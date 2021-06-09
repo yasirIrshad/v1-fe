@@ -1,0 +1,13 @@
+<div class="genres">
+    <nav class="navbar pl-0">
+        <a class="navbar-brand pl-0" href="#">
+            <img src="../images/icons/chevron-left.svg" alt="go back"> Go back
+        </a>
+    </nav>
+    <h2 class="mt-2 mb-5">Genres</h2>
+    <div class="row">
+        <div class="col-12">
+            <a *ngFor="let genre of genres" routerLink="/genre/{{ genre.name }}"><img [src]="genre?.picture?.url" alt="techno" class="card-img"></a>
+        </div>
+    </div>
+</div>

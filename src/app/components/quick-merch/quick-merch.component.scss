@@ -1,0 +1,44 @@
+.btn-cart {
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid #788995;
+    color :#fff;
+    width: 100%;
+    margin-top: 20px;
+}
+.form-floating > label {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.form-select {
+    background-color: #131519;
+    border-radius: 10px;
+    border: 1px solid #788995;
+    width: 55px;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+.item-preview {
+    height: 188px;
+    width: 188px;
+    background-color: #fff;
+    border-radius: 20px;
+    img {
+        height: 188px;
+        width: 188px;
+    }
+}
+.picker {
+    width: 60px;
+    height: 58px;
+}
+.price {
+    width: 53px;
+    height: 23px;
+    margin-left: 10px;
+}
+p {
+    margin-top: 10px;
+}

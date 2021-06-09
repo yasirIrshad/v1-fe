@@ -1,0 +1,21 @@
+<div class="profile">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="menu d-none d-md-block">
+                    <p class="heading" routerLink="/account/profile/my-profile">My Profile</p>
+                    <ul class="list-group pl-0">
+                        <li class="list-group-item"><a routerLink="/account/profile/personal-details">Personal Details</a></li>
+                        <li class="list-group-item"><a routerLink="/account/profile/login-security">Login & Security</a></li>
+                        <li class="list-group-item"><a routerLink="/account/profile/invoices">Invoices</a></li>
+                        <li class="list-group-item"><a routerLink="/account/profile/address">Address</a></li>
+                        <li class="list-group-item"><a routerLink="/account/profile/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

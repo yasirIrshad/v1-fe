@@ -1,0 +1,338 @@
+.artist-profile {
+    min-height: 100vh;
+    margin-bottom: 80px;
+    img {
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+             margin-top: 50px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+             margin-top: 50px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-left: 0;
+        }
+    }
+    .artist-header {
+        
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+            margin-top: 90px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 90px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-top: 90px;
+        }
+    }
+    .artist-img {
+        border-radius: 113px;
+        border: 1px solid rgba(171, 185, 194, 1);
+        min-height: 190px;
+        max-height: 190px;
+        min-width: 190px;
+        max-width: 190px;
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-right: 30px;
+        }
+    }
+    .btn-follow {
+        width: 190px;
+        height: 40px;
+        background: transparent linear-gradient(103deg, #FFD83B 0%, #FBBE3A 52%, #F7A639 100%) 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        opacity: 1;
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+            margin-top: 260px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 260px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+    .btn-outline-primary {
+        border: 1.5px solid #7a848b;
+        border-radius: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .img-col {
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+        }
+
+         // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-right: 30px;
+            min-width: 190px;
+            max-width: 190px;
+        }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-right: 30px;
+            min-width: 190px;
+            max-width: 190px;
+        }
+    }
+    .list-group {
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+             margin-left: 0px;
+             margin-top: 33px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-left: 0px;
+            margin-top: 33px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+    .list-group-item {
+        background-color: transparent;
+        border: none;
+        color: #ABB9C2;
+        padding-left: 0;
+        padding-right: 38px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+             margin-top: 630px;
+        }
+
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 630px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-top: 25px;
+        }
+    }
+    .list-group-item.active {
+       text-decoration: underline;
+       text-decoration-color: #FFD83B;
+       text-decoration-thickness: 3px;
+       text-underline-offset: 9px;
+       color: #fff;
+    }
+    .list-group-item:hover {
+        cursor: pointer;
+    }
+    .merch-item {
+        width: 190px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .bio-row {
+        margin-bottom: 80px;
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 190px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            margin-top: 70px;
+        }
+    }
+    .merch-row {
+        margin-bottom: 80px;
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 190px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            margin-top: 70px;
+        }
+    }
+    .name {
+        font-weight: bold;
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+            margin-top:210px;
+            font-size: 25px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 210px;
+            font-size: 40px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-left: 0;
+            margin-top: 0;
+            font-size: 40px;
+        }
+    }
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+            margin-top: 170px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 170px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-left: 0;
+            margin-top: 90px;
+        }
+    }
+    .artist-body {
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+            padding-top: 190px;
+        }
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            padding-top: 0px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            padding-top: 0px;
+        }
+        .artist-card {
+            border-radius: 15px;
+            min-width: 190px;
+            max-width: 190px;
+            min-height: 221px;
+            max-height: 221px;
+            margin-top: 0;
+        }
+        .list-group-item {
+            margin-top: 0;
+            max-height: 85px;
+            width: 100%;
+            img {
+                width: 85px;
+                height: 85px;
+                border-radius: 6px;
+                margin-top: 0;
+                margin-right: 25px;
+            }
+            .btn-purchase {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border-radius: 6px;
+                width: 127px;
+                height: 39px;
+                font-size: 13px;
+                // Extra Small devices (landscape phones, 576px and up)
+                @media (max-width: 576px) {
+                    margin-top: 44px;
+                    margin-left: -83px;
+                    float: left;
+                }
+                // Small devices (landscape phones, 576px and up)
+                @media (min-width: 576px) {
+                    margin-top: 44px;
+                    margin-left: -83px;
+                    float: left;
+                }
+                // Medium devices (tablets, 768px and up)
+                @media (min-width: 768px) { 
+                    margin-top: 24px;
+                    float: right;
+                }
+            }
+            .l-e-name {
+                color: #FFFFFF;
+                font-size: 16px;
+                // Extra Small devices (landscape phones, 576px and up)
+                @media (max-width: 576px) {
+                    margin-top: 0px;
+                }
+                // Small devices (landscape phones, 576px and up)
+                @media (min-width: 576px) {
+                    margin-top:0px;
+                }
+                // Medium devices (tablets, 768px and up)
+                @media (min-width: 768px) { 
+                    margin-top: 24px;
+                }
+            }
+        }
+        .premieres-card {
+            // Extra Small devices (landscape phones, 576px and up)
+            @media (max-width: 576px) {
+                margin-top: 62px;
+            }
+            // Small devices (landscape phones, 576px and up)
+            @media (min-width: 576px) {
+                margin-top: 62px;
+            }
+            // Medium devices (tablets, 768px and up)
+            @media (min-width: 768px) { 
+                margin-top: 0px;
+            }
+        }
+        .card {
+            border: 0;
+            border-radius: 15px;
+            background: transparent linear-gradient(180deg, #28324D00 0%, #28324D 100%) 0% 0% no-repeat padding-box;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            img {
+                margin-top: 0;
+                height: 100%;
+                border-radius: 15px;
+            }
+            section {
+                margin-left: 19px;
+                margin-top: 165px;
+            }
+            .c-name {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .e-name {
+                font-size: 14px;
+            }
+        }
+        .title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        // Extra Small devices (landscape phones, 576px and up)
+         @media (max-width: 576px) {
+            margin-top: 210px;
+        }
+        // Small devices (landscape phones, 576px and up)
+         @media (min-width: 576px) {
+            margin-top: 210px;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-top: 0px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<app-profile-sub-header path="Address" text="Update your shipping address for additional Merch purchases."></app-profile-sub-header>
+
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <div class="row address-form">
+        <div class="col-12">
+            <p>Full Name</p>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <input type="text" class="form-control" placeholder="First name" formControlName="firstName" aria-label="First name" required>
+        </div>
+        <div class="col-md-6 col-xs-12 mt-4 mt-md-0">
+            <input type="text" class="form-control" placeholder="Last name" formControlName="lastName"  aria-label="Last name" required>
+        </div>
+        <div class="col-12 mt-4">
+            <p>Shipping Address</p>
+        </div>
+        <div class="col-12">
+            <input type="text" class="form-control" placeholder="Street, House/Apartment/Unit" formControlName="address_1"  aria-label="address 1" required>
+        </div>
+        <div class="col-12 mt-3">
+            <input type="text" class="form-control" placeholder="Apt, Suite, Unit, etc. (Optional)" formControlName="address_2"  aria-label="address 2">
+        </div>
+        <div class="col-md-6 col-xs-12 mt-3">
+            <select class="form-select" formControlName="country" aria-label="Default select example" required>
+                <option [ngValue]="null" disabled>Select Your Country</option>
+                <option *ngFor="let country of countries" [ngValue]="country.name">{{ country?.name }}</option>
+              </select>
+        </div>
+        <div class="col-md-6 col-xs-12 mt-3">
+            <input type="text" class="form-control" placeholder="State/Province/Region" formControlName="state" aria-label="state">
+        </div>
+        <div class="col-md-6 col-xs-12 mt-3">
+            <input type="text" class="form-control" placeholder="City" formControlName="city" aria-label="city">
+        </div>
+        <div class="col-md-6 col-xs-12 mt-3">
+            <input type="text" class="form-control" placeholder="Postal Code" formControlName="postalCode" aria-label="postal code">
+        </div>
+        <div class="col-12 mt-4 d-grid">
+            <button class="btn btn-primary sa-btn" type="submit">UPDATE SHIPPING ADDRESS</button>
+        </div>
+    </div>
+</form>

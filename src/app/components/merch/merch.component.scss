@@ -1,0 +1,46 @@
+.image {
+    min-width: 93px;
+    max-width: 93px;
+    min-height: 93px; 
+    max-height: 93px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-right: 21px;      
+}
+
+.form-select {
+    color: #fff;
+    background-color: #000;
+    width: 59px;
+    height: 59px;
+    border-radius: 10px;
+}
+
+.form-select:disabled {
+    background-color: transparent;
+}
+
+.form-floating {
+    label {
+        font-size: 11px;
+    }
+}
+
+.price {
+    margin-top: 70px;
+    font-size: 20px
+}
+
+.row {
+    margin-bottom: 26px;
+}
+
+section {
+    p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    .selects {
+        margin-bottom: 19px;
+    }
+}

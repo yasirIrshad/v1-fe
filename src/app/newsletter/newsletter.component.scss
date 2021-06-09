@@ -1,0 +1,54 @@
+.check-row {
+    vertical-align: middle;
+    .fa-square {
+        color: #ffd83b;
+    }
+    p {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+}
+.interest {
+    margin-top: 40px;
+    .choices {
+        margin-top: 40px;
+    }
+    .disclaimer-row {
+        margin-top: 30px;
+        p {
+            color: #cacaca;
+        }
+    }
+    .link-text {
+        color: #ffd83b;
+    }
+}
+
+.s-btn {
+    background: linear-gradient(95.65deg, #ffd83b 4.5%, #ffa43b 97.15%);
+    border-radius: 6px;
+    border: none;
+    color: #232b31;
+    font-style: normal;
+    font-weight: 600;
+    height: 51px;
+}
+
+.form-check-input {
+    display: none;
+}
+
+input[type='checkbox']+ label:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0c8";
+	font-size:1.7rem;
+	cursor:pointer;
+    color: #ffd83b;
+ }
+
+ input[type='checkbox']:checked + label:before {
+    content: "\f14a";
+	font-size:1.7rem;
+	cursor:pointer;
+    color: #ffd83b;
+}

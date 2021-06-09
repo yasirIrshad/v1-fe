@@ -1,0 +1,26 @@
+<div class="row justify-content-between ticket">
+    <div class="col-4">
+        <p>Choose a ticket</p>
+    </div>
+    <div class="col-1">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-5">
+                <select class="form-select" aria-label="Default select example" *ngIf="ticketOptions" (change)="setTicket($event)">
+                    <option selected>Select ticket</option>
+                    <option *ngFor="let ticket of ticketOptions" [value]="ticket.id">{{ ticketName(ticket.type) }}</option>
+                </select>
+            </div>
+            <div class="col-7">
+                <p class="float-end">{{ price | currency }}</p>
+            </div>
+            <div class="col-12">
+                <p class="vip-text" *ngIf="ticketSelected?.type === 'vip'">Included for free in your VIP Stream</p>
+                <app-merch [freeItems]="vipItems" [event]="event" *ngIf="ticketSelected?.type === 'vip'"></app-merch>
+            </div>
+        </div>
+    </div>
+</div>
+

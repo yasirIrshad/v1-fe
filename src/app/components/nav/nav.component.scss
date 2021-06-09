@@ -1,0 +1,56 @@
+.logo {
+    width: 62px;
+    height: auto;
+}
+
+nav {
+    // background: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    .avatar {
+        border-radius: 19px;
+        height: 37px;
+        width: 37px;
+    }
+    .btn-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .btn-sos-main {
+        background: linear-gradient(105deg,#ffd83b,#ffa43b);
+        color: #000;
+        padding: 5px 18px !important;
+        border-radius: 5px;
+        font-size: 16px;
+        max-height: 35px;
+    }
+    .fa-bars {
+        color: #fff;
+    }
+    .nav-link.active {
+        color: #fff;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+    .dropdown-menu {
+        background-color: #000;
+        padding: 10px;
+    }
+    .dropdown-item {
+        color: #fff;
+        background-color: transparent;
+    }
+    .user-icon {}
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}

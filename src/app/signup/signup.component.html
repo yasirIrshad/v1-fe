@@ -1,0 +1,101 @@
+<div class="signup">
+    <nav class="navbar">
+        <a class="navbar-brand" href="javascript:void(0)" (click)="goBack()">&larr; Back to previous page</a>
+    </nav>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <img src="./assets/sos-logo.svg" class="logo">
+            </div>
+        </div>
+        <div class="row" *ngIf="!emailAvailable">
+            <div class="col-xs-12 col-md-6 offset-md-3 mt-5 alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Oh no!</strong> An account already exist with this email. Please try again.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="row mt-5" *ngIf="step === 1">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <label for="exampleFormControlInput1" class="form-label mb-3">Enter your email</label>
+                <input type="email" class="form-control" id="email" (input)="emailUniq()" placeholder="Email" formControlName="email" required>
+            </div>
+        </div>
+        <div class="row mt-3 ml-2" *ngIf="step === 1">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="receiveUpdates">
+                    <label class="form-check-label terms-label" for="flexCheckDefault">
+                        Yes! I would like to receive updates, special offers, and other information from Studio On Sunset
+                    </label>
+                  </div>
+            </div>
+        </div>
+        <div class="row mt-1" *ngIf="step === 1">
+            <div class="col-xs-12 col-md-6 offset-md-3 d-grid">
+                <div class="col-12 agree-col d-grid">
+                    <p class="agree-text">
+                        Studio on Sunset will use your data to personalize and improve your Studio on Sunset experience and to send you information about Studio on Sunset. You can change your communication preferences anytime. We may use your data as described in our <span class="agree-link">Privacy Policy</span>, including sharing it with the family of companies. By clicking “Agree & Continue”, you agree to our <span class="agree-link">User Agreement</span> and acknowledge that you have read our <span class="agree-link">Privacy Policy</span>.
+                    </p>
+                    <button class="btn btn-primary btn-lg continue-btn" (click)="nextStep()" [disabled]="checkEmail()">Agree & Continue</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!usernameAvailable">
+            <div class="col-xs-12 col-md-6 offset-md-3 mt-5 alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Oh no!</strong> This username is taken. Please try again.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="row mt-5" *ngIf="step === 2">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <label for="exampleFormControlInput1" class="form-label mb-3">Enter a username</label>
+                <input type="text" class="form-control" id="username" (input)="usernameUniq()" placeholder="Username" formControlName="username" required>
+            </div>
+        </div>
+        <div class="row mt-3" *ngIf="step === 2">
+            <div class="col-xs-12 col-md-6 offset-md-3 d-grid">
+                <div class="col-12 agree-col d-grid">
+                    <button class="btn btn-primary btn-lg continue-btn" (click)="nextStep()" [disabled]="checkUsername()">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5" *ngIf="step === 3">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <label for="exampleFormControlInput1" class="form-label mb-3">Create a password</label>
+                <input type="password" class="form-control" id="password" (input)="checkPassword()" placeholder="Password" formControlName="password" required>
+            </div>
+        </div>
+        <div class="row mt-3" *ngIf="step === 3">
+            <div class="col-xs-12 col-md-6 offset-md-3 d-grid">
+                <div class="col-12">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" [ngClass]="passwordMin === true ? 'valid' : 'invalid'">Minimum eight characters</li>
+                        <li class="list-group-item" [ngClass]="passwordUpper === true ? 'valid' : 'invalid'">At least one uppercase letter</li>
+                        <li class="list-group-item" [ngClass]="passwordLower === true ? 'valid' : 'invalid'">At least one lowercase letter</li>
+                        <li class="list-group-item" [ngClass]="passwordNum === true ? 'valid' : 'invalid'">At least one number</li>
+                        <li class="list-group-item" [ngClass]="passwordSC === true ? 'valid' : 'invalid'">At least one special character</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2" *ngIf="step === 3">
+            <div class="col-xs-12 col-md-6 offset-md-3 form-floating">
+                <input type="email" class="form-control form-pw" id="floatingInputValue" value="{{ signUpForm?.value?.email }}">
+                <label for="floatingInputValue" class="fl">You are using this email</label>
+            </div>
+        </div>
+        <div class="row mt-3" *ngIf="step === 3">
+            <div class="col-xs-12 col-md-6 offset-md-3 d-grid">
+                <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg continue-btn" [disabled]="!isValid">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <p class="terms-label">Already have an account? <span class="login">Log in</span></p>
+            </div>
+        </div>
+    </form>
+</div>
+

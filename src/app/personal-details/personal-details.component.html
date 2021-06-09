@@ -1,0 +1,49 @@
+<app-profile-sub-header path="Personal Details" text="Access and modify your personal details in order to facilitate your future purchases and to notify us of any change in
+your contact details."></app-profile-sub-header>
+
+<div class="row avatar-row">
+    <div class="col-12">
+        <img [src]="defaultImg" class="avatar" id="my-image">
+        <input type="file" accept=".jpg, .png, jpeg" id="file" #file name="files" hidden (change)="readUrl($event)" />
+        <label for="file" class="file btn btn-dark btn-pp">Change profile picture</label>
+        <button type="button" class="btn btn-dark btn-remove" (click)="removeImg()">Remove</button>
+    </div>
+</div>
+
+<div class="row form-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12 text-label">
+                    Full Name
+                </div>
+                <br />
+                <br />
+                <div class="col-md-6 col-xs-12">
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" formControlName="firstName">
+                </div>
+                <div class="col-md-6 col-xs-12 mt-4 mt-md-0">
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" formControlName="lastName">
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-12 text-label">
+                    Username
+                </div>
+                <br />
+                <br />
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" [value]="user.username" disabled>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-primary pd-btn">UPDATE PERSONAL DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+
+
+.table {
+    border-bottom: 1px solid #2d3343;
+    margin-top: 50px;
+    thead {
+        background-color: #2d3343;
+        color: #fff;
+        text-transform: uppercase;
+        height: 54px;
+        border-right: 1px solid #2d3343;
+        border-left: 1px solid #2d3343;
+        th {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
+        }
+    }
+    .head {
+        border-right: 1px solid #2d3343;
+        border-left: 1px solid #2d3343;
+    }
+    tr {
+        border: none;
+        color: #fff;
+        .des {
+            color: #ffd83b;
+        }
+    }
+}

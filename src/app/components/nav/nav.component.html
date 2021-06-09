@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light sticky-top navbar-expand-md" id="nav" *ngIf="showNav">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">
+        <img src="./assets/sos-logo.svg" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">My Shows</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button type="button" class="btn btn-link" routerLink="/login" *ngIf="!user">Login</button>
+          <button class="btn btn-sos-main" type="submit" routerLink="/signup" *ngIf="!user">Sign Up</button>
+          <div class="dropdown" *ngIf="user">
+            <button type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{{ user?.username }}</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" routerLink="/account/profile/my-profile">My Profile</a></li>
+              <li><a class="dropdown-item" routerLink="/support">Support</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+            </ul>
+          </div>
+          <i class="far fa-user-circle fa-2x user-icon" *ngIf="user && !user?.profile?.avatar"></i>
+          <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar">
+        </form>
+      </div>
+    </div>
+  </nav>

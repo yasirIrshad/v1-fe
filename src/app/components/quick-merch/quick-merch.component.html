@@ -1,0 +1,29 @@
+<div class="col-12">
+    <div class="item-preview">
+        <img [src]="merchItem.img">
+    </div>
+    <p>{{ merchItem?.name }}</p>
+    <div class="row p-0">
+        <div class="form-floating float-start picker">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="small">S</option>
+              <option value="medium">M</option>
+              <option value="large">L</option>
+              <option value="xlarge">XL</option>
+            </select>
+            <label for="floatingSelect">Size</label>
+        </div>
+        <div class="form-floating float-start picker">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <label for="floatingSelect">QTY</label>
+        </div>
+        <p class="float-start price">{{ merchItem?.price | currency }}</p>
+    </div>
+    <button type="button" class="btn btn-cart">Add to Cart</button>
+</div>

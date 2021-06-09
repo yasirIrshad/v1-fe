@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800&display=swap');
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1185px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+body {
+    background-color: #1a2030 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #fff !important;
+    -webkit-font-smoothing: antialiased im !important;
+}
+
+.swiper-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.swiper-container .swiper-wrapper .different-photo {
+    background-size: cover;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+    background-size: cover;
+    background-position-y: bottom;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: 19px;
+    // Extra Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+        min-height: 221px;
+        max-height: 221px;
+        min-width: 192px;
+        max-width: 192px;
+        a {
+            text-decoration: none;
+        }
+        section {
+            color: #fff;
+            text-decoration: none;
+            padding-left: 19px;
+            .swipe-event {
+                font-size: 18px;
+            }
+            .swipe-artist {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        min-height: 221px;
+        max-height: 221px;
+        min-width: 192px;
+        max-width: 192px;
+        a {
+            text-decoration: none;
+        }
+        section {
+            color: #fff;
+            text-decoration: none;
+            padding-left: 19px;
+            .swipe-event {
+                font-size: 18px;
+            }
+            .swipe-artist {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        min-height: 221px;
+        max-height: 221px;
+        min-width: 192px;
+        max-width: 192px;
+        a {
+            text-decoration: none;
+        }
+        section {
+            color: #fff;
+            text-decoration: none;
+            padding-left: 19px;
+            .swipe-event {
+                font-size: 18px;
+            }
+            .swipe-artist {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+ // Extra Small devices (landscape phones, 576px and up)
+ @media (max-width: 576px) {
+    .container {
+        max-width: 91vw !important;
+    }
+}
+
+ // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .container {
+        max-width: 92vw !important;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .container {
+        max-width: 92vw !important;
+    }
+}
+
+// Large devices (desktops, 1185px and up)
+@media (min-width: 1185px) { 
+    .container {
+        max-width: 92vw !important;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .container {
+        max-width: 92vw !important;
+    }
+}
+
+.nav-blur {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50 px);
+}
+
+
+@import "bootstrap";

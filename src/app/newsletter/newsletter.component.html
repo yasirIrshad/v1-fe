@@ -1,0 +1,28 @@
+<app-profile-sub-header path="Newsletter & Policies" text="Set up your newsletter and you will receive news and information from the sections you have selected."></app-profile-sub-header>
+<div class="interest">
+    <p class="heading">Selection of your interest</p>
+    <form [formGroup]="newsletterForm" (ngSubmit)="onSubmit()">
+        <div class="row choices">
+            <div class="col-12 check-row">
+                <input class="form-check-input" type="checkbox" formControlName="notify_new_events" id="option1">
+                <label class="form-check-label" for="option1">
+                    Notify me when new events are coming out
+                </label>
+            </div>
+            <div class="col-12 check-row">
+                <input class="form-check-input" type="checkbox" formControlName="notify_weekly_newsletter" id="option2">
+                <label class="form-check-label" for="option2">
+                    Send me weekly newsletter
+                </label>
+            </div>
+            <div class="col-12 disclaimer-row">
+                <p>
+                    I have read and understand the <span class="link-text">Privacy Policy, Terms & Conditions, Disclaimer</span> and <span class="link-text">EULA</span> and agree to receive personalized commercial communications from Studio On Sunset by email.
+                </p>
+            </div>
+            <div class="col-12 d-grid mt-3">
+                <button class="btn btn-primary s-btn" type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+    </form>
+</div>

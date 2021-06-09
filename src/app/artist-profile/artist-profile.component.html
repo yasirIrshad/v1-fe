@@ -1,0 +1,80 @@
+<div class="artist-profile">
+    <div class="row artist-header">
+    <!-- Displays header for Medium and larger displays -->
+        <div class="col-12 d-none d-md-block">
+            <img [src]="performer?.profile_picture?.formats?.medium?.url" class="artist-img float-md-start float-sm-none float-xs-none">
+            <div class="artist-info">
+                <p class="title mb-md-0">Artist</p>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 p-0">
+                        <p class="name mb-md-0">{{ performer?.name }}</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 p-0">
+                        <button type="button" class="btn btn-follow float-md-end">Follow</button>
+                    </div>
+                </div>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item shows tab-item active" (click)="setTab('shows', 0)">Shows</li>
+                    <li class="list-group-item merch tab-item" (click)="setTab('merch', 1)">Merch</li>
+                    <li class="list-group-item bio tab-item" (click)="setTab('bio', 2)">Bio</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Displays header for smaller than medium displays -->
+        <div class="col-12 d-md-none d-sm-block justify-content-center">
+            <img [src]="performer?.profile_picture?.formats?.medium?.url" class="artist-img position-absolute top-20 start-50 translate-middle">
+            <p class="title position-absolute top-20 start-50 translate-middle">Artist</p>
+            <p class="name position-absolute top-20 start-50 translate-middle">{{ performer?.name }}</p>
+            <button type="button" class="btn btn-follow position-absolute top-20 start-50 translate-middle">Follow</button>
+            <ul class="list-group list-group-horizontal position-absolute top-20 start-50 translate-middle">
+                <li class="list-group-item shows tab-item" (click)="setTab('shows', 0)">Shows</li>
+                <li class="list-group-item merch tab-item" (click)="setTab('merch', 1)">Merch</li>
+                <li class="list-group-item bio tab-item" (click)="setTab('bio', 2)">Bio</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row artist-body">
+        <div #shows class="row tab-view-items" *ngIf="tabSelected === 'shows'">
+            <div class="col-md-6 col-sm-12 col-xs-12 premieres-card">
+                <p class="title">Premieres</p>
+                <div class="card" style="width: 190px; height: 221px;" [ngStyle]="{'background-image':'url(' + premierers?.background_image?.formats?.small?.url + ')'}" *ngIf="premierers">
+                    <section>
+                        <p class="mb-0 c-name">{{ premierers?.name }}</p>
+                        <p>{{ performer?.name }}</p>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <p class="title">Library</p>
+                <ul class="list-group list-group-horizontal" *ngIf="library">
+                    <li class="list-group-item p-0" *ngFor="let event of library">
+                        <img [src]="performer?.flyer?.formats?.small?.url" class="float-start">
+                        <p class="float-start l-e-name">{{ truncateText(event?.name, 11, '...') }}</p>
+                        <button type="button" class="btn btn-purchase" routerLink="/purchase-show/{{event.slug}}"><i class="fas fa-play"></i> Purchase</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div #merch class="tab-view-items" *ngIf="tabSelected === 'merch'">
+            <div class="row p-0 justify-content-around merch-row">
+                <div *ngFor="let merch of merchItems" class="merch-item p-0">
+                    <app-quick-merch [item]="merch"></app-quick-merch>
+                </div>
+            </div>
+            <!-- 
+                <div class="row justify-content-center p-0" *ngIf="tabSelected === 'merch'">
+                    <div class="col-xs-4 col-md-2 text-center">
+                        <button type="button" class="btn btn-outline-primary">Show More</button>
+                    </div>
+                </div>
+            -->
+        </div>
+        <div #bio class="tab-view-items" *ngIf="tabSelected === 'bio'">
+            <div class="row p-0 bio-row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    Bio
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

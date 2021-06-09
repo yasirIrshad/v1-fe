@@ -1,0 +1,40 @@
+.profile {
+    min-height: 100vh;
+    padding-top: 60px;
+    .avatar {
+        width: 130px;
+        height: 130px;
+        border: 1px solid #FFD83B;
+        border-radius: 94px;
+    }
+    .heading {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 44px;
+    }
+    .menu {
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+            padding-left: 0;
+            font-size: 18px;
+            color: #fff;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            a:hover {
+                color: #ffd83b;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        }
+        .list-group-item:hover {
+            color: #ffd83b;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+    
+}

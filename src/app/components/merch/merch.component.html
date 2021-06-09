@@ -1,0 +1,67 @@
+<div *ngIf="freeItems">
+    <div class="row merh-row" *ngFor="let item of freeItems">
+        <div class="col-12">
+            <img [src]="item?.image?.formats?.small.url" class="float-start image">
+            <section class="float-start">
+                <p>{{ item?.name }}</p>
+                <div class="row selects">
+                    <div class="col-6" *ngIf="item.type ==='apparel'">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (change)="setVipMerch($event)">
+                                <option selected></option>
+                                <option value="small">S</option>
+                                <option value="medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="X-Large">XL</option>
+                            </select>
+                            <label for="floatingSelect">Size</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" disabled>
+                                <option selected>1</option>
+                            </select>
+                            <label for="floatingSelect">QTY</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!freeItems">
+    <div class="row merh-row">
+        <div class="col-12">
+            <img [src]="products?.image?.formats?.small.url" class="float-start image">
+            <section class="float-start">
+                <p>{{ products?.name }}</p>
+                <div class="row selects">
+                    <div class="col-5" *ngIf="products.type ==='apparel'">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <option selected></option>
+                                <option value="small">S</option>
+                                <option value="medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="X-Large">XL</option>
+                            </select>
+                            <label for="floatingSelect">Size</label>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <option selected>1</option>
+                            </select>
+                            <label for="floatingSelect">QTY</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <p class="float-end price">{{ products?.price | currency }}</p>
+        </div>
+    </div>
+</div>
+

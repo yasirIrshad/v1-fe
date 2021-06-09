@@ -1,0 +1,74 @@
+.profile-group {
+    .card {
+        background-color: transparent;
+    }
+    .card:hover {
+        cursor: pointer;
+    }
+}
+
+.pg-row {
+    margin-top: 30px;
+}
+.username {
+    font-size: 18px;
+    @media (max-width: 576px) {
+        margin-left: 27px;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        margin-left: 27px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 768px) { 
+        margin-left: 0px;
+    }
+}
+.user-continer {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 576px) {
+        display: flex;
+        justify-content: start;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        display: flex;
+        justify-content: start;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 768px) { 
+        
+    }
+    .user-img {
+        width: 141px;
+        height: 141px;
+        display: block;
+    }
+}
+
+.intro {
+        font-size: 20px;
+        font-weight: bold;
+        // Extra Small devices (landscape phones, 576px and up)
+        @media (max-width: 576px) {
+            margin-top: 50px;
+        }
+
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            margin-top: 50px;
+        }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            margin-top: 0;
+        }
+    }
+    .sub {
+        font-size: 18px;
+    }
