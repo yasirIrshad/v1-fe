@@ -59,8 +59,16 @@ footer {
     .updates-container {
         max-width: 415px;
         padding: 0;
+        
     }
     .max-width-wrapper {
-        max-width: 1119px;
+        max-width: 1400px;
+    }
+    .link {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: #FFD83B;
+        }
     }
 }

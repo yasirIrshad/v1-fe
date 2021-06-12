@@ -55,5 +55,8 @@ nav {
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 1rem;
     padding-left: 1rem;
+    &:hover {
+      color: #ffd83b;
+    }
   }
 }
