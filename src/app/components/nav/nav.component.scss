@@ -49,7 +49,11 @@ nav {
   }
   .user-icon {
   }
+  .max-width-wrapper {
+    max-width: 1440px !important;
+  }
 }
+
 
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .nav-link {

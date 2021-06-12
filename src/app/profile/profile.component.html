@@ -1,9 +1,9 @@
-<div class="profile">
-    <div class="row">
+<div class="profile mx-auto max-width-wrapper">
+    <div class="row flex-column flex-sm-row">
         <div class="col-3 col-md-3">
             <div class="row">
                 <div class="menu">
-                    <h1 class="heading" routerLink="/account/profile/my-profile">My Profile</h1>
+                    <h1 class="heading text-nowrap" routerLink="/account/profile/my-profile">My Profile</h1>
                     <img class="user-img" src="../images/user-avatar.png" class="user-img" >
                     <ul class="list-group pl-0">
                         <li class="list-group-item"><a routerLink="/account/profile/personal-details">Personal Details</a></li>
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-9 col-md-9">
+        <div class="col-12 col-md-9">
             <router-outlet></router-outlet>
         </div>
     </div>
