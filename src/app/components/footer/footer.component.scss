@@ -31,6 +31,7 @@ footer {
         font-size: 14px;
         font-weight: 500;
         padding: 9px 15px;
+        
     }
     .list-group-item {
         background-color: transparent;
@@ -54,5 +55,12 @@ footer {
     }
     .updates {
         font-weight: 600;
+    }
+    .updates-container {
+        max-width: 415px;
+        padding: 0;
+    }
+    .max-width-wrapper {
+        max-width: 1119px;
     }
 }

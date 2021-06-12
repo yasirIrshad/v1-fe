@@ -1,13 +1,28 @@
 .profile-group {
     .card {
         background-color: transparent;
+        max-width: 315.5px;
     }
     .card:hover {
-        cursor: pointer;
-        outline:2px solid red;
+        cursor: pointer; 
     }
 }
-
+.card-text {
+    margin: 20px auto 25px auto;
+    
+}
+.top-card-border {
+    border-top: none;
+}
+.bottom-card-border {
+    border-bottom: none;
+}
+.left-card-border {
+    border-left: none;
+}
+.right-card-border {
+    border-right: none;
+}
 .pg-row {
     margin-top: 30px;
 }
@@ -27,18 +42,22 @@
         margin-left: 0px;
     }
 }
+.my-profile-wrapper {
+    margin-bottom: 140.5px;
+}
 .user-continer {
+    
     display: flex;
     justify-content: center;
     @media (max-width: 576px) {
         display: flex;
-        justify-content: start;
+        justify-content: flex-end;
     }
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) {
         display: flex;
-        justify-content: start;
+        justify-content: flex-end;
     }
 
     // Medium devices (tablets, 768px and up)
@@ -49,6 +68,9 @@
         width: 141px;
         height: 141px;
         display: block;
+        border: 1px solid #FFD83B;
+        border-radius: 50%;
+        margin-right: 79px;
     }
 }
 
