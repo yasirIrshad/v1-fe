@@ -2,18 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and was updated to the following:
 
-` Package                         Version
-    ---------------------------------------------------------
+     Package                         Version
+    
     @angular-devkit/architect       0.1102.14
+    
     @angular-devkit/build-angular   0.1102.14
+    
     @angular-devkit/core            11.2.14
+    
     @angular-devkit/schematics      11.2.14
+    
     @nguniversal/builders           11.2.1
+    
     @nguniversal/express-engine     11.2.1
+    
     @schematics/angular             11.2.14
+    
     @schematics/update              0.1102.14
+    
     rxjs                            6.5.5
+    
     typescript                      4.1.5 `
+
 
 ## Development server
 
