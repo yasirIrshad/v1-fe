@@ -7,8 +7,7 @@ nav {
   background: transparent linear-gradient(180deg, #1a2030 0%, #1a203000 100%) 0%
     0% no-repeat padding-box;
   opacity: 1;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 35px;
   font-size: 16px;
   .avatar {
     border-radius: 19px;
@@ -38,6 +37,11 @@ nav {
 
   .navbar-toggler {
     border: none;
+    background-image: url(../../../images/icons/SOS_Mobile_Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
   }
   .dropdown-menu {
     background-color: #000;
