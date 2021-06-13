@@ -1,127 +1,136 @@
 .profile-group {
-    .card {
-        background-color: transparent;
-        max-width: 315.5px;
-        img {
-            width: 1.75rem;
-            height: 1.75rem;
-        }
+  .card {
+    border-radius: 0;
+    border-color: black;
+    background-color: transparent;
+    max-width: 315.5px;
+    img {
+      width: 1.75rem;
+      height: 1.75rem;
     }
-    .card:hover {
-        cursor: pointer; 
+  }
+  .card:hover {
+    cursor: pointer;
+  }
+  .card-body {
+    padding: 0;
+    @media (max-width: 768px) {
+      max-width: 212px;
     }
-    .card-body {
-        padding: 0;
-        @media (max-width: 768px) {
-            max-width: 212px;
-        }
-        @media (max-width: 475px) {
-            .text-muted {
-                font-size: 12px;
-                margin-right: 20px ;
-            }
-        }
+    @media (max-width: 475px) {
+      .text-muted {
+        font-size: 12px;
+        margin-right: 20px;
+      }
     }
+  }
 }
+
 .card-text {
-    margin: 20px auto 25px auto;
-    @media (max-width: 450px) {
-        margin: 20px 20px 25px auto;
-    }
-    
+  margin: 20px auto 25px auto;
+  @media (max-width: 450px) {
+    margin: 20px 20px 25px auto;
+  }
 }
 .top-card-border {
-    border-top: none;
+  border-top: none;
 }
 .bottom-card-border {
-    border-bottom: none;
+  border-bottom: none;
 }
 .left-card-border {
-    border-left: none;
+  border-left: none;
+  -webkit-box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
+  -moz-box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
+  box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
 }
 .right-card-border {
-    border-right: none;
+  border-right: none;
+  -webkit-box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
+  -moz-box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
+  box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
 }
 .pg-row {
-    margin-top: 30px;
+  margin-top: 30px;
 }
-@media (max-width:768px) {
-    .left-card-border, .right-card-border, .top-card-border, .bottom-card-border {
-        border: none;
-    }
+@media (max-width: 576px) {
+  .left-card-border,
+  .right-card-border,
+  .top-card-border,
+  .bottom-card-border {
+    border: none;
+    box-shadow: none;
+  }
 }
 .username {
-    font-size: 18px;
-    @media (max-width: 576px) {
-        margin-left: 27px;
-    }
+  font-size: 18px;
+  @media (max-width: 576px) {
+    margin-left: 27px;
+  }
 
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) {
-        margin-left: 27px;
-    }
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    margin-left: 27px;
+  }
 
-    // Medium devices (tablets, 768px and up)
-    @media (max-width: 768px) { 
-        margin-left: 0px;
-    }
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 }
 .my-profile-wrapper {
-    margin-bottom: 140.5px;
+  margin-bottom: 140.5px;
 }
-.user-continer {
-    display: none !important;
-    justify-content: center;
-   
-    @media (min-width: 769px) {
-        display: flex !important;
-        justify-content: flex-end;
-    }
+.user-container {
+  display: none !important;
+  justify-content: center;
 
-    
-    @media (max-width: 768px) { 
-        
+  @media (min-width: 769px) {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 768px) {
+  }
+  .user-img {
+    width: 141px;
+    height: 141px;
+    display: block;
+    border: 1px solid #ffd83b;
+    border-radius: 50%;
+    margin-right: 79px;
+    @media (max-width: 1200px) {
+      margin-right: 1vw;
     }
-    .user-img {
-        width: 141px;
-        height: 141px;
-        display: block;
-        border: 1px solid #FFD83B;
-        border-radius: 50%;
-        margin-right: 79px;
-        @media (max-width: 1200px) {
-            margin-right: 1vw;
-        }
-        @media (max-width: 900px) {
-            margin-right: 0;
-            width: 125px;
-            height: 125px;
-        }
-        @media (max-width: 768px) {
-            display: none;
-        }
-        
+    @media (max-width: 900px) {
+      margin-right: 0;
+      width: 125px;
+      height: 125px;
     }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .intro {
-        font-size: 20px;
-        font-weight: bold;
-        // Extra Small devices (landscape phones, 576px and up)
-        @media (max-width: 576px) {
-            margin-top: 0;
-        }
+  font-size: 20px;
+  font-weight: bold;
+  // Extra Small devices (landscape phones, 576px and up)
+  @media (max-width: 576px) {
+    margin-top: 0;
+  }
 
-        // Small devices (landscape phones, 576px and up)
-        @media (min-width: 576px) {
-            // margin-top: 50px;
-        }
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    // margin-top: 50px;
+  }
 
-        // Medium devices (tablets, 768px and up)
-        @media (min-width: 768px) { 
-            margin-top: 0;
-        }
-    }
-    .sub {
-        font-size: 18px;
-    }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+.sub {
+  font-size: 18px;
+}
