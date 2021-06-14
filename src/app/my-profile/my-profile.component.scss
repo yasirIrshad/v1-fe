@@ -15,6 +15,7 @@
   }
   .card-body {
     padding: 0;
+    
     @media (max-width: 768px) {
       max-width: 212px;
     }
@@ -24,11 +25,13 @@
       }
     }
   }
+  .card-category {
+    white-space: nowrap;
+  }
 }
 
 .card-text {
   margin: 20px auto 25px auto;
-
   @media (max-width: 475px) {
     margin: 20px 20px 25px auto;
   }
@@ -119,10 +122,10 @@
     border-radius: 50%;
     margin-right: 79px;
     @media (max-width: 1200px) {
-      margin-right: 1vw;
+      margin-right: 2vw;
     }
     @media (max-width: 900px) {
-      margin-right: 0;
+      margin-right: 10px;
       width: 125px;
       height: 125px;
     }
