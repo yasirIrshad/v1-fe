@@ -3,7 +3,7 @@
   "cli": {
     "analytics": "30998479-81f6-460d-aeac-19539a460ba8"
   },
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ui": {
@@ -175,8 +175,13 @@
           "configurations": {
             "production": {}
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ui"
 }
