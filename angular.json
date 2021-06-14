@@ -179,7 +179,13 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/images"
+            ]
+          }
         }
       }
     }
