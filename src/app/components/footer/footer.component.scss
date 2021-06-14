@@ -63,6 +63,9 @@ footer {
     }
     .max-width-wrapper {
         max-width: 1440px;
+        & > div {
+            padding:0;
+        }
     }
     .link {
         text-decoration: none;

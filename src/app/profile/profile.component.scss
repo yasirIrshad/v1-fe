@@ -66,3 +66,14 @@
 .max-width-wrapper {
     max-width: 1440px !important;
   }
+  .padding-wrapper {
+      @media (max-width: 450px) {
+          padding: 0 12px !important;
+      }
+  }
+  .flex-direction-wrapper {
+      flex-direction: column;
+      @media (min-width: 700px) {
+          flex-direction: row;
+      }
+  }

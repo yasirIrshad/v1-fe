@@ -18,7 +18,7 @@ nav {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    margin-right: 10px;
+    
   }
   .btn-sos-main {
     background: linear-gradient(105deg, #ffd83b, #ffa43b);
@@ -28,11 +28,18 @@ nav {
     font-size: 16px;
     max-height: 35px;
   }
-  .fa-bars {
-    color: #fff;
-  }
+
   .nav-link.active {
     color: #fff;
+  }
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .search-icon:hover {
+    path{
+    fill: #ffd83b;
+    }
   }
 
   .navbar-toggler {
@@ -42,6 +49,12 @@ nav {
     background-position: center;
     width: 20px;
     height: 20px;
+    //increasing target area for easier clicking
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    // margin: -1rem;
   }
   .dropdown-menu {
     background-color: #000;
@@ -50,14 +63,24 @@ nav {
   .dropdown-item {
     color: #fff;
     background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      color: #ffd83b;
+    }
+    svg:hover {
+      fill: #ffd83b;
+    }
   }
   .user-icon {
+    margin-left: 20px;
   }
   .max-width-wrapper {
     max-width: 1440px !important;
   }
+  @media (max-width: 576px) {
+    padding: 20px 12px;
+  }
 }
-
 
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .nav-link {
