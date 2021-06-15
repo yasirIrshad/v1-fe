@@ -41,7 +41,11 @@ nav {
     fill: #ffd83b;
     }
   }
-
+  @media (min-width: 1440px) {
+    button {
+    padding-right: 0 !important;
+    }
+  }
   .navbar-toggler {
     border: none;
     background-image: url(../../../images/icons/SOS_Mobile_Menu.svg);
