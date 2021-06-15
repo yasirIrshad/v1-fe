@@ -45,11 +45,11 @@
 }
 .top-card-border {
   border-top: none;
-  // padding-top: 30px;
+  padding-top: 0 !important;
 }
 .bottom-card-border {
   border-bottom: none;
-  padding-bottom: 30px;
+  padding-bottom: 0;
 }
 .left-card-border {
   border-left: none;
@@ -103,14 +103,20 @@
 }
 .my-profile-wrapper {
   margin-bottom: 140.5px;
+  margin-top: -10px;
+  margin: -10px 0 140.5px 0;
+  @media (max-width: 850px) {
+    margin-top: 0;
+  }
 }
 .user-container {
   display: none !important;
   justify-content: center;
-
-  @media (min-width: 769px) {
+  margin-left: -45px;
+  @media (min-width: 850px) {
     display: flex !important;
     justify-content: flex-end;
+    
   }
 
   @media (max-width: 768px) {
