@@ -1,6 +1,25 @@
+.profile-wrapper {
+    padding-left: 50px;
+    @media (min-width: 1600px) {
+        padding-left: 25px;
+    }
+    @media (max-width: 1200px) {
+        padding-left: 20px;
+    }
+    @media (max-width: 992px) {
+        padding-left: 5px;
+    }
+    @media (max-width: 576px) {
+        padding-left: 17px;
+    }
+    @media (max-width: 500px) {
+        padding-left: 0;
+    }
+}
+
 .profile {
     min-height: 100vh;
-    padding-top: 60px;
+    padding-top: 30px;
     .avatar {
         width: 130px;
         height: 130px;
@@ -78,9 +97,7 @@
     max-width: 1440px !important;
   }
   .padding-wrapper {
-      @media (max-width: 450px) {
-          padding: 0 12px !important;
-      }
+     
   }
   .flex-direction-wrapper {
       flex-direction: column;
