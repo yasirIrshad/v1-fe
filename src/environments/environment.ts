@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: `http://104.236.98.152/api`
+  api: `https://studioonsunset.com/api/`
 };
 
 /*
