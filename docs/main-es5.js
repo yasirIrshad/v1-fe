@@ -2612,7 +2612,7 @@
 
       var environment = {
         production: false,
-        api: "http://104.236.98.152/api"
+        api: "https://studioonsunset.com/api/"
       };
       /*
        * For easier debugging in development mode, you can import the following file
