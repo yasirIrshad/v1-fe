@@ -45,7 +45,7 @@ footer {
     @media (max-width: 1440px) {
       margin-right: 28px;
     }
-    @media (max-width: 786px) {
+    @media (max-width: 767px) {
       margin-top: 30px;
     }
     @media (max-width: 450px) {
@@ -97,52 +97,42 @@ footer {
 }
 
 .max-width-wrapper {
-  max-width: 1440px !important;
+  max-width: 1575px !important;
   padding: 45px 75px 20px 70px;
-  @media (min-width: 1440px) {
-    padding: inherit 0;
-  }
   @media (max-width: 1200px) {
-    padding-left: 43px;
-    padding-right: 43px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
   @media (max-width: 992px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (max-width: 576px) {
     padding-left: 30px;
     padding-right: 30px;
   }
-  @media (max-width: 576px) {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
   @media (max-width: 500px) {
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 }
 .copyright-wrapper {
+  max-width: 1575px !important;
   padding: 20px 70px;
-  max-width: 1440px !important;
-  @media (max-width: 450px) {
-    padding: 25px 12px;
-  }
-  @media (min-width: 1500px) {
-    padding-left: 0px;
-  
-  }
   @media (max-width: 1200px) {
-    padding-left: 43px;
-    padding-right: 43px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
   @media (max-width: 992px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (max-width: 576px) {
     padding-left: 30px;
     padding-right: 30px;
   }
-  @media (max-width: 576px) {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
   @media (max-width: 500px) {
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 }
