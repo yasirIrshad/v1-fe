@@ -53,9 +53,7 @@
 }
 .left-card-border {
   border-left: none;
-//   -webkit-box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
-//   -moz-box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
-//   box-shadow: inset -8px 0 8px -8px rgb(40, 40, 40);
+
   .card-text {
     padding-right: 5px;
   }
@@ -75,9 +73,7 @@
     }
     
   }
-//   -webkit-box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
-//   -moz-box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
-//   box-shadow: inset 8px 0 8px -8px rgb(40, 40, 40);
+
 }
 .pg-row {
   margin-top: 35px;
@@ -105,15 +101,15 @@
   margin-bottom: 140.5px;
   margin-top: -10px;
   margin: -10px 0 140.5px 0;
-  @media (max-width: 850px) {
-    margin-top: 0;
+  @media (max-width: 700px) {
+    margin-top: 200px;
   }
 }
 .user-container {
-  display: none !important;
+  // display: none !important;
   justify-content: center;
   margin-left: -45px;
-  @media (min-width: 850px) {
+  @media (min-width: 860px) {
     display: flex !important;
     justify-content: flex-end;
     
@@ -137,7 +133,10 @@
       height: 125px;
     }
     @media (max-width: 768px) {
-      display: none;
+      outline: 2px solid blue;
+      position: absolute;
+      left: 40px;
+      top: 195px;
     }
   }
 }
