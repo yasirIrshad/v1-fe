@@ -1,16 +1,47 @@
-.form-control, .form-select {
-    background-color: #31353e;
-    height: 51px;
-    border: none;
-    color: #fff;
+.form-control,
+.form-select {
+  background-color: #31353e;
+  height: 51px;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
 }
 
+
+
 .sa-btn {
-    background: linear-gradient(95.65deg, #ffd83b 4.5%, #ffa43b 97.15%);
-    border-radius: 6px;
-    border: none;
-    color: #232b31;
-    font-style: normal;
-    font-weight: 600;
-    height: 51px;
+  background: linear-gradient(95.65deg, #ffd83b 4.5%, #ffa43b 97.15%);
+  border-radius: 6px;
+  border: none;
+  color: #232b31;
+  font-style: normal;
+  font-weight: 600;
+  height: 51px;
+}
+
+.address-form {
+  margin-top: 50px;
+  margin-bottom: 140px;
+  .country-select {
+      background-image: url("/images/icons/dropdown-select-icon.svg");
+      background-position: right 20px top 50%;
+  }
+  .input-side-by-side--wrapper {
+    .input-left {
+        margin-right: 36px;
+        @media (max-width: 600px) {
+            margin-right: 30px;
+        }
+    }
+    > * {
+      width: 100%;
+      max-width: 297px;
+      @media (max-width: 768px) {
+          max-width: 330px;
+      }
+    }
+  }
+  .input-heading {
+      font-size: 18px;
+  }
 }

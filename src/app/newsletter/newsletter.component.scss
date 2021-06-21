@@ -1,5 +1,8 @@
 .check-row {
     margin-bottom: 3px;
+    @media (max-width: 375px) {
+        margin-bottom: 18px;
+    }
     .fa-square {
         color: #ffd83b;
     }
@@ -28,6 +31,10 @@
     }
     .link-text {
         color: #ffd83b;
+        text-decoration: none;
+    }
+    .form-check-label {
+        cursor: pointer;
     }
 }
 
