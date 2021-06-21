@@ -30,6 +30,28 @@
     fbq('init', '3979181178770160'); 
     fbq('track', 'PageView');
   </script>
+  <script>
+    function toggleVisibility() {
+      var pw_ele = document.getElementById("password-input");
+      if (pw_ele.type === "password") {
+        pw_ele.type = "text";
+        function PassIconOn() {
+          var pw_ico = document.getElementById("togglePassIcon")
+          pw_ico.classList.remove("fa-eye-slash");
+          pw_ico.classList.add("fa-eye");
+        }
+        PassIconOn();
+      } else {
+        pw_ele.type = "password";
+        function PassIconOff() {
+          var pw_ico = document.getElementById("togglePassIcon")
+          pw_ico.classList.add("fa-eye-slash");
+          pw_ico.classList.remove("fa-eye");
+        }
+        PassIconOff();
+      }
+    }
+    </script>
   <noscript>
    <img height="1" width="1" 
   src="https://www.facebook.com/tr?id=3979181178770160&ev=PageView
