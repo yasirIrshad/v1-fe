@@ -1,5 +1,5 @@
 .check-row {
-    vertical-align: middle;
+    margin-bottom: 3px;
     .fa-square {
         color: #ffd83b;
     }
@@ -9,15 +9,22 @@
     }
 }
 .interest {
-    margin-top: 40px;
+    margin-top: 48px;
+    .heading {
+        font-size: 18px;
+        font-weight: 600;
+    }
     .choices {
-        margin-top: 40px;
+        margin-top: 30px;
+        margin-bottom: 138px;
+        @media (max-width: 768px) {
+            margin-bottom: 384px;
+        }
     }
     .disclaimer-row {
-        margin-top: 30px;
-        p {
-            color: #cacaca;
-        }
+        margin-top: 33px;
+        font-size: 14px;
+        color: #CACACA;
     }
     .link-text {
         color: #ffd83b;
@@ -44,6 +51,7 @@ input[type='checkbox']+ label:before {
 	font-size:1.7rem;
 	cursor:pointer;
     color: #ffd83b;
+    margin-right: 10px;
  }
 
  input[type='checkbox']:checked + label:before {
