@@ -3,9 +3,11 @@
     a {
         color: #fff;
         text-decoration: none;
+        padding: .5rem;
+        margin: -.5rem;
     }
     .heading {
-        margin-top: 65px;
+        margin-top: 45px;
         text-transform: uppercase;
     }
     .sub-text {
@@ -13,5 +15,6 @@
         font-style: normal;
         font-weight: 300;
         font-size: 14px;
+        line-height: 1.5rem;
     }
 }
