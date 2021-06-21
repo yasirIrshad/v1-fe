@@ -1,47 +1,81 @@
 .btn-col {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 .email-sub {
-    color: #cacaca;
-    font-size: 14px;
-    font-weight: 300;
+  color: #cacaca;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 30px;
 }
 
 .email-text {
-    color: #ffda45;
+  color: #ffda45;
 }
 
 .form-control {
-    background-color: #31353e;
-    height: 51px;
-    border: none;
-    color: #fff;
+  background-color: #31353e;
+  height: 51px;
+  border: none;
+  color: #fff;
 }
 
 .form-container {
-    margin-top: 50px;
+  margin-top: 48px;
+  width: 100%;
+  & > * {
+    padding: 0;
+  }
+  .input-new--wrapper {
+    display: flex;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+  .input-new,
+  .input-confirm {
+    max-width: 300px;
+    @media (max-width: 500px) {
+      max-width: 100%;
+    }
+  }
+  .input-new--email,
+  .input-group {
+    @media (max-width: 500px) {
+      margin-bottom: 14px;
+    }
+  }
+  .input-group:first-child {
+    margin-right: 30px;
+  }
+  .input-new--email {
+    margin-right: 30px;
+  }
 }
 
 .input-group-text {
-    background-color: #31353e;
-    border: none;
-    color: #cacaca;
+  background-color: #31353e;
+  border: none;
+  color: #cacaca;
+  padding-right: 25px;
+}
+.input-group {
+  margin-bottom: 20px;
 }
 
 .password-container {
-    margin-bottom: 150px;
+  margin-bottom: 150px;
 }
 
 .text-label {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .ue-btn {
-    background: linear-gradient(95.65deg, #ffd83b 4.5%, #ffa43b 97.15%);
-    border-radius: 6px;
-    border: none;
-    color: #232b31;
-    font-style: normal;
-    font-weight: 600;
-    height: 51px;
+  background: linear-gradient(95.65deg, #ffd83b 4.5%, #ffa43b 97.15%);
+  border-radius: 6px;
+  border: none;
+  color: #232b31;
+  font-weight: 600;
+  font-size: 18px;
+  height: 51px;
 }
