@@ -30,25 +30,97 @@
     fbq('init', '3979181178770160'); 
     fbq('track', 'PageView');
   </script>
+  <!-- currentEmail password script -->
   <script>
-    function toggleVisibility() {
-      var pw_ele = document.getElementById("password-input");
+    function toggleVisibilityCurrentEmail() {
+      let pw_ele = document.getElementById("password-input");
       if (pw_ele.type === "password") {
         pw_ele.type = "text";
-        function PassIconOn() {
-          var pw_ico = document.getElementById("togglePassIcon")
+        function PassIconOnCurrentEmail() {
+          let pw_ico = document.getElementById("togglePassIcon")
           pw_ico.classList.remove("fa-eye-slash");
           pw_ico.classList.add("fa-eye");
         }
-        PassIconOn();
+         PassIconOnCurrentEmail();
       } else {
         pw_ele.type = "password";
-        function PassIconOff() {
-          var pw_ico = document.getElementById("togglePassIcon")
+        function PassIconOffCurrentEmail() {
+          let pw_ico = document.getElementById("togglePassIcon")
           pw_ico.classList.add("fa-eye-slash");
           pw_ico.classList.remove("fa-eye");
         }
-        PassIconOff();
+        PassIconOffCurrentEmail();
+      }
+    }
+    </script>
+  <!-- currentPassword password script -->
+  <script>
+    function toggleVisibilityCurrentPassword() {
+      let pw_ele = document.getElementById("current-password-input");
+      if (pw_ele.type === "password") {
+        pw_ele.type = "text";
+        function PassIconOnCurrentPassword() {
+          let pw_ico = document.getElementById("current-password-togglePassIcon")
+          pw_ico.classList.remove("fa-eye-slash");
+          pw_ico.classList.add("fa-eye");
+        }
+         PassIconOnCurrentPassword();
+      } else {
+        pw_ele.type = "password";
+        function PassIconOffCurrentPassword() {
+          let pw_ico = document.getElementById("current-password-togglePassIcon")
+          pw_ico.classList.add("fa-eye-slash");
+          pw_ico.classList.remove("fa-eye");
+        }
+        PassIconOffCurrentPassword();
+      }
+    }
+    </script>
+  <!-- newPassword password script -->
+  <script>
+    function toggleVisibilityNewPassword() {
+      let pw_ele = document.getElementById("new-password-input");
+      if (pw_ele.type === "password") {
+        pw_ele.type = "text";
+        console.log(`changed new password input!`);
+        function PassIconOnNewPassword() {
+          let pw_ico = document.getElementById("new-password-togglePassIcon")
+          pw_ico.classList.remove("fa-eye-slash");
+          pw_ico.classList.add("fa-eye");
+        }
+         PassIconOnNewPassword();
+      } else {
+        pw_ele.type = "password";
+        function PassIconOffNewPassword() {
+          let pw_ico = document.getElementById("new-password-togglePassIcon")
+          pw_ico.classList.add("fa-eye-slash");
+          pw_ico.classList.remove("fa-eye");
+        }
+        PassIconOffNewPassword();
+      }
+    }
+    </script>
+  <!-- RepeatNewPassword password script -->
+  <script>
+    function toggleVisibilityRepeatNewPassword() {
+      let pw_ele = document.getElementById("repeat-password-input");
+      if (pw_ele.type === "password") {
+        pw_ele.type = "text";
+        console.log(`changed repeat password input!`);
+        function PassIconOnRepeatNewPassword() {
+          let pw_ico = document.getElementById("reapeat-password-togglePassIcon")
+          pw_ico.classList.remove("fa-eye-slash");
+          pw_ico.classList.add("fa-eye");
+        }
+         PassIconOnRepeatNewPassword();
+      } else {
+        pw_ele.type = "password";
+        function PassIconOffRepeatNewPassword() {
+          let pw_ico = document.getElementById("reapeat-password-togglePassIcon")
+          pw_ico.classList.add("fa-eye-slash");
+          pw_ico.classList.remove("fa-eye");
+        }
+        PassIconOffRepeatNewPassword();
       }
     }
     </script>
