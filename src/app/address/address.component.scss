@@ -32,12 +32,22 @@
         @media (max-width: 600px) {
             margin-right: 30px;
         }
+        @media (max-width: 500px) {
+            margin-right: 0;
+            margin-bottom: 14px;
+        }
+    }
+    @media (max-width: 500px) {
+        flex-direction: column;
     }
     > * {
       width: 100%;
       max-width: 297px;
       @media (max-width: 768px) {
           max-width: 330px;
+      }
+      @media (max-width: 500px) {
+          max-width: 100%;
       }
     }
   }
