@@ -16,5 +16,19 @@ export class LoginSecurityComponent implements OnInit {
     this.user = this.tokenService.getUser();
   }
 
+  toggleVisibility(event, id) {
+    const element = event.currentTarget;
+    const icon = element.querySelector('i');
+    const input = document.getElementById(id);
+    if (icon.classList.contains('fa-eye-slash')) {
+      icon.classList.remove('fa-eye-slash')
+      icon.classList.add('fa-eye')
+      input.setAttribute('type', 'text')
+    } else {
+      icon.classList.add('fa-eye-slash')
+      icon.classList.remove('fa-eye')
+      input.setAttribute('type', 'password')
+    }
+  }
 }
 
