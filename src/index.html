@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Studio On Sunset</title>
@@ -12,22 +13,25 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E9J5514BH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-0E9J5514BH');
   </script>
   <!-- Facebook Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3979181178770160'); 
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3979181178770160');
     fbq('track', 'PageView');
   </script>
   <!-- currentEmail password script -->
@@ -41,7 +45,7 @@
           pw_ico.classList.remove("fa-eye-slash");
           pw_ico.classList.add("fa-eye");
         }
-         PassIconOnCurrentEmail();
+        PassIconOnCurrentEmail();
       } else {
         pw_ele.type = "password";
         function PassIconOffCurrentEmail() {
@@ -52,7 +56,7 @@
         PassIconOffCurrentEmail();
       }
     }
-    </script>
+  </script>
   <!-- currentPassword password script -->
   <script>
     function toggleVisibilityCurrentPassword() {
@@ -64,7 +68,7 @@
           pw_ico.classList.remove("fa-eye-slash");
           pw_ico.classList.add("fa-eye");
         }
-         PassIconOnCurrentPassword();
+        PassIconOnCurrentPassword();
       } else {
         pw_ele.type = "password";
         function PassIconOffCurrentPassword() {
@@ -75,20 +79,19 @@
         PassIconOffCurrentPassword();
       }
     }
-    </script>
+  </script>
   <!-- newPassword password script -->
   <script>
     function toggleVisibilityNewPassword() {
       let pw_ele = document.getElementById("new-password-input");
       if (pw_ele.type === "password") {
         pw_ele.type = "text";
-        console.log(`changed new password input!`);
         function PassIconOnNewPassword() {
           let pw_ico = document.getElementById("new-password-togglePassIcon")
           pw_ico.classList.remove("fa-eye-slash");
           pw_ico.classList.add("fa-eye");
         }
-         PassIconOnNewPassword();
+        PassIconOnNewPassword();
       } else {
         pw_ele.type = "password";
         function PassIconOffNewPassword() {
@@ -99,20 +102,19 @@
         PassIconOffNewPassword();
       }
     }
-    </script>
+  </script>
   <!-- RepeatNewPassword password script -->
   <script>
     function toggleVisibilityRepeatNewPassword() {
       let pw_ele = document.getElementById("repeat-password-input");
       if (pw_ele.type === "password") {
         pw_ele.type = "text";
-        console.log(`changed repeat password input!`);
         function PassIconOnRepeatNewPassword() {
           let pw_ico = document.getElementById("reapeat-password-togglePassIcon")
           pw_ico.classList.remove("fa-eye-slash");
           pw_ico.classList.add("fa-eye");
         }
-         PassIconOnRepeatNewPassword();
+        PassIconOnRepeatNewPassword();
       } else {
         pw_ele.type = "password";
         function PassIconOffRepeatNewPassword() {
@@ -123,15 +125,16 @@
         PassIconOffRepeatNewPassword();
       }
     }
-    </script>
+  </script>
   <noscript>
-   <img height="1" width="1" 
-  src="https://www.facebook.com/tr?id=3979181178770160&ev=PageView
-  &noscript=1"/>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=3979181178770160&ev=PageView
+  &noscript=1" />
   </noscript>
   <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>
