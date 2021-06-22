@@ -11,10 +11,12 @@ fields. Your password is requested for security reasons."></app-profile-sub-head
     <div class="input-group">
         <input type="password" id="password-input" class="form-control email-current-password"
             placeholder="Current Password" aria-label="Password">
-        <span class="input-group-text" onclick="toggleVisibilityCurrentEmail()">
+        <!-- <span class="input-group-text" onclick="toggleVisibilityCurrentEmail()"> -->
+        <span class="input-group-text" (click)="toggleVisibility($event, 'password-input')">
             <i id="togglePassIcon" class="fas fa-eye-slash fa-lg">
             </i>
         </span>
+
 
     </div>
     <div class="input-new--wrapper">
@@ -35,7 +37,8 @@ fields. Your password is requested for security reasons."></app-profile-sub-head
     <div class="input-group">
         <input type="password" id="current-password-input" class="form-control" placeholder="Current Password"
             aria-label="Password">
-        <span class="input-group-text" onclick="toggleVisibilityCurrentPassword()">
+        <!-- <span class="input-group-text" onclick="toggleVisibilityCurrentPassword()"> -->
+        <span class="input-group-text" (click)="toggleVisibility($event, 'current-password-input')">
             <i id="current-password-togglePassIcon" class="fas fa-eye-slash fa-lg" aria-hidden="true">
             </i>
         </span>
@@ -44,7 +47,8 @@ fields. Your password is requested for security reasons."></app-profile-sub-head
         <div class="input-group">
             <input type="password" id="new-password-input" class="form-control input-new" placeholder="New Password"
                 aria-label="Password">
-            <span class="input-group-text" onclick="toggleVisibilityNewPassword()">
+            <!-- <span class="input-group-text" onclick="toggleVisibilityNewPassword()"> -->
+            <span class="input-group-text" (click)="toggleVisibility($event, 'new-password-input')">
                 <i id="new-password-togglePassIcon" class="fas fa-eye-slash fa-lg"></i>
             </span>
         </div>
@@ -52,8 +56,9 @@ fields. Your password is requested for security reasons."></app-profile-sub-head
             <div class="input-group">
                 <input type="password" id="repeat-password-input" class="form-control input-confirm"
                     placeholder="Repeat Password" aria-label="Password">
-                <span class="input-group-text" onclick="toggleVisibilityRepeatNewPassword()" 
-                    ><i class="fas fa-eye-slash fa-lg" id="reapeat-password-togglePassIcon"></i>
+                <!-- <span class="input-group-text" onclick="toggleVisibilityRepeatNewPassword()" > -->
+                <span class="input-group-text" (click)="toggleVisibility($event, 'repeat-password-input')">
+                    <i class="fas fa-eye-slash fa-lg" id="reapeat-password-togglePassIcon"></i>
                 </span>
             </div>
         </div>
