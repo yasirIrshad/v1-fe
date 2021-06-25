@@ -4,7 +4,7 @@
     border-color: #1b1e24;
     background-color: transparent;
     max-width: 315px;
-    @media (max-width: 800px) {
+    @media (max-width: 825px) {
       max-width: 212px;
     }
     padding-top: 30px;
@@ -18,7 +18,7 @@
   }
   .card-body {
     padding: 0;
-    @media (max-width: 800px) {
+    @media (max-width: 825px) {
       max-width: 212px;
     }
     @media (max-width: 475px) {
@@ -95,7 +95,7 @@
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 800px) {
+  @media (max-width: 825px) {
     margin-left: 0px;
   }
 }
@@ -110,12 +110,13 @@
   }
   .category--wrapper {
     width: 70%;
-    @media (max-width: 768px) {
-      width: 100%;
+    @media (max-width: 825px) {
+      width: 100% !important;
+      margin-left: -12px !important;
     }
   }
-  @media (max-width: 800px) {
-    margin-top: 230px;
+  @media (max-width: 825px) {
+    margin-top: 155px;
     flex-direction: column;
   }
 }
@@ -145,14 +146,13 @@
       width: 125px;
       height: 125px;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 825px) {
       position: absolute;
-      left: 40px;
-      top: 195px;
-    }
-    @media (max-width: 700px) {
+      margin: 0;
       left: 30px;
+      top: 215px;
     }
+
     @media (max-width: 500px) {
       width: 116px;
       height: 116px;
