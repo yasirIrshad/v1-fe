@@ -5,11 +5,20 @@
                 <div class="menu text-nowrap px-0">
                     <h1 class="heading">My Profile</h1>
                     <ul class="list-group pl-0">
-                        <li class="list-group-item" ><a routerLink="/account/profile/personal-details">Personal Details</a></li>
-                        <li class="list-group-item"><a routerLink="/account/profile/login-security">Login & Security</a></li>
-                        <li class="list-group-item"><a routerLink="/account/profile/invoices">Invoices</a></li>
-                        <li class="list-group-item"><a routerLink="/account/profile/address">Shipping Address</a></li>
-                        <li class="list-group-item"><a routerLink="/account/profile/newsletter">Newsletter</a></li>
+                        <li id="personal-details" class="list-group-item"><a
+                                routerLink="/account/profile/personal-details"
+                                routerLinkActive="profile-link-active">Personal Details</a></li>
+                        <li id="login-security" class="list-group-item"><a routerLink="/account/profile/login-security"
+                                routerLinkActive="profile-link-active">Login & Security</a></li>
+                        <li id="invoices" class="list-group-item"><a routerLink="/account/profile/invoices"
+                                routerLinkActive="profile-link-active">Invoices</a>
+                        </li>
+                        <li id="shipping-address" class="list-group-item"><a routerLink="/account/profile/address"
+                                routerLinkActive="profile-link-active">Shipping Address</a></li>
+                        <li id="newsletter" class="list-group-item newsletter-link">
+                            <a routerLink="/account/profile/newsletter"
+                                routerLinkActive="profile-link-active">Newsletter</a>
+                        </li>
                     </ul>
                 </div>
             </div>

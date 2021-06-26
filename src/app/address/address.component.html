@@ -1,24 +1,9 @@
-<app-profile-sub-header path="Shipping Address" text="Update your shipping address for additional merchandise purchases.">
+<app-profile-sub-header path="Shipping Address"
+    text="Update your shipping address for additional merchandise purchases.">
 </app-profile-sub-header>
 
 <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
     <div class="row gx-0 address-form profile-category-max-width">
-        <!-- <div class="col-12 input-heading">
-            <p>Full Name</p>
-        </div>
-        <div class="input-side-by-side--wrapper d-flex align-items-center">
-            <div class="input-left">
-                <input type="text" class="form-control first-name" placeholder="First name" formControlName="firstName"
-                    aria-label="First name" required>
-            </div>
-            <div class="input-right">
-                <input type="text" class="form-control" placeholder="Last name" formControlName="lastName"
-                    aria-label="Last name" required>
-            </div>
-        </div> -->
-        <div class="col-12 input-heading">
-            <p>Shipping Address</p>
-        </div>
         <div class="col-12">
             <input type="text" class="form-control" placeholder="Street, House/Apartment/Unit"
                 formControlName="address_1" aria-label="address 1" required>
@@ -29,10 +14,11 @@
         </div>
         <div class="mt-3 input-side-by-side--wrapper d-flex align-items-center">
             <div class="input-left">
-                <select class="form-select country-select dropdown-toggle" formControlName="country" aria-label="Default select example" required>
+                <select class="form-select country-select dropdown-toggle" formControlName="country"
+                    aria-label="Default select example" required>
                     <option [ngValue]="null" disabled>Select Your Country</option>
                     <option *ngFor="let country of countries" [ngValue]="country.name">{{ country?.name }}</option>
-                </select>                
+                </select>
             </div>
             <div class="input-right">
                 <input type="text" class="form-control" placeholder="State/Province/Region" formControlName="state"
@@ -48,7 +34,7 @@
                     aria-label="postal code">
             </div>
         </div>
-        <div class="col-12 mt-4">
+        <div class="col-12 shipping-btn">
             <button class="btn btn-primary sa-btn w-100" type="submit">UPDATE SHIPPING ADDRESS</button>
         </div>
     </div>

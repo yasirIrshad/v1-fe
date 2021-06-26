@@ -20,7 +20,7 @@
 }
 
 .address-form {
-  margin-top: 40px;
+  margin-top: 45px;
   margin-bottom: 140px;
   .country-select {
       background-image: url("/images/icons/dropdown-select-icon.svg");
@@ -53,5 +53,8 @@
   }
   .input-heading {
       font-size: 18px;
+  }
+  .shipping-btn {
+    margin-top: 40px;
   }
 }
