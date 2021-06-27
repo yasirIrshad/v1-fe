@@ -4,7 +4,6 @@
 
 //padding add-ins to align with header/footer
 .profile-wrapper {
-  overflow-x: scroll;
   padding: 0;
   @media (max-width: 14400px) {
     padding: 0 72px 0 72px;
@@ -24,6 +23,7 @@
   @media (max-width: 500px) {
     padding-left: 25px;
     padding-right: 9px;
+    overflow-x: scroll;
   }
 }
 
