@@ -4,6 +4,7 @@
 
 //padding add-ins to align with header/footer
 .profile-wrapper {
+  overflow-x: scroll;
   padding: 0;
   @media (max-width: 14400px) {
     padding: 0 72px 0 72px;
@@ -17,7 +18,7 @@
     padding-right: 30px;
   }
   @media (max-width: 576px) {
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 0;
   }
   @media (max-width: 500px) {
@@ -69,17 +70,8 @@
     ul {
       display: none;
     }
-    // .heading {
-    //     display: none;
-    // }
     min-height: auto;
   }
-  //   .card-group--tablet-bp {
-  //     @media (max-width: 825px) {
-  //       flex: 0 0 auto !important;
-  //       width: 100% !important;
-  //     }
-  //   }
 }
 
 .max-width-wrapper {
