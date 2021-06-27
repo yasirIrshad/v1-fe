@@ -38,6 +38,12 @@ footer {
     font-size: 14px;
     font-weight: 600;
     color: #adb5cb;
+    @media (max-width: 1200px) {
+      padding-left: 10px;
+    }
+    @media (max-width: 768px) {
+      padding-left: unset;
+    }
   }
   .list-group-wrapper {
     max-width: 170px;
