@@ -1,7 +1,11 @@
 .profile-link-active {
   color: #ffd83b !important;
 }
-
+.card-group--tablet-bp {
+  @media (max-width: 825px) {
+    margin-left: -8px !important;
+  }
+}
 //padding add-ins to align with header/footer
 .profile-wrapper {
   padding: 0;
