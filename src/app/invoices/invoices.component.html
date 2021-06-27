@@ -1,18 +1,42 @@
-<app-profile-sub-header path="Invoices" text="View / download your previous invoices and transactions below"></app-profile-sub-header>
+<app-profile-sub-header path="Invoices" text="View / download your previous invoices and transactions below">
+</app-profile-sub-header>
 
 <table class="table table-borderless profile-category-max-width">
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Description</th>
-        <th scope="col">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let invoice of invoices">
+  <thead>
+    <tr>
+      <th scope="col" class="date-col">Date</th>
+      <th scope="col" class="des-col">Description</th>
+      <th scope="col" class="total-col">Total</th>
+      <th scope="col" class="download-col">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- commenting out ts for manual invoices table build -->
+    <!-- <tr *ngFor="let invoice of invoices">
         <th scope="row" class="head">{{ formatDate(invoice?.createdAt) }}</th>
         <td class="des">{{ invoice?.details?.ticket?.name }}</td>
         <td class="head">{{ invoice?.cart?.totalDue | currency }}</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr> -->
+    <tr class="invoice-row">
+      <th scope="row" class="head"><span class="text-wrapper">04/14/2021</span></th>
+      <td class="des"><span class="text-wrapper">Bedbugs - Jenna Doe</span></td>
+      <td class="cost"><span class="text-wrapper">$ 4,99.00</span></td>
+      <td class="download"><img src="../../images/icons/download-icon.svg" alt="download invoice" class="down-icon"
+          width="15px" height="15px"></td>
+    </tr>
+    <tr class="invoice-row">
+      <th scope="row" class="head"><span class="text-wrapper">04/14/2021</span></th>
+      <td class="des"><span class="text-wrapper">Bedbugs - Jenna Doe</span></td>
+      <td class="cost"><span class="text-wrapper">$ 4,99.00</span></td>
+      <td class="download"><img src="../../images/icons/download-icon.svg" alt="download invoice" class="down-icon"
+          width="15px" height="15px"></td>
+    </tr>
+    <tr class="invoice-row">
+      <th scope="row" class="head"><span class="text-wrapper">04/14/2021</span></th>
+      <td class="des"><span class="text-wrapper">Bedbugs - Jenna Doe</span></td>
+      <td class="cost"><span class="text-wrapper">$ 4,99.00</span></td>
+      <td class="download"><img src="../../images/icons/download-icon.svg" alt="download invoice" class="down-icon"
+          width="15px" height="15px"></td>
+    </tr>
+  </tbody>
+</table>

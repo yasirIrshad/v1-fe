@@ -1,6 +1,9 @@
 <div class="row my-profile-wrapper ms-0">
-    <div class="user-container pe-0">
-        <img src="../images/user-avatar.png" class="user-img ">
+    <div class="user-container px-0">
+        <!-- <div class="username-img-wrapper"> -->
+            <img src="../images/user-avatar.png" class="user-img ">
+            <span class="username-label">{{ user?.username }}</span>
+        <!-- </div> -->
     </div>
     <div class="category--wrapper ms-0 px-0">
         <p class="intro">Hi, User Name</p>
@@ -43,8 +46,8 @@
                 <!-- 2nd row - 1st card on row -->
                 <div class="col-6 px-0 card left-card-border" routerLink="/account/profile/invoices">
                     <div class="card-body">
-                        <h5 class="card-title"><img src="../images/icons/profile-invoice.svg" alt="invoice icon" width="auto"
-                                height="27px"></h5>
+                        <h5 class="card-title"><img src="../images/icons/profile-invoice.svg" alt="invoice icon"
+                                width="auto" height="27px"></h5>
                         <p class="card-text card-category">Invoices</p>
                         <p class="card-text"><small class="text-muted">View / Download your previous invoices</small>
                         </p>
@@ -67,10 +70,11 @@
         <!-- begin 3rd row -->
         <div class="card-group profile-group">
             <div class="row row-wrapper mx-auto w-100">
-                <div class="col-6 px-0 card left-card-border bottom-card-border" routerLink="/account/profile/newsletter">
+                <div class="col-6 px-0 card left-card-border bottom-card-border"
+                    routerLink="/account/profile/newsletter">
                     <div class="card-body">
-                        <h5 class="card-title"><img src="../../images/icons/profile-newsletter.svg" alt="newsletter icon"
-                                width="auto" height="27px"></h5>
+                        <h5 class="card-title"><img src="../../images/icons/profile-newsletter.svg"
+                                alt="newsletter icon" width="auto" height="27px"></h5>
                         <p class="card-text card-category">Newsletter</p>
                         <p class="card-text"><small class="text-muted">Set up your newsletter to receive information
                                 about
