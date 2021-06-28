@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { AddressComponent } from './address/address.component';
+import { DocsComponent } from './docs/docs.component';
 import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -39,6 +40,7 @@ import { SupportComponent } from './support/support.component';
     AccountComponent,
     AddressComponent,
     ArtistProfileComponent,
+    DocsComponent,
     ForgotPasswordComponent,
     GenresComponent,
     HomeComponent,
