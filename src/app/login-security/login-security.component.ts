@@ -29,7 +29,5 @@ export class LoginSecurityComponent implements OnInit {
       input.setAttribute('type', 'password')
     }
   }
-
-
 }
 

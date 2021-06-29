@@ -4,6 +4,7 @@ import { AuthGuard } from './config/auth.guard';
 import { AccountComponent } from './account/account.component';
 import { AddressComponent } from './address/address.component';
 import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
+import { DocsComponent } from './docs/docs.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { GenreComponent } from './genre/genre.component';
 import { GenresComponent } from './genres/genres.component';
@@ -22,6 +23,7 @@ import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
   { path: 'artist-profile/:id', component: ArtistProfileComponent },
+  { path: 'docs/:type', component: DocsComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent},
   { path: 'genre/:type', component: GenreComponent },
   { path: 'genres', component: GenresComponent },
