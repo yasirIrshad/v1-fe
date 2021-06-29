@@ -1,8 +1,35 @@
 .docs {
-    min-height: 100vh;
-    padding-top: 89px;
+  min-height: 100vh;
+  padding-top: 89px;
 
-    .alt {
-        color: #FFD83B;
+  .alt-color {
+    color: #ffd83b;
+  }
+}
+.docs--terms {
+    li {
+        margin-top: 15px;
     }
+}
+.max-width-wrapper {
+  max-width: 826px !important;
+  @media (max-width: 14400px) {
+    padding: 0 65px
+  }
+  @media (max-width: 1200px) {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: 576px) {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+  @media (max-width: 500px) {
+    padding-left: 25px;
+    padding-right: 9px;
+  }
 }
