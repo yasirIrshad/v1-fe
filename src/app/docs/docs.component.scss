@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding-top: 89px;
   line-height: 1.5em;
+  margin-top: 90px;
   margin-bottom: 235px;
   ul {
     padding-left: 17px;
@@ -59,6 +60,27 @@
     font-size: 20px;
     font-weight: 600;
     margin: 40px 0 20px 0;
+  }
+  .docs--faq {
+    .faq-title-wrapper {
+      .docs-title {
+        color: #ffd83b;
+        font-size: 28px;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 90px;
+      }
+      .bg-text {
+        text-align: center;
+        position: relative;
+        top:-40px;
+        font-size: 141px;
+        font-weight: 700;
+        letter-spacing: 0.85px;
+        z-index: -1;
+        color: #1F273B;
+      }
+    }
   }
 }
 
