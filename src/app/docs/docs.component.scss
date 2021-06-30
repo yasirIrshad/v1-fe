@@ -1,35 +1,83 @@
 .docs {
   min-height: 100vh;
   padding-top: 89px;
-
+  line-height: 1.5em;
+  margin-bottom: 235px;
+  ul {
+    padding-left: 17px;
+  }
+  li {
+    margin-top: 15px;
+    color: #d3daef;
+    strong {
+      color: white;
+    }
+    &::marker {
+      color: #ffd83b;
+    }
+  }
   .alt-color {
     color: #ffd83b;
   }
+  a {
+    text-decoration: none;
+  }
+  .docs-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #d3daef;
+  }
+  .docs-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #D3DAEF;
+  }
+  .docs-update {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 40px 0;
+  }
+  .docs-sub-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .docs-subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+  }
+  .docs-subheading {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+  }
 }
-.docs--terms {
-    li {
-        margin-top: 15px;
-    }
-}
+
+
 .max-width-wrapper {
   max-width: 826px !important;
   @media (max-width: 14400px) {
-    padding: 0 65px
+    padding: 0 65px;
   }
   @media (max-width: 1200px) {
     padding-left: 43px;
     padding-right: 43px;
   }
   @media (max-width: 992px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   @media (max-width: 576px) {
-    padding-left: 30px;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   @media (max-width: 500px) {
-    padding-left: 25px;
-    padding-right: 9px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
