@@ -63,6 +63,7 @@
   }
   .docs--faq {
     .faq-title-wrapper {
+      margin-bottom: 30px;
       .docs-title {
         color: #ffd83b;
         font-size: 28px;
@@ -81,6 +82,22 @@
         color: #1F273B;
       }
     }
+    .accordion-item {
+      background-color: transparent;
+      border: none;
+      color: white;
+    }
+    .accordion-button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      &::after {
+        content: "v";
+        color: white;
+        background-image: none;
+      }
+    }
+
   }
 }
 
