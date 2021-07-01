@@ -74,12 +74,12 @@
       .bg-text {
         text-align: center;
         position: relative;
-        top:-40px;
+        top: -40px;
         font-size: 141px;
         font-weight: 700;
         letter-spacing: 0.85px;
         z-index: -1;
-        color: #1F273B;
+        color: #1f273b;
       }
     }
     .accordion-item {
@@ -87,17 +87,43 @@
       border: none;
       color: white;
     }
+    .accordion-body {
+      padding: 0 90px;
+    }
     .accordion-button {
       background-color: transparent;
       border: none;
       color: white;
+      padding-top: 20px;
+      font-size: 18px;
+
       &::after {
-        content: "v";
-        color: white;
-        background-image: none;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        background-image: url(../../images/icons/faq-arrow.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .faq-question {
+        width: 40px;
+        height: 40px;
+        padding-right: 40px;
+        background-image: url(../../images/icons/faq-question.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &:not(.collapsed) {
+        box-shadow: none;
+        .faq-question {
+          transition: 0.2s;
+          background-image: url(../../images/icons/faq-question-alt.svg);
+        }
+      }
+      .faq-question {
+        margin-right: 28px;
       }
     }
-
   }
 }
 
