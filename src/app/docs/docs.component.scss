@@ -5,11 +5,12 @@
   margin-top: 90px;
   margin-bottom: 235px;
   ul {
-    padding-left: 17px;
+    padding-left: 20px;
   }
   li {
     margin-top: 15px;
     color: #d3daef;
+    font-weight: 400;
     strong {
       color: white;
     }
@@ -19,6 +20,10 @@
   }
   .alt-color {
     color: #ffd83b;
+  }
+  .no-bullets {
+    list-style-type: none;
+    margin-bottom: 50px;
   }
   a {
     text-decoration: none;
@@ -30,12 +35,21 @@
     font-size: 16px;
     font-weight: 400;
     color: #d3daef;
+    em {
+      font-weight: 300;
+      font-size: 14px;
+    }
   }
   .docs-title {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
     color: white;
+    .title-add {
+      font-weight: 400;
+      font-size: 24px;
+      color: #d3d3d3;
+    }
   }
   .docs-update {
     display: inline-block;
@@ -61,6 +75,14 @@
     font-weight: 600;
     margin: 40px 0 20px 0;
   }
+
+  .docs-lower-subheading {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
   .docs--faq {
     .faq-title-wrapper {
       margin-bottom: 30px;
