@@ -30,7 +30,9 @@ nav {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    
+    &:hover {
+      color: #ffd83b;
+    }
   }
   .btn-sos-main {
     background: linear-gradient(105deg, #ffd83b, #ffa43b);
@@ -50,13 +52,13 @@ nav {
     height: 20px;
   }
   .search-icon:hover {
-    path{
-    fill: #ffd83b;
+    path {
+      fill: #ffd83b;
     }
   }
   @media (min-width: 1440px) {
     button {
-    padding-right: 0 !important;
+      padding-right: 0 !important;
     }
   }
   .navbar-toggler {
@@ -71,18 +73,41 @@ nav {
     position: relative;
     z-index: 1;
     padding: 1rem;
-    // margin: -1rem;
   }
   .dropdown-menu {
-    background-color: #000;
+    background-color: #0e111a;
+    box-shadow: 0 0 10px #090b11;
     padding: 10px;
+    margin-top: 10px;
+    &::before {
+      content: url(../../../images/icons/nav-menu-arrow.png);
+      position: absolute;
+      top: -15px;
+      left: 110px;
+    }
+
+    .dropdown-divider {
+      color: #41464b;
+      width: 80%;
+      margin: 8px auto;
+    }
   }
   .dropdown-item {
     color: #fff;
     background-color: transparent;
     cursor: pointer;
+    &::before {
+      content: url(../../../images/icons/nav-hover-dash.png);
+      opacity: 0;
+      margin-right: -5px;
+      vertical-align: text-bottom;
+      transition: all .35s ease-in-out;
+    }
     &:hover {
-      color: #ffd83b;
+        &::before {
+          opacity: 1;
+          margin-right: 5px;
+        }
     }
     svg:hover {
       fill: #ffd83b;
@@ -94,7 +119,6 @@ nav {
   .max-width-wrapper {
     max-width: 1440px !important;
   }
-
 }
 
 @media (min-width: 768px) {

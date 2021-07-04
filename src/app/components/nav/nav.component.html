@@ -27,9 +27,12 @@
           </a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex align-items-center">
         <button type="button" class="btn btn-link" routerLink="/login" *ngIf="!user">Login</button>
         <button class="btn btn-sos-main" type="submit" routerLink="/signup" *ngIf="!user">Sign Up</button>
+        <div class="dropdown">
+          <img src="../../../images/icons/notifcations.svg" alt="Your Notifcations" width="15px" height="20px">
+        </div>
         <div class="dropdown" *ngIf="user">
           <button type="button" class="btn btn-link d-flex align-items-center pe-0" data-bs-toggle="dropdown"
             aria-expanded="false">{{ user?.username
