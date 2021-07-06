@@ -37,6 +37,8 @@ export class PersonalDetailsComponent implements OnInit {
     if (this.helpers.isBrowser()) {
       this.user = this.tokenService.getUser();
       this.profile = this.user.profile;
+      this.helpers.setHeader();
+
       if (this.profile) {
         this.setFormAttributes();
       }
