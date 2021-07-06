@@ -16,6 +16,9 @@ export class InvoicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getInvoices()
+    if (this.helpers.isBrowser()) {
+      this.helpers.setHeader();
+    }
   }
 
   getInvoices() {

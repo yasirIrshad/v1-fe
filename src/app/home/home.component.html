@@ -1,179 +1,49 @@
 <div class="home">
-    <div class="row">
-        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
-            <div class="card feature-card">
-                <div style="background: transparent; padding: 0px;" *ngIf="!contentLoaded">
-                    <ngx-skeleton-loader
-                      count="5"
-                      animation='progress-dark'
-                      [theme]="{ 
-                        'border-radius': '5px',
-                        height: '35px',
-                        width: '95%',
-                        'background-color': '#323232'
-                      }"
-                    ></ngx-skeleton-loader>
-                </div>
-                <div class="card-body p-0" *ngIf="contentLoaded">
-                    <img [src]="featuredEvent?.performers[0]?.profile_picture?.formats?.medium?.url" class="featured-img float-md-start float-sm-none">
-                    <div class="featured-details float-md-start">
-                        <p class="title p-0">{{ featuredEvent?.name }}</p>
-                        <p class="artist-name p-0">{{ featuredEvent?.performers[0]?.name }}</p>
-                        <p class="event-details p-0">{{ featuredEvent?.summary }}</p>
-                        <p class="event-date">
-                            <img src="./images/icons/calendar.svg" alt="calendar" class="cal-icon"> <span class="cal-text">{{ setEventStartDate(featuredEvent?.start)}}</span>
-                            <img src="./images/icons/clock.svg" alt="clock" class="cal-icon"> <span class="cal-text">{{ setEventDuration(featuredEvent?.start, featuredEvent?.end)}}</span>
-                        </p>
-                        <button type="button" class="btn btn-purchase-show" routerLink="/purchase-show/{{ featuredEvent?.slug }}">Purchase Show</button>
+    <div class="heading">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="artist-name">{{ featuredEvent?.performers[0]?.name }}</h4>
+                <h1 class="event-name">{{ featuredEvent?.name }}</h1>
+                <p class="event-date">
+                    <img src="./assets/calendar.svg" alt="calendar" class="cal-icon"> <span class="cal-text">{{ setEventStartDate(featuredEvent?.start)}}</span>
+                    <img src="./assets/time.svg" alt="clock" class="cal-icon"> <span class="cal-text">{{ setEventDuration(featuredEvent?.start, featuredEvent?.end)}}</span>
+                </p>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="badge bg-white">LIVE</span>
+                        <span class="badge bg-outline-white">FHD</span>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-purchase">Purchase</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img [src]="getPerformerPic(featuredEvent?.performers[0]?.profile_picture)" alt="featured artist" class="preview-pic float-end">
             </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-            <div class="col-lg-12 col-md-6 col-sm-12 float-md-start">
-                <div class="card artist-card">
-                    <div class="card-header p-0">
-                        <span class="float-start title">Artists</span>
-                        <span class="float-end v-all">View All</span>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="row p-0 artists-chips">
-                            <div style="background: transparent; padding-top: 30px;" *ngIf="!contentLoaded">
-                                <ngx-skeleton-loader count="5" 
-                                appearance="circle"
-                                animation='progress-dark'
-                                [theme]="{ 
-                                    'background-color': '#323232'
-                                  }"
-                            >
-                            </ngx-skeleton-loader>
-                            </div>
-                            <ul class="list-group list-group-horizontal" *ngIf="contentLoaded">
-                                <li class="list-group-item text-center artist-link" *ngFor="let performer of performers" routerLink="/artist-profile/{{performer.id}}">
-                                    <span><img [src]="performer.profile_picture?.formats?.thumbnail?.url" alt="" class="artist-img"></span>
-                                    <p class="mt-2">{{ truncateText(performer.name, 8, '...' )}}</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="row watch-now">
+            <div class="col-6">
+                <h4 class="section-heading">Watch Now</h4>
             </div>
-            <div class="col-lg-12 col-md-6 col-sm-12 float-md-end">
-                <div class="card genre-card">
-                    <div class="card-header p-0">
-                        <span class="float-start title">Genres</span>
-                        <span class="float-end v-all" routerLink="/genres">View All</span>
-                    </div>
-                    <div class="card-body">
-                        <div style="background: transparent; padding-top: 10px;" *ngIf="!contentLoaded">
-                            <ngx-skeleton-loader count="3" appearance="circle" animation='progress-dark' [theme]="{
-                                width: '70px',
-                                height: '40px',
-                                'border-radius': '10px',
-                                'background-color': '#323232'
-                              }">
-                            </ngx-skeleton-loader>
-                        </div>
-                        <div *ngIf="contentLoaded">
-                            <button type="button" class="btn genre-btn btn-sm mb-2" routerLink="/genre/{{genre.name}}" *ngFor='let genre of genres | slice:0:7'>{{ genre.name }}</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-6">
+                <div class="btn-group float-end" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                  </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-8 col-lg-8 col-md-12 order-md-2 order-lg-1 sliders">
-            <div class="card upcoming-card">
-                <div class="card-header p-0">
-                    <span class="float-start">Premieres</span>
-                    <span class="float-end">
-                      <img src="./images/icons/chevron-left.svg" alt="prev" class="prev1">
-                      <img src="./images/icons/chevron-right.svg" alt="next" class="next1">
-                    </span>
-                </div>
-                <swiper [config]="config" *ngIf="isBrowser">
-                    <div style="background: transparent; padding-top: 10px;" *ngIf="!contentLoaded">
-                        <ngx-skeleton-loader count="3" appearance="circle" animation='progress-dark' [theme]="{
-                            width: '200px',
-                            height: '234px',
-                            'border-radius': '10px',
-                            'background-color': '#323232'
-                          }">
-                        </ngx-skeleton-loader>
-                    </div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" *ngFor="let event of premieres" [ngStyle]="{'background-image':' -webkit-gradient(linear, left top, left bottom, from(#28324d00), to(#28324d)), url(' + event?.performers[0]?.flyer?.formats?.small?.url + ')'}">
-                            <a routerLink="/purchase-show/{{ event?.slug }}">
-                                <section>
-                                    <h2 class="mb-0 swipe-event">{{ event?.name }}</h2>
-                                    <h3 class="swipe-artist">{{ event?.performers[0]?.name }}</h3>
-                                </section>
-                            </a>
-                        </div>
-                    </div>
-                </swiper>
+        <div class="row watch-now">
+            <div class="col-6">
+                <h4 class="section-heading">Just Announced</h4>
             </div>
-            <div class="card most-popular-card">
-                <div class="card-header p-0">
-                    <span class="float-start">Most Popular</span>
-                    <span class="float-end">
-                      <img src="./images/icons/chevron-left.svg" alt="prev" class="prev2">
-                      <img src="./images/icons/chevron-right.svg" alt="next" class="next2">
-                    </span>
-                </div>
-                <swiper [config]="configAlt" *ngIf="isBrowser">
-                    <div style="background: transparent; padding-top: 10px;" *ngIf="!contentLoaded">
-                        <ngx-skeleton-loader count="3" appearance="circle" animation='progress-dark' [theme]="{
-                            width: '200px',
-                            height: '234px',
-                            'border-radius': '10px',
-                            'background-color': '#323232'
-                          }">
-                        </ngx-skeleton-loader>
-                    </div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" *ngFor="let event of mostPopular" [ngStyle]="{'background-image':' -webkit-gradient(linear, left top, left bottom, from(#28324d00), to(#28324d)), url(' + event?.performers[0]?.flyer?.formats?.small?.url + ')'}">
-                            <a routerLink="/purchase-show/{{ event?.slug }}">
-                                <section>
-                                    <h2 class="mb-0 swipe-event">{{ truncateText(event?.name, 17, '...') }}</h2>
-                                    <h3 class="swipe-artist">{{ event?.performers[0]?.name }}</h3>
-                                </section>
-                            </a>
-                        </div>
-                    </div>
-                </swiper>
-            </div>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-12 order-md-1 charts d-none d-sm-none d-md-block">
-            <div class="card">
-                <div class="card-header">
-                  Charts
-                </div>
-                <div class="card-body p-0 charts-card">
-                    <div style="background: transparent; padding: 0px;" *ngIf="!contentLoaded">
-                        <ngx-skeleton-loader
-                          count="5"
-                          animation='progress-dark'
-                          [theme]="{ 
-                            'border-radius': '5px',
-                            height: '85px',
-                            width: '95%',
-                            'background-color': '#323232'
-                          }"
-                        ></ngx-skeleton-loader>
-                    </div>
-                    <ul class="list-group" id="charts-list" *ngIf="contentLoaded">
-                        <li class="list-group-item" *ngFor="let performer of charting; let i = index">
-                            <div class="chart-number float-start"><span class="float-end">{{ i + 1}}</span></div>
-                            <div class="chart-img float-start"><img src="{{ performer?.profile_picture?.formats?.thumbnail?.url}}" alt="artist"></div>
-                            <div class="float-start chart-listing">
-                                <p class="mb-0 chart-event">{{ truncateText(performer?.events[0]?.name, eventTruncate, '...') }}</p>
-                                <p class="mb-0 chart-artist">{{ truncateText(performer?.name, nameTruncate, '...') }}</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-6">
+                <div class="btn-group float-end" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                  </div>
             </div>
         </div>
     </div>

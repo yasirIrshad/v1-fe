@@ -19,7 +19,9 @@ body {
     -webkit-font-smoothing: antialiased im !important;
 }
 
-
+*:focus {
+    box-shadow: none !important;
+}
 .swiper-wrapper {
     box-sizing: border-box;
     width: 100%;
@@ -27,6 +29,9 @@ body {
 
 .swiper-container .swiper-wrapper .different-photo {
     background-size: cover;
+}
+.alt-color {
+    color: #ffd83b !important;
 }
 
 .swiper-container .swiper-wrapper .swiper-slide {

@@ -37,6 +37,7 @@ export class AddressComponent implements OnInit {
     if (this.helpers.isBrowser()) {
       this.user = this.tokenService.getUser();
       this.shippingAddress = this.user.shipping_address;
+      this.helpers.setHeader();
       if (this.shippingAddress) {
         this.setFormAttributes();
       }
