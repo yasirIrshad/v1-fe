@@ -76,25 +76,10 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:scroll') onScroll(e: Event): void {
     const nav = document.querySelector('nav');
-    if (window.pageYOffset > 0) {
-      // nav.style.filter = "blur(30px)"
-      // nav.style.background = '#1a2030cf';
-      // nav.classList.add('nav-blur');
-    } else {
-      // nav.classList.remove('scrolled');
-      // nav.classList.remove('nav-blur');
-      // nav.style.background =
-        // 'linear-gradient(180deg, #000000 -20%, #00000010 72%, #00000000 101%)';
-    }
   }
 
   @HostListener('window:resize', ['$event']) onResize(event) {
     const windowSize = event.target.innerWidth;
-    if (windowSize < 1185) {
-      this.setMobileView();
-    } else {
-      this.unSetMobileView()
-    }
   }
 
   
@@ -152,6 +137,9 @@ export class HomeComponent implements OnInit {
     if (!this.featuredEvent) {
       return this.loading = false;
     }
+    if (this.isBrowser) {
+      this.setBG();
+    }
     this.backgroundImage = this.helpers.getImageCDNPath(this.featuredEvent.performers[0].flyer.formats.small.url);
     this.featuredImage = this.backgroundImage;
     this.loading = false;
@@ -162,12 +150,25 @@ export class HomeComponent implements OnInit {
     this.api.getArtists().subscribe(data => (this.performers = data));
   }
 
+  getPerformerPic(pic) {
+    if (pic) {
+      return `${pic.url}`;
+    }
+  }
+
   getGenres() {
     this.api.getGenres().subscribe(data => (this.genres = data));
   }
 
   getCharting() {
     this.api.getCharting().subscribe(data => (this.charting = data));
+  }
+
+  setBG() {
+    document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(26, 32, 48, 0.52), rgba(26, 32, 48, 1)), url(${this.featuredEvent.background_image.formats.large.url})`;
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundSize = '100% 60vh';
   }
 
   setEventStartDate(date) {
