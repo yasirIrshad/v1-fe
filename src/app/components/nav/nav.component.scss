@@ -131,11 +131,11 @@ nav {
       cursor: pointer;
     }
     .notification-link {
+      cursor: pointer;
       text-decoration: none;
       transition: 0.2s;
       &:hover {
         color: #ffd83b;
-        text-decoration: underline;
       }
     }
     .dropdown-menu {
