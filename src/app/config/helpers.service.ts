@@ -134,6 +134,14 @@ export class HelpersService {
     return path;
   }
 
+  defaultBG(path) {
+    if (path !== '/') {
+      document.body.style.backgroundImage = ``;
+      document.body.style.backgroundRepeat = '';
+      document.body.style.backgroundSize = '';
+    }
+  }
+
   setBG(url = 'none', type = 'none') {
     const height = type === 'full' ? '100% 100%' : '100vw 549px'
     if (url === 'none') {
