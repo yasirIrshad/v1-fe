@@ -17,7 +17,10 @@ export class AppComponent implements OnInit {
     private router: Router,
     private location: Location
   ) {
-    location.onUrlChange(url => this.path = url);
+    location.onUrlChange(url => {
+      this.path = url;
+      this.helpers.defaultBG(url)
+    });
   }
 
   ngOnInit() {}
