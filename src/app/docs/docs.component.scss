@@ -85,6 +85,9 @@
 
   .docs--faq {
     margin-left: 15px;
+    @media (max-width: 825px) {
+      margin-left: unset;
+    }
     .faq-title-wrapper {
       margin-bottom: 30px;
       .docs-title {
@@ -156,8 +159,8 @@
         background-color: #1f273b;
       }
       @media (max-width: 825px) {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 8px;
+        padding-right: 8px;
       }
       @media (max-width: 475px) {
         font-size: 16px;
@@ -182,6 +185,10 @@
         box-shadow: none;
         background-color: #1f273b;
         border-radius: 10px 10px 0 0;
+        // @media (max-width: 825px) {
+        //   padding-left: 8px;
+        //   padding-right: 8px;
+        // }
         .faq-question {
           background-image: url(../../images/icons/faq-question-alt.svg);
         }
