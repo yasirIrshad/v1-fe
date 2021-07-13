@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light sticky-top navbar-expand-md" id="nav" *ngIf="showNav">
   <div class="container px-0 max-width-wrapper mx-auto">
-    <a class="navbar-brand" routerLink="/">
+    <a class="navbar-brand" routerLink="/home">
       <img src="./assets/sos-logo.svg" class="logo" width="78px" height="52px" alt="Studio on sunset Logo">
     </a>
     <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
@@ -65,7 +65,7 @@
               aria-expanded="false">{{ user?.username
               }}
               <i class="far fa-user-circle fa-2x user-icon" *ngIf="user && !user?.profile?.avatar"></i>
-              <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar" alt="User Icon">
+              <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar" alt="User Icon" width="47px" height="47px">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" routerLink="/account/profile/my-profile">My Profile</a></li>
@@ -114,10 +114,6 @@
               <span class="canvas-link-text">My Profile</span>
             </a>
         </li>
-<<<<<<< HEAD
-
-=======
->>>>>>> 509203e2b3b196e3edef777df2aebeb964005e2d
       </ul>
       <form class="d-flex flex-column align-items-center no-user">
         <button type="button" class="btn btn-link" routerLink="/login" *ngIf="!user"

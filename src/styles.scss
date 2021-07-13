@@ -12,8 +12,8 @@ $grid-breakpoints: (
 
 body {
     background-color: #1a2030 !important;
-    // ^ changing bg color temporarily  to make things more visible 
     // background-color: darkgrey !important;
+    // ^ changing bg color temporarily  to make things more visible 
     font-family: 'Montserrat', sans-serif !important;
     color: #fff !important;
     -webkit-font-smoothing: antialiased im !important;
@@ -150,8 +150,8 @@ body {
 }
 
 .nav-blur {
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50 px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25 px);
 }
 .profile-category-max-width {
     max-width: 630px;
