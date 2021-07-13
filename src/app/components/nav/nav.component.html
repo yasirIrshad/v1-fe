@@ -1,16 +1,16 @@
 <nav class="navbar navbar-light sticky-top navbar-expand-md" id="nav" *ngIf="showNav">
   <div class="container px-0 max-width-wrapper mx-auto">
     <a class="navbar-brand" routerLink="/">
-      <img src="./assets/sos-logo.svg" class="logo" width="78px" height="52px">
+      <img src="./assets/sos-logo.svg" class="logo" width="78px" height="52px" alt="Studio on sunset Logo">
     </a>
     <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvas" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-lg"></i>
     </button>
     <div class="navbar d-none d-md-flex w-100">
-      <ul class="list-unstyled d-flex m-0">
+      <ul class="list-unstyled d-flex m-0 left-links">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/" routerLinkActive="alt-color">Home</a>
+          <a class="nav-link" aria-current="page" href="/home" routerLinkActive="alt-color">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">My Shows</a>
@@ -65,7 +65,7 @@
               aria-expanded="false">{{ user?.username
               }}
               <i class="far fa-user-circle fa-2x user-icon" *ngIf="user && !user?.profile?.avatar"></i>
-              <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar">
+              <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar" alt="User Icon">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" routerLink="/account/profile/my-profile">My Profile</a></li>
@@ -78,14 +78,14 @@
           </div>
         </div>
         <!-- <i class="far fa-user-circle fa-2x user-icon" *ngIf="user && !user?.profile?.avatar"></i>
-          <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar"> -->
+          <img [src]="user?.profile?.avatar?.url" class="avatar" id="image" *ngIf="user?.profile?.avatar" alt="User Icon"> -->
       </form>
     </div>
     <!-- begin offcanvas content for mobile menu -->
     <div class="offcanvas offcanvas-start" id="offcanvas">
       <div class="offcanvas-header pt-0">
         <a class="navbar-brand" routerLink="/">
-          <img src="./assets/sos-logo.svg" class="logo" width="82px" height="52px">
+          <img src="./assets/sos-logo.svg" class="logo" width="82px" height="52px" alt="Studio on Sunset Logo">
         </a>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -102,19 +102,22 @@
         </li>
         <li class="nav-item" routerLinkActive="ticket-link-active">
           <a class="nav-link d-flex align-items-center" aria-current="page" href="/" routerLink="/shows" routerLinkActive="ticket-link-active"
-            data-bs-dismiss="offcanvas"><img src="../../../images/icons/mobile-ticket.svg" alt="home"
+            data-bs-dismiss="offcanvas"><img src="../../../images/icons/mobile-ticket.svg" alt="tickets"
               class="mobile-menu-icon" width="20px" height="20px">
               <span class="canvas-link-text">My Shows</span>
             </a>
         </li>
         <li class="nav-item" routerLinkActive="profile-link-active">
           <a class="nav-link d-flex align-items-center" aria-current="page" href="/account/profile/my-profile" routerLink="/account/profile/my-profile" routerLinkActive="profile-link-active"
-            data-bs-dismiss="offcanvas"><img src="../../../images/icons/mobile-user-circle.svg" alt="home"
+            data-bs-dismiss="offcanvas"><img src="../../../images/icons/mobile-user-circle.svg" alt="User icon"
               class="mobile-menu-icon" width="20px" height="20px">
               <span class="canvas-link-text">My Profile</span>
             </a>
         </li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 509203e2b3b196e3edef777df2aebeb964005e2d
       </ul>
       <form class="d-flex flex-column align-items-center no-user">
         <button type="button" class="btn btn-link" routerLink="/login" *ngIf="!user"

@@ -181,13 +181,14 @@ export class HelpersService {
     }
   }
 
-  setHeader() {
-    const path = location.pathname.split('/')[3];
-    if (path === 'personal-details' || path === 'login-security' || path === 'invoices' || path === 'address' || path === 'newsletter') {
-      this.document.getElementById('my-profile-heading').classList.add('d-none')
-    } else if (path === 'my-profile') {
-      this.document.getElementById('my-profile-heading').classList.remove('d-none')
-    }
-  }
+  // removed setHeader and added to profile ts file
+  //setHeader() {
+  //   const path = location.pathname.split('/')[3];
+  //   if (path === 'personal-details' || path === 'login-security' || path === 'invoices' || path === 'address' || path === 'newsletter') {
+  //     this.document.getElementById('my-profile-heading').classList.add('d-none')
+  //   } else if (path === 'my-profile') {
+  //     this.document.getElementById('my-profile-heading').classList.remove('d-none')
+  //   }
+  // }
 
 }

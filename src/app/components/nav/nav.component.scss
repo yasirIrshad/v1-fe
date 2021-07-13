@@ -46,9 +46,17 @@ nav {
     max-height: 35px;
     margin-left: 25px;
   }
-
+  .left-links {
+    .nav-item {
+      margin: 0 45px 0 0;
+      &:first-child {
+        margin-left: 45px;
+      }
+    }
+  }
   .nav-link {
     color: #fff;
+    padding: 0;
     &:hover {
       color: #ffd83b;
     }
@@ -104,6 +112,9 @@ nav {
       flex-grow: initial;
       li {
         width: 100%;
+        a {
+          padding-left: 20px;
+        }
         .home-link-active {
           background-color: #0e111a;
           img {
@@ -166,7 +177,7 @@ nav {
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
-        margin-left: 35px;
+        margin-left: 55px;
         height: 50px;
         @media (max-width: 575px) {
           font-size: 18px;
@@ -182,18 +193,14 @@ nav {
     }
   }
   .profile-wrapper {
-    // .show {
-    //   outline: 2px solid green;
-    // }
     .dropdown-menu {
       width: 185px;
-      height: 175px;
       left: unset;
       right: 0 !important;
       background-color: #0e111a;
       box-shadow: 0px 10px 50px #151a27;
       border: none;
-      padding: 25px;
+      padding: 32px 25px 25px 25px;
       margin-top: 10px;
       text-transform: capitalize;
 

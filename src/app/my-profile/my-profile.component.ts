@@ -18,7 +18,7 @@ export class MyProfileComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.tokenService.getUser();
     if (this.helpers.isBrowser()) {
-      this.helpers.setHeader();
+      // this.helpers.setHeader();
     }
   }
 

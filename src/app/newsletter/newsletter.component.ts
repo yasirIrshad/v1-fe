@@ -29,7 +29,7 @@ export class NewsletterComponent implements OnInit {
     if (this.helpers.isBrowser()) {
       this.user = this.tokenService.getUser();
       this.newsletter = this.user.news_letter;
-      this.helpers.setHeader();
+      // this.helpers.setHeader();
       if (this.newsletter) {
         this.setFormAttributes();
       }
