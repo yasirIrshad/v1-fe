@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light sticky-top navbar-expand-md" id="nav" *ngIf="showNav">
   <div class="container px-0 max-width-wrapper mx-auto">
     <a class="navbar-brand" routerLink="/">
-      <img src="./assets/sos-logo.svg" class="logo" width="82px" height="52px">
+      <img src="./assets/sos-logo.svg" class="logo" width="78px" height="52px">
     </a>
     <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvas" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
         <div class="d-flex align-items-center" *ngIf="user">
           <!-- end of notification wrapper ^ -->
           <div class="dropdown profile-wrapper">
-            <button type="button" class="btn btn-link pe-0" data-bs-toggle="dropdown"
+            <button type="button" class="btn btn-link d-flex align-items-center pe-0" data-bs-toggle="dropdown"
               aria-expanded="false">{{ user?.username
               }}
               <i class="far fa-user-circle fa-2x user-icon" *ngIf="user && !user?.profile?.avatar"></i>
@@ -115,17 +115,6 @@
             </a>
         </li>
 
-
-
-
-        <!-- <li class="nav-item d-flex align-items-center">
-          <img src="../../../images/icons/mobile-ticket.svg" alt="ticket" class="mobile-menu-icon">
-          <a class="nav-link" aria-current="page" href="#" data-bs-dismiss="offcanvas">My Shows</a>
-        </li>
-        <li class="nav-item d-flex align-items-center" *ngIf="user">
-          <img src="../../../images/icons/mobile-user-circle.svg" alt="profile" class="mobile-menu-icon">
-          <a class="nav-link" href="/account/profile/my-profile" data-bs-dismiss="offcanvas">My Profile</a>
-        </li> -->
       </ul>
       <form class="d-flex flex-column align-items-center no-user">
         <button type="button" class="btn btn-link" routerLink="/login" *ngIf="!user"

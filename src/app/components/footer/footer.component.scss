@@ -39,6 +39,14 @@ footer {
     font-size: 14px;
     font-weight: 600;
     color: #adb5cb;
+    //put in to compensate for footer icons slightly widening list items. 
+    //TODO: figure out way to remove this class from being needed
+    .footer-margin-fix {
+      margin-left: -1px;
+      @media (max-width: 768px) {
+        margin-left: inherit;
+      }
+    }
     @media (max-width: 1200px) {
       padding-left: 10px;
     }
@@ -91,12 +99,9 @@ footer {
     &:hover {
       color: #ffd83b;
     }
+    
   }
-  // .links-wrapper {
-  //   @media screen {
 
-  //   }
-  // }
   .links-wrapper .list-group-wrapper:nth-child(2) {
     max-width: 100px;
     margin-right: 28px;
