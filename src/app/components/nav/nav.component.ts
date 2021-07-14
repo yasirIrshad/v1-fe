@@ -25,7 +25,7 @@ export class NavComponent implements OnInit, OnChanges {
     if (this.helpers.isBrowser()) {
       if (window.pageYOffset > 0) {
       nav.style.background = 
-      'transparent linear-gradient(180deg, #1a2030 0%, #1a203000 100%) 0% 0% no-repeat padding-box';
+      'transparent linear-gradient(180deg, #1a2030 0%, #1a203000 100%) 0% 0% no-repeat';
       nav.classList.add('nav-blur');
       } else {
         nav.classList.remove('scrolled');
