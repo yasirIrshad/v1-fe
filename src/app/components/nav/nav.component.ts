@@ -28,7 +28,7 @@ export class NavComponent implements OnInit, OnChanges {
       'transparent linear-gradient(180deg, #1a2030 0%, #1a203000 100%) 0% 0% no-repeat';
       nav.classList.add('nav-blur');
       } else {
-        nav.classList.remove('scrolled');
+        // nav.classList.remove('scrolled');
         nav.classList.remove('nav-blur');
         nav.style.background =
           'linear-gradient(180deg, #000000 -20%, #00000010 72%, #00000000 101%)';
