@@ -1,127 +1,158 @@
 .home {
-    min-height: 100vh;
-    padding-top: 90px;
-    padding-bottom: 160px;
-    .artist-name {
-        color: #FFDC4E;
-        font-size: 28px;
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-bottom: 160px;
+  .feature-wrapper {
+      @media (max-width: 768px) {
+          text-align: center;
+          flex-flow: column-reverse;
+      }
+  }
+  .artist-name {
+    color: #ffdc4e;
+    font-size: 28px;
+    @media (max-width: 768px) {
+        font-size: 24px;
     }
-    .bg-white {
-        background-color: #fff;
-        color: #000;
+  }
+  .bg-white {
+    padding: 3px 6px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .bg-outline-white {
+    padding: 3px 6px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .btn-outline-purchase {
+    border: 3px solid #ffdc4e;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    &:hover {
+      background-color: #ffdc4e;
+      color: black;
     }
-    .bg-outline-white {
-        border: 1px solid #fff;
-        background-color: transparent;
-        color: #fff;
-        margin-left: 10px;
+  }
+  .btn-secondary {
+    background-color: #20212b;
+    border: 1px solid #2e303d;
+  }
+  .cal-icon {
+    width: 16px;
+    height: 16px;
+    color: #ffdc4e;
+    margin-right: 10px;
+  }
+  .cal-text {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+  .event-name {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 800;
+    @media (max-width: 768px) {
+        font-size: 42px;
     }
-    .btn-outline-purchase {
-        border: 3px solid #FFDC4E;
-        color: #fff;
-        border-radius: 10px;
-        padding-left: 61px;
-        padding-right: 61px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+  }
+  .fa-chevron-left,
+  .fa-chevron-right {
+    color: #ffdc4e;
+  }
+  .preview-pic {
+    width: 75%;
+    height: 100%;
+    position: relative;
+    left: 23%;
+    border-radius: 10px;
+    @media (max-width:768px) {
+        position: unset;
+        left: unset;
+        margin-bottom: 50px;
     }
-    .btn-secondary {
-        background-color: #20212B;
-        border: 1px solid #2E303D;
-    }
-    .cal-icon {
-        width: 16px;
-        height: 16px;
-        color: #FFDC4E;   
-        margin-right: 10px;
-    }
-    .cal-text {
-        font-size: 16px;
-        color: #fff;
-        margin-right: 20px;
-    }
-    .event-name {
-        font-size: 60px;
-        color: #fff;
-        font-weight: 800;
-    }
-    .fa-chevron-left, .fa-chevron-right {
-        color: #FFDC4E; 
-    }
-    .preview-pic {
-        width: 75%;
-        height: 100%;
-        position: relative;
-        left: 23%;
-        // Extra Small devices (landscape phones, 576px and up)
-        // @media (max-width: 576px) {
-        //     width: 486px;
-        //     height: 486px;
-        //     border-radius: 10px;
-        // }
+    // Extra Small devices (landscape phones, 576px and up)
+    // @media (max-width: 576px) {
+    //     width: 486px;
+    //     height: 486px;
+    //     border-radius: 10px;
+    // }
 
-        // // Small devices (landscape phones, 576px and up)
-        // @media (min-width: 576px) {
-        //     width: 486px;
-        //     height: 486px;
-        //     border-radius: 10px;
-        // }
+    // // Small devices (landscape phones, 576px and up)
+    // @media (min-width: 576px) {
+    //     width: 486px;
+    //     height: 486px;
+    //     border-radius: 10px;
+    // }
 
-        // // Medium devices (tablets, 768px and up)
-        // @media (min-width: 768px) { 
-        //     width: 486px;
-        //     height: 486px;
-        //     border-radius: 10px;
-        // }
-        // // Large devices (desktops, 1185px and up)
-        // @media (min-width: 1185px) {
-        //     width: 445px;
-        //     height: 445px;
-        //     border-radius: 10px;
-        // }
-        // // X-Large devices (large desktops, 1400px and up)
-        // @media (min-width: 1400px) { 
-        //     width: 486px;
-        //     height: 486px;
-        //     border-radius: 10px;
-        // }
-    }
-    .section-heading {
-        font-weight: 800;
-        color: #fff;
-        font-size: 36px;
-    }
-    .watch-now {
-        margin-top: 112px;
-    }
+    // // Medium devices (tablets, 768px and up)
+    // @media (min-width: 768px) {
+    //     width: 486px;
+    //     height: 486px;
+    //     border-radius: 10px;
+    // }
+    // // Large devices (desktops, 1185px and up)
+    // @media (min-width: 1185px) {
+    //     width: 445px;
+    //     height: 445px;
+    //     border-radius: 10px;
+    // }
+    // // X-Large devices (large desktops, 1400px and up)
+    // @media (min-width: 1400px) {
+    //     width: 486px;
+    //     height: 486px;
+    //     border-radius: 10px;
+    // }
+  }
+  .section-heading {
+    font-weight: 800;
+    color: #fff;
+    font-size: 36px;
+  }
+  .watch-now {
+    margin-top: 100px;
+  }
 }
 
 .spinner-container {
-    min-height: 100vh;
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .max-width-wrapper {
-    max-width: 1575px !important;
-    padding: 45px 70px 20px 70px;
-    @media (min-width: 1575px) {
-      padding-left: 70px;
-      padding-right: 70px;
-    }
-    @media (max-width: 1200px) {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    @media (max-width: 992px) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    @media (max-width: 576px) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    // @media (max-width: 475px) {
-    //   padding-left: 11px;
-    //   padding-right: 11px;
-    // }
+  max-width: 1575px !important;
+  padding: 70px 48px 330px 46px;
+  @media (min-width: 1575px) {
+    padding-left: 70px;
+    padding-right: 70px;
   }
+  @media (max-width: 1200px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 475px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
