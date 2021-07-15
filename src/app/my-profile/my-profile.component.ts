@@ -8,7 +8,7 @@ import { HelpersService } from '../config/helpers.service';
   styleUrls: ['./my-profile.component.scss']
 })
 export class MyProfileComponent implements OnInit {
-
+  public type: string;
   public user: any;
   constructor(
     private tokenService: TokenService,
@@ -19,6 +19,12 @@ export class MyProfileComponent implements OnInit {
     this.user = this.tokenService.getUser();
     if (this.helpers.isBrowser()) {
       // this.helpers.setHeader();
+    }
+  }
+  getType(data) {
+    this.type = data.type;
+    if (this.helpers.isBrowser()) {
+      window.scrollTo(0, 0)
     }
   }
 

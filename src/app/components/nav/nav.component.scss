@@ -94,7 +94,7 @@ nav {
     max-width: 100vw;
     height: 100vh;
     padding: 20px 0 30px 0;
-    transition: 0.1s;
+    transition: 0s;
     .btn-close {
       width: 15px;
       height: 15px;
@@ -106,9 +106,17 @@ nav {
       opacity: 1;
     }
     .offcanvas-header {
-      padding: 1rem 25px;
+      padding: 1rem 28px;
       @media (max-width: 500px) {
         padding: 1rem 10px;
+      }
+      @media (max-width: 575px) {
+        padding-right: 25px;
+        padding-left: 25px;
+      }
+      @media (max-width: 500px) {
+        padding-right: 7px;
+        padding-left: 7px;
       }
     }
     
