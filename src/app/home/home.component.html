@@ -1,14 +1,14 @@
 <div class="home max-width-wrapper mx-auto">
     <div class="heading">
-        <div class="row align-items-center feature-wrapper">
-            <div class="col-12 col-md-6">
+        <div class="d-flex align-items-center feature-wrapper">
+            <div class="event-wrapper">
                 <h4 class="artist-name">{{ featuredEvent?.performers[0]?.name }}</h4>
                 <h1 class="event-name">{{ featuredEvent?.name }}</h1>
                 <p class="event-date">
                     <img src="./assets/calendar.svg" alt="calendar" class="cal-icon"> <span class="cal-text">{{ setEventStartDate(featuredEvent?.start)}}</span>
                     <img src="./assets/time.svg" alt="clock" class="cal-icon"> <span class="cal-text">{{ setEventDuration(featuredEvent?.start, featuredEvent?.end)}}</span>
                 </p>
-                <div class="row">
+                <div class="row badge-wrapper">
                     <div class="col-12">
                         <span class="badge bg-white">LIVE</span>
                         <span class="badge bg-outline-white">FHD</span>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 pe-0">
+            <div class="d-flex preview-pic-wrapper">
                 <!-- <img [src]="getPerformerPic(featuredEvent?.performers[0]?.profile_picture)" alt="featured artist" class="preview-pic"> -->
                 <img src="https://via.placeholder.com/485" alt="featured artist" class="preview-pic" width="485px" height="485px">
             </div>

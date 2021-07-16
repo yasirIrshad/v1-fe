@@ -65,19 +65,32 @@
     font-size: 60px;
     color: #fff;
     font-weight: 800;
+    margin-bottom: 20px;
+    @media (max-width: 1200px) {
+        font-size: 54px;
+    }
     @media (max-width: 768px) {
         font-size: 42px;
     }
+  }
+  .badge-wrapper {
+    margin-bottom: 35px;
   }
   .fa-chevron-left,
   .fa-chevron-right {
     color: #ffdc4e;
   }
+  .preview-pic-wrapper {
+    justify-content: flex-end;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+  }
   .preview-pic {
-    width: 75%;
+    width: 100%;
+    max-width: 485px;
     height: 100%;
-    position: relative;
-    left: 23%;
     border-radius: 10px;
     @media (max-width:768px) {
         position: unset;
