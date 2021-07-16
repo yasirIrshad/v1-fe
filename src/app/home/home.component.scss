@@ -2,17 +2,25 @@
   min-height: 100vh;
   padding-top: 90px;
   padding-bottom: 160px;
+  #bg-container {
+    width: 100%;
+    height: 700px;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    // outline: 2px solid blue;
+  }
   .feature-wrapper {
-      @media (max-width: 768px) {
-          text-align: center;
-          flex-flow: column-reverse;
-      }
+    @media (max-width: 768px) {
+      text-align: center;
+      flex-flow: column-reverse;
+    }
   }
   .artist-name {
     color: #ffdc4e;
     font-size: 28px;
-    @media (max-width: 768px) {
-        font-size: 24px;
+    @media (max-width: 992px) {
+      font-size: 24px;
     }
   }
   .bg-white {
@@ -60,6 +68,10 @@
     font-size: 18px;
     color: #fff;
     margin-right: 20px;
+    @media (max-width:992px) {
+      font-size: 16px;
+      white-space: nowrap;
+    }
   }
   .event-name {
     font-size: 60px;
@@ -67,14 +79,23 @@
     font-weight: 800;
     margin-bottom: 20px;
     @media (max-width: 1200px) {
-        font-size: 54px;
+      font-size: 54px;
     }
-    @media (max-width: 768px) {
-        font-size: 42px;
+    @media (max-width: 992px) {
+      font-size: 42px;
     }
   }
   .badge-wrapper {
-    margin-bottom: 35px;
+    margin: 20px auto 35px auto;
+  }
+  .event-wrapper {
+    padding-right: 20px;
+  }
+  .event-date {
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
   .fa-chevron-left,
   .fa-chevron-right {
@@ -85,58 +106,45 @@
     @media (max-width: 768px) {
       justify-content: center;
     }
-
   }
   .preview-pic {
     width: 100%;
     max-width: 485px;
     height: 100%;
     border-radius: 10px;
-    @media (max-width:768px) {
-        position: unset;
-        left: unset;
-        margin-bottom: 50px;
+    @media (max-width: 768px) {
+      position: unset;
+      left: unset;
+      margin-bottom: 50px;
     }
-    // Extra Small devices (landscape phones, 576px and up)
-    // @media (max-width: 576px) {
-    //     width: 486px;
-    //     height: 486px;
-    //     border-radius: 10px;
-    // }
-
-    // // Small devices (landscape phones, 576px and up)
-    // @media (min-width: 576px) {
-    //     width: 486px;
-    //     height: 486px;
-    //     border-radius: 10px;
-    // }
-
-    // // Medium devices (tablets, 768px and up)
-    // @media (min-width: 768px) {
-    //     width: 486px;
-    //     height: 486px;
-    //     border-radius: 10px;
-    // }
-    // // Large devices (desktops, 1185px and up)
-    // @media (min-width: 1185px) {
-    //     width: 445px;
-    //     height: 445px;
-    //     border-radius: 10px;
-    // }
-    // // X-Large devices (large desktops, 1400px and up)
-    // @media (min-width: 1400px) {
-    //     width: 486px;
-    //     height: 486px;
-    //     border-radius: 10px;
-    // }
   }
   .section-heading {
     font-weight: 800;
     color: #fff;
     font-size: 36px;
+    margin-bottom: 20px;
   }
   .watch-now {
     margin-top: 100px;
+  }
+}
+.card-wrapper {
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  .artist-card-container {
+    margin-left: 42px;
+    width: 100%;
+    max-width: 225px;
+  }
+  .artist-img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .event {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
   }
 }
 

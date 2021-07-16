@@ -165,10 +165,12 @@ export class HomeComponent implements OnInit {
   }
 
   setBG() {
-    document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(26, 32, 48, 0.52), rgba(26, 32, 48, 1)), url(${this.featuredEvent.background_image.formats.large.url})`;
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-    document.body.style.backgroundSize = '100% 60vh';
+    //adding to absolute container rather than body so that the image can be set to cover, but also won't show too far down on the page
+    const bgContainer = document.getElementById("bg-container");
+    bgContainer.style.background = `linear-gradient(to bottom, rgba(26, 32, 48, 0.52), rgba(26, 32, 48, 1)), url(${this.featuredEvent.background_image.formats.large.url})`;
+    bgContainer.style.backgroundRepeat = 'no-repeat';
+    bgContainer.style.backgroundPosition = 'top';
+    bgContainer.style.backgroundSize = 'cover';
   }
 
   setEventStartDate(date) {
