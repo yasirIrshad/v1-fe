@@ -1,17 +1,21 @@
 <div class="home max-width-wrapper mx-auto">
-    
-        <div id="bg-container" class="position-absolute p-0 m-0"></div>
-    
+
+    <div id="bg-container" class="position-absolute p-0 m-0" style="width: 100%; height: 700px;"></div>
+
     <div class="heading">
         <div class="d-flex align-items-center feature-wrapper">
-            <div class="event-wrapper">
+            <div class="event-wrapper" style="width: 100%; height: 100%;">
                 <div class="artist-name">{{ featuredEvent?.performers[0]?.name }}</div>
                 <h1 class="event-name">{{ featuredEvent?.name }}</h1>
                 <div class="event-date d-flex align-items-center">
-                    <img src="./assets/calendar.svg" alt="calendar" class="cal-icon"> <span class="cal-text">{{
-                        setEventStartDate(featuredEvent?.start)}}</span>
-                    <img src="./assets/time.svg" alt="clock" class="cal-icon"> <span class="cal-text">{{
-                        setEventDuration(featuredEvent?.start, featuredEvent?.end)}}</span>
+                    <div class="event-details-wrapper d-flex align-items-center">
+                        <img src="./assets/calendar.svg" alt="calendar" class="cal-icon"> <span class="cal-text">{{
+                            setEventStartDate(featuredEvent?.start)}}</span>
+                    </div>
+                    <div class="event-details-wrapper d-flex align-items-center">
+                        <img src="./assets/time.svg" alt="clock" class="cal-icon"> <span class="cal-text">{{
+                            setEventDuration(featuredEvent?.start, featuredEvent?.end)}}</span>
+                    </div>
                 </div>
                 <div class="row badge-wrapper">
                     <div class="col-12 px-0">
@@ -27,7 +31,7 @@
             </div>
             <div class="d-flex preview-pic-wrapper">
                 <img [src]="getPerformerPic(featuredEvent?.performers[0]?.profile_picture)" alt="featured artist"
-                    class="preview-pic">
+                    class="preview-pic" width="485px" height="485px">
                 <!-- <img src="https://via.placeholder.com/485" alt="featured artist" class="preview-pic" width="485px" height="485px"> -->
             </div>
         </div>
