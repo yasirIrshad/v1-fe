@@ -16,7 +16,8 @@ body {
     // ^ changing bg color temporarily  to make things more visible 
     font-family: 'Montserrat', sans-serif !important;
     color: #fff !important;
-    -webkit-font-smoothing: antialiased im !important;
+    -webkit-font-smoothing: antialiased !important;
+    overflow-x: hidden;
 }
 
 *:focus {
