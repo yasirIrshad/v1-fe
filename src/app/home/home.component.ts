@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
 import { ApiService } from '../config/api.service';
 import { HelpersService } from '../config/helpers.service';
 import { Autoplay, SwiperOptions } from 'swiper';
+import { calcPossibleSecurityContexts } from '@angular/compiler/src/template_parser/binding_parser';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
   config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     simulateTouch: true,
-    
+    loop: false,
     navigation: {
       nextEl: '.swiper-button-next1',
       prevEl: '.swiper-button-prev1'
@@ -40,18 +41,20 @@ export class HomeComponent implements OnInit {
     breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: 2
+        // slidesPerView: 2,
+        // spaceBetween: 40
+
       },
       // when window width is >= 992px
       992: {
-        slidesPerView: 4
+        // slidesPerView: 4
       }
     }
   };
   configAlt: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     simulateTouch: true,
-    
+    loop: false,
     navigation: {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2'
@@ -60,13 +63,18 @@ export class HomeComponent implements OnInit {
     spaceBetween: 20,
     // Responsive breakpoints
     breakpoints: {
+      450: {
+        slidesPerView: 1
+      },
       // when window width is >= 320px
-      320: {
+      500: {
         slidesPerView: 2
+        // spaceBetween: 40,
+        // slidesOffsetAfter: 300
       },
       // when window width is >= 992px
       992: {
-        slidesPerView: 4
+        // slidesPerView: 4
       }
     }
   };

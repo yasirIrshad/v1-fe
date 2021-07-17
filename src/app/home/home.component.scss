@@ -15,6 +15,9 @@
 
   .swiper-button-container {
     margin-bottom: 20px;
+    @media (max-width: 575px) {
+      margin-bottom: 0;
+    }
     .swiper-button-disabled {
       .fa-chevron-left,
       .fa-chevron-right {
@@ -24,12 +27,17 @@
   }
   .swiper-wrapper {
     margin-top: 20px;
+    @media (max-width: 500px) {
+      // left:30px;
+    }
   }
   .swiper-container {
-    width: 90%;
     height: 375px;
+    @media (max-width: 500px) {
+      width: 98%;
+      
+    }
     .hover-wrapper {
-
       transition: all 0.3s ease-in-out;
     }
     .swiper-slide {
@@ -240,6 +248,11 @@
     font-weight: 800;
     color: #fff;
     font-size: 36px;
+    white-space: nowrap;
+    @media (max-width: 576px) {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
   }
   .watch-now {
     margin-top: 100px;
