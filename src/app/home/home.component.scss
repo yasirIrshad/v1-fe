@@ -12,12 +12,84 @@
   //   left: 0;
   //   top: 0;
   // }
+
+  .swiper-button-container {
+    margin-bottom: 20px;
+    .swiper-button-disabled {
+      .fa-chevron-left, .fa-chevron-right {
+        color: #6E6F77;
+      }
+    }
+  }
   .swiper-container {
     width: 90%;
-    height: 250px;
+    height: 350px;
     .swiper-slide {
-      background-color: grey;
+      max-width: 225px;
+      height: 225px;
       margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      
+      .artist-img {
+        border-radius: 10px;
+      }
+      .event {
+        margin: 20px 0 5px 0;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 225px;
+      }
+      .artist {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 225px;
+      }
+      .btn-wrapper {
+        //opacity set to 1 for development
+        //TODO: change back to 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 102%;
+        border-radius: 10px;
+        // background-color: grey;
+        background-color: rgba(0,0,0,0.6);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          // transition: all 0.3s ease-in-out;
+          opacity: 1;
+        }
+        .slide-btn {
+          font-size: 12px;
+          border-radius: 8px;
+          border: 2px solid #ffdc4e;
+          width: 111px;
+          height: 41px;
+          margin-bottom: 10px;
+          &:active {
+            background-color: #ffcc00;
+          }
+        }
+        .btn-sos-main {
+          background-color: #FFDC4E;
+        }
+        .btn-sos-secondary {
+          color: white;
+          background-color: #20212B;
+          &:hover {
+            background-color: #ffdc4e;
+            color: black;
+            &:active {
+              background-color: #ffcc00;
+            }
+          }
+        }
+      }
     }
   }
   #bg-container {
@@ -29,6 +101,7 @@
     // outline: 2px solid blue;
   }
   .feature-wrapper {
+    height: 75vh;
     @media (max-width: 768px) {
       text-align: center;
       flex-flow: column-reverse;
@@ -86,14 +159,13 @@
     font-size: 18px;
     color: #fff;
     margin-right: 20px;
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
       font-size: 16px;
       white-space: nowrap;
     }
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
       margin-right: 0;
     }
-
   }
   .event-name {
     font-size: 60px;

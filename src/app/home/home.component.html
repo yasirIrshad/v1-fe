@@ -4,7 +4,7 @@
 
     <div class="heading">
         <div class="d-flex align-items-center feature-wrapper">
-            <div class="event-wrapper" style="width: 100%; height: 100%;">
+            <div class="event-wrapper">
                 <div class="artist-name">{{ featuredEvent?.performers[0]?.name }}</div>
                 <h1 class="event-name">{{ featuredEvent?.name }}</h1>
                 <div class="event-date d-flex align-items-center">
@@ -30,114 +30,246 @@
                 </div>
             </div>
             <div class="d-flex preview-pic-wrapper">
-                <!-- <img [src]="getPerformerPic(featuredEvent?.performers[0]?.profile_picture)" alt="featured artist"
-                    class="preview-pic" width="485px" height="485px"> -->
-                <img src="https://via.placeholder.com/485" alt="featured artist" class="preview-pic" width="485px"
-                    height="485px">
+                <img [src]="getPerformerPic(featuredEvent?.performers[0]?.profile_picture)" alt="featured artist"
+                    class="preview-pic" width="485px" height="485px">
+                <!-- <img src="https://picsum.photos/485" alt="featured artist" class="preview-pic" width="485px"
+                    height="485px"> -->
             </div>
         </div>
         <div class="row watch-now">
             <div class="col-6">
                 <h4 class="section-heading">Watch Now</h4>
             </div>
-            <div class="col-6">
-
-            </div>
-            <!-- <div class="swiper-buttons">
-                <div class="swiper-button-prev1" style="margin-right: 40px;">
-                    prev </div>
-                <div class="swiper-button-next1"> next </div>
-            </div> -->
-            <!-- <div class="swiper-container">
-                <swiper [config]="config">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">item 1</div>
-                        <div class="swiper-slide">item 2</div>
-                        <div class="swiper-slide">item 3</div>
-                        <div class="swiper-slide">item 4</div>
-                        <div class="swiper-slide">item 5</div>
-                        <div class="swiper-slide">item 6</div>
-                        <div class="swiper-slide">item 7</div>
-                        <div class="swiper-slide">item 8</div>
-                        <div class="swiper-slide">item 9</div>
-                        <div class="swiper-slide">item 10</div>
-                        <div class="swiper-slide">item 11</div>
-                        <div class="swiper-slide">item 12</div>
-                        <div class="swiper-slide">item 13</div>
-                        <div class="swiper-slide">item 14</div>
-                    </div>
-                </swiper>
-            </div> -->
             <!-- ********************************************************** -->
-            <div class="swiper-button-prev1" style="margin-right: 40px;">
-                prev </div>
-            <div class="swiper-button-next1"> next </div>
+            <div class="col-6 swiper-button-container d-flex justify-content-end">
+                <div class="swiper-button-prev1">
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                </div>
+                <div class="swiper-button-next1"> <button type="button" class="btn btn-secondary"><i
+                            class="fas fa-chevron-right"></i></button> </div>
+            </div>
+            <!-- ************************* begin swiper container ********** -->
             <div class="swiper-container w-100">
-                <swiper [config]="config">
+                <swiper [config]="config" class="h-100">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="image" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/225" alt="" class="artist-img" width="225px" height="225px">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
                             <div class="card-details">
                                 <div class="event alt-color">{{ featuredEvent?.name }}</div>
                                 <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
                             </div>
                         </div>
+                        
                     </div>
                 </swiper>
             </div>
         </div>
-        <div class="row watch-now">
+
+
+
+        <div class="row just-announced">
             <div class="col-6">
                 <h4 class="section-heading">Just Announced</h4>
             </div>
-            <div class="col-6">
-                <div class="btn-group float-end" role="group" aria-label="Basic example">
+            <!-- ********************************************************** -->
+            <div class="col-6 swiper-button-container d-flex justify-content-end">
+                <div class="swiper-button-prev2">
                     <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
                 </div>
+                <div class="swiper-button-next2"> <button type="button" class="btn btn-secondary"><i
+                            class="fas fa-chevron-right"></i></button> </div>
+            </div>
+            <!-- ************************* begin swiper container ********** -->
+            <div class="swiper-container w-100">
+                <swiper [config]="configAlt" class="h-100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="https://picsum.photos/225" alt="image" class="artist-img">
+                                <div class="btn-wrapper d-flex flex-column justify-content-center align-items-center">
+                                    <button type="button" class="btn slide-btn btn-sos-main">Get Tickets</button>
+                                    <button type="button" class="btn slide-btn btn-sos-secondary">Preview</button>
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="event alt-color">{{ featuredEvent?.name }}</div>
+                                <div class="artist">{{ featuredEvent?.performers[0]?.name }}</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </swiper>
             </div>
         </div>
+
+
+       
+
+
+
+
+
     </div>
 </div>
