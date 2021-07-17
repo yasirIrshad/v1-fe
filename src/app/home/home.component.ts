@@ -29,9 +29,10 @@ export class HomeComponent implements OnInit {
   config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     simulateTouch: true,
+    initialSlide: 0,
     navigation: {
-      nextEl: '.next1',
-      prevEl: '.prev1'
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1'
     },
     spaceBetween: 20,
     // Responsive breakpoints
@@ -47,26 +48,26 @@ export class HomeComponent implements OnInit {
     }
   };
 
-  configAlt: SwiperOptions = {
-    pagination: { el: '.swiper-pagination', clickable: true },
-    simulateTouch: true,
-    navigation: {
-      nextEl: '.next2',
-      prevEl: '.prev2'
-    },
-    spaceBetween: 20,
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 2
-      },
-      // when window width is >= 992px
-      992: {
-        slidesPerView: 4
-      }
-    }
-  };
+  // configAlt: SwiperOptions = {
+  //   pagination: { el: '.swiper-pagination2', clickable: true },
+  //   simulateTouch: true,
+  //   navigation: {
+  //     nextEl: '.swiper-button-next2',
+  //     prevEl: '.swiper-button-prev2'
+  //   },
+  //   spaceBetween: 20,
+  //   // Responsive breakpoints
+  //   breakpoints: {
+  //     // when window width is >= 320px
+  //     320: {
+  //       slidesPerView: 2
+  //     },
+  //     // when window width is >= 992px
+  //     992: {
+  //       slidesPerView: 4
+  //     }
+  //   }
+  // };
 
   constructor(
     private api: ApiService,

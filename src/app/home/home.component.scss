@@ -12,6 +12,14 @@
   //   left: 0;
   //   top: 0;
   // }
+  .swiper-container {
+    width: 90%;
+    height: 250px;
+    .swiper-slide {
+      background-color: grey;
+      margin: 0 10px;
+    }
+  }
   #bg-container {
     width: 100%;
     height: 700px;
@@ -154,7 +162,8 @@
 .card-wrapper {
   font-weight: 600;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
   .artist-card-container {
     margin-left: 42px;
     width: 100%;
