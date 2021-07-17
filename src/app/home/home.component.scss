@@ -16,21 +16,36 @@
   .swiper-button-container {
     margin-bottom: 20px;
     .swiper-button-disabled {
-      .fa-chevron-left, .fa-chevron-right {
-        color: #6E6F77;
+      .fa-chevron-left,
+      .fa-chevron-right {
+        color: #6e6f77;
       }
     }
   }
+  .swiper-wrapper {
+    margin-top: 20px;
+  }
   .swiper-container {
     width: 90%;
-    height: 350px;
+    height: 375px;
+    .hover-wrapper {
+
+      transition: all 0.3s ease-in-out;
+    }
     .swiper-slide {
+      cursor: pointer;
       max-width: 225px;
-      height: 225px;
+      max-height: 305px;
       margin: 0 10px;
+      border: 5px solid transparent;
       display: flex;
       flex-direction: column;
-      
+      transition: all 0.3s ease-in-out;
+
+      &:hover .hover-wrapper {
+        transition: all 0.3s ease-in-out;
+        margin-top: -20px;
+      }
       .artist-img {
         border-radius: 10px;
       }
@@ -48,48 +63,47 @@
         white-space: nowrap;
         width: 225px;
       }
-      .btn-wrapper {
-        //opacity set to 1 for development
-        //TODO: change back to 0;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 102%;
-        border-radius: 10px;
-        // background-color: grey;
-        background-color: rgba(0,0,0,0.6);
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          // transition: all 0.3s ease-in-out;
-          opacity: 1;
-        }
-        .slide-btn {
-          font-size: 12px;
-          border-radius: 8px;
-          border: 2px solid #ffdc4e;
-          width: 111px;
-          height: 41px;
-          margin-bottom: 10px;
-          &:active {
-            background-color: #ffcc00;
-          }
-        }
-        .btn-sos-main {
-          background-color: #FFDC4E;
-        }
-        .btn-sos-secondary {
-          color: white;
-          background-color: #20212B;
-          &:hover {
-            background-color: #ffdc4e;
-            color: black;
-            &:active {
-              background-color: #ffcc00;
-            }
-          }
-        }
-      }
+      //   ****removed per HC request****
+      // .btn-wrapper {
+      //   opacity: 0;
+      //   position: absolute;
+      //   top: 0;
+      //   width: 100%;
+      //   height: 102%;
+      //   border-radius: 10px;
+      //   // background-color: grey;
+      //   background-color: rgba(0,0,0,0.6);
+      //   transition: all 0.3s ease-in-out;
+      //   &:hover {
+      //     // transition: all 0.3s ease-in-out;
+      //     opacity: 1;
+      //   }
+      //   .slide-btn {
+      //     font-size: 12px;
+      //     border-radius: 8px;
+      //     border: 2px solid #ffdc4e;
+      //     width: 111px;
+      //     height: 41px;
+      //     margin-bottom: 10px;
+      //     &:active {
+      //       background-color: #ffcc00;
+      //     }
+      //   }
+      //   .btn-sos-main {
+      //     background-color: #FFDC4E;
+      //   }
+      //   .btn-sos-secondary {
+      //     color: white;
+      //     background-color: #20212B;
+      //     &:hover {
+      //       background-color: #ffdc4e;
+      //       color: black;
+      //       &:active {
+      //         background-color: #ffcc00;
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
   #bg-container {
@@ -225,32 +239,31 @@
     font-weight: 800;
     color: #fff;
     font-size: 36px;
-    margin-bottom: 20px;
   }
   .watch-now {
     margin-top: 100px;
   }
 }
-.card-wrapper {
-  font-weight: 600;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  .artist-card-container {
-    margin-left: 42px;
-    width: 100%;
-    max-width: 225px;
-  }
-  .artist-img {
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  .event {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 5px;
-  }
-}
+// .card-wrapper {
+//   font-weight: 600;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   overflow: hidden;
+//   .artist-card-container {
+//     margin-left: 42px;
+//     width: 100%;
+//     max-width: 225px;
+//   }
+//   .artist-img {
+//     border-radius: 10px;
+//     margin-bottom: 20px;
+//   }
+//   .event {
+//     font-size: 18px;
+//     font-weight: 700;
+//     margin-bottom: 5px;
+//   }
+// }
 
 .spinner-container {
   min-height: 100vh;
