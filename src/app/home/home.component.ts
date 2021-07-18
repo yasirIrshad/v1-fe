@@ -31,12 +31,15 @@ export class HomeComponent implements OnInit {
     pagination: { el: '.swiper-pagination', clickable: true },
     simulateTouch: true,
     loop: false,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    width: 225,
     navigation: {
       nextEl: '.swiper-button-next1',
       prevEl: '.swiper-button-prev1'
     },
     preloadImages: true,
-    spaceBetween: 20,
+    spaceBetween: 35,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
@@ -55,22 +58,22 @@ export class HomeComponent implements OnInit {
     pagination: { el: '.swiper-pagination', clickable: true },
     simulateTouch: true,
     loop: false,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    width: 225,
     navigation: {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2'
     },
     preloadImages: true,
-    spaceBetween: 20,
+    spaceBetween: 35,
     // Responsive breakpoints
     breakpoints: {
-      450: {
-        slidesPerView: 1
-      },
       // when window width is >= 320px
-      500: {
-        slidesPerView: 2
-        // spaceBetween: 40,
-        // slidesOffsetAfter: 300
+      320: {
+        // slidesPerView: 2,
+        // spaceBetween: 40
+
       },
       // when window width is >= 992px
       992: {

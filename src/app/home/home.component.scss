@@ -14,24 +14,37 @@
   // }
 
   .swiper-button-container {
-    outline: 2px solid blue;
-    width: 85px;
+    // outline: 2px solid blue;
+    width: 79px;
+    height: 45px;
     background-color: #20212b;
     border-radius: 8px;
     border: 2px solid #2e303d;
-    margin-bottom: 20px;
     @media (max-width: 575px) {
       margin-bottom: 0;
     }
+    .swiper-button-right-wrapper {
+      padding-right: 1rem;
+      margin-right: -1rem;
+    }
+    .swiper-button-left-wrapper {
+      padding-left: 1rem;
+      margin-left: -1rem;
+    }
+    .btn-right {
+      margin-left: 15px;
+    }
     .btn-left {
+      margin-right: 15px;
       position: relative;
       &::after {
         content: "";
-        height: 20px;
-        // border-right: 1px solid #2e303d;
-        border-right: 1px solid red;
+        height: 18px;
+        border-right: 1px solid #2E303D;
         position: absolute;
         left: 0;
+        top: calc((100%/2) - 9px);
+        right: -16.5px;
       }
     }
     .swiper-button-disabled {
@@ -51,6 +64,7 @@
   }
   .swiper-container {
     height: 375px;
+    margin-top: -20px;
     @media (max-width: 500px) {
       width: 98%;
     }
@@ -140,7 +154,8 @@
     // outline: 2px solid blue;
   }
   .feature-wrapper {
-    height: 75vh;
+    // height: 75vh;
+    justify-content: space-between;
     @media (max-width: 768px) {
       height: unset;
       text-align: center;
@@ -150,6 +165,7 @@
   .artist-name {
     color: #ffdc4e;
     font-size: 28px;
+    font-weight: 700;
     @media (max-width: 992px) {
       font-size: 24px;
     }
@@ -226,14 +242,17 @@
     }
   }
   .event-date {
-    @media (max-width: 768px) {
-      justify-content: center;
-    }
-    @media (max-width: 575px) {
-      flex-flow: wrap;
+    align-items: center;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: unset;
       .event-details-wrapper {
         margin-top: 10px;
       }
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
     }
   }
   .fa-chevron-left,
@@ -247,10 +266,16 @@
     }
   }
   .preview-pic {
-    width: 100%;
-    max-width: 485px;
+    width: 485px;
     height: 100%;
     border-radius: 10px;
+    @media (max-width: 1200px) {
+      width: 370px;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       position: unset;
       left: unset;
@@ -269,6 +294,10 @@
   }
   .watch-now {
     margin-top: 100px;
+    margin-bottom: 15px;
+  }
+  .just-announced {
+    margin-bottom: 15px;
   }
 }
 // .card-wrapper {
