@@ -14,14 +14,32 @@
   // }
 
   .swiper-button-container {
+    outline: 2px solid blue;
+    width: 85px;
+    background-color: #20212b;
+    border-radius: 8px;
+    border: 2px solid #2e303d;
     margin-bottom: 20px;
     @media (max-width: 575px) {
       margin-bottom: 0;
     }
+    .btn-left {
+      position: relative;
+      &::after {
+        content: "";
+        height: 20px;
+        // border-right: 1px solid #2e303d;
+        border-right: 1px solid red;
+        position: absolute;
+        left: 0;
+      }
+    }
     .swiper-button-disabled {
-      .fa-chevron-left,
-      .fa-chevron-right {
-        color: #6e6f77;
+      .swiper-arrow-next {
+        content: url("../../images/icons/swiper-next--disabled.svg");
+      }
+      .swiper-arrow-prev {
+        content: url("../../images/icons/spwiper-prev--disabled.svg");
       }
     }
   }
@@ -35,7 +53,6 @@
     height: 375px;
     @media (max-width: 500px) {
       width: 98%;
-      
     }
     .hover-wrapper {
       transition: all 0.3s ease-in-out;
@@ -167,10 +184,6 @@
       background-color: #ffdc4e;
       color: black;
     }
-  }
-  .btn-secondary {
-    background-color: #20212b;
-    border: 1px solid #2e303d;
   }
   .cal-icon {
     width: 16px;
