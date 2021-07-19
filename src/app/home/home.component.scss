@@ -225,11 +225,14 @@
     font-weight: 800;
     margin-bottom: 20px;
     max-width: 800px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1250px) {
       font-size: 54px;
     }
-    @media (max-width: 992px) {
+    @media (max-width: 1015px) {
       font-size: 42px;
+    }
+    @media (max-width: 768px) {
+      font-size: 32px;
     }
   }
   .badge-wrapper {
@@ -237,8 +240,12 @@
   }
   .event-wrapper {
     padding-right: 20px;
+    @media (max-width: 992px) {
+      width: 125%;
+    }
     @media (max-width: 768px) {
       padding-right: 0;
+      width: 100%;
     }
   }
   .event-date {
@@ -261,7 +268,17 @@
   }
   .preview-pic-wrapper {
     justify-content: flex-end;
+    @media (max-width: 992px) {
+      width: 80%;
+    }
     @media (max-width: 768px) {
+      width: 100%;
+      max-width: 454px;
+      justify-content: center;
+    }
+    @media (max-width: 525px) {
+      width: 100%;
+      max-width: 325px;
       justify-content: center;
     }
   }
@@ -272,8 +289,12 @@
     @media (max-width: 1200px) {
       width: 370px;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 995px) {
+      width: 325px;
+    }
+    @media (max-width: 850px) {
       width: 100%;
+      // float: right;
     }
 
     @media (max-width: 768px) {
