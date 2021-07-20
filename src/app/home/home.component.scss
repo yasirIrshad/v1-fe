@@ -229,11 +229,11 @@
       font-size: 54px;
     }
     @media (max-width: 1015px) {
-      font-size: 42px;
+      font-size: clamp(2rem, 1.4504rem + 2.4427vw, 3rem);
     }
-    @media (max-width: 768px) {
-      font-size: 32px;
-    }
+    // @media (max-width: 768px) {
+    //   font-size: 32px;
+    // }
   }
   .badge-wrapper {
     margin: 20px auto 35px auto;
@@ -250,7 +250,7 @@
   }
   .event-date {
     align-items: center;
-    @media (max-width: 992px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: unset;
       .event-details-wrapper {
