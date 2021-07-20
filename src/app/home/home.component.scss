@@ -220,6 +220,19 @@
     }
     @media (max-width: 400px) {
       margin-right: 0;
+      padding-right: 5px;
+    }
+    @media (max-width: 375px) {
+      padding: 0;
+    }
+  }
+  .event-time {
+    @media (max-width: 400px) {
+      padding-left: 5px;
+    // outline: 2px solid blue;
+    @media (max-width: 375px) {
+      padding:0;
+    }
     }
   }
   .event-name {
@@ -254,18 +267,16 @@
   .event-date {
     align-items: center;
     @media (max-width: 768px) {
-      // flex-direction: column;
-      // align-items: unset;
       .event-details-wrapper {
         margin-top: 10px;
+      }
+      @media (max-width: 375px ) {
+        flex-direction: column;
       }
     }
     @media (max-width: 768px) {
       justify-content: center;
       align-items: center;
-    }
-    @media (max-width: 425px) {
-      flex-direction: column;
     }
   }
   .fa-chevron-left,

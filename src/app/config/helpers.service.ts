@@ -52,9 +52,10 @@ export class HelpersService {
       if (start && end) {
           const s = moment(start)
           const e = moment(end)
-          const hours = e.diff(s, 'hours', true).toFixed(1).split('.')[0];
+          // removed hours since no show will be longer than 60min
+          // const hours = e.diff(s, 'hours', true).toFixed(1).split('.')[0];
           const minutes = e.diff(s, 'minutes', true)
-          return `${hours}h ${minutes}min`
+          return `${minutes}min`
       }
   }
 
