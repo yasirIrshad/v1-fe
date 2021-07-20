@@ -215,6 +215,9 @@
       font-size: 16px;
       white-space: nowrap;
     }
+    @media (max-width: 525px) {
+      margin-right: 15px;
+    }
     @media (max-width: 400px) {
       margin-right: 0;
     }
@@ -251,8 +254,8 @@
   .event-date {
     align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: unset;
+      // flex-direction: column;
+      // align-items: unset;
       .event-details-wrapper {
         margin-top: 10px;
       }
@@ -260,6 +263,9 @@
     @media (max-width: 768px) {
       justify-content: center;
       align-items: center;
+    }
+    @media (max-width: 425px) {
+      flex-direction: column;
     }
   }
   .fa-chevron-left,
