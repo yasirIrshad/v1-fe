@@ -81,8 +81,8 @@
       transition: all 0.3s ease-in-out;
 
       &:hover .hover-wrapper {
-        transition: all 0.3s ease-in-out;
-        margin-top: -20px;
+        // transition: all 0.3s ease-in-out;
+        // margin-top: -20px;
       }
       .artist-img {
         border-radius: 10px;
@@ -153,10 +153,15 @@
     // outline: 2px solid blue;
   }
   .feature-wrapper {
-    height: 75vh;
+    // height: 600px;
+    margin-top: 40px;
     justify-content: space-between;
+    @media (max-width: 992px) {
+      // height: 300px;
+    }
     @media (max-width: 768px) {
       // height: unset;
+      margin-top: unset;
       text-align: center;
       flex-flow: column-reverse;
     }
@@ -247,9 +252,13 @@
       // font-size: clamp(2rem, 1.4504rem + 2.4427vw, 3rem);
       font-size: clamp(2rem, 1.5728rem + 1.8987vw, 2.75rem);
     }
-    // @media (max-width: 768px) {
-    //   font-size: 32px;
-    // }
+    @media (max-width: 992px) {
+      font-size: 34px;
+    }
+    @media (max-width: 768px) {
+      // font-size: clamp(2rem, 1.5728rem + 1.8987vw, 2.75rem);
+      font-size: 32px;
+    }
   }
   .badge-wrapper {
     margin: 20px auto 35px auto;
@@ -329,12 +338,12 @@
     font-size: 34px;
     white-space: nowrap;
     @media (max-width: 576px) {
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 0;
     }
   }
   .watch-now {
-    margin-top: 100px;
+    margin-top: 110px;
     margin-bottom: 15px;
   }
   .just-announced {
@@ -369,7 +378,7 @@
 
 .max-width-wrapper {
   max-width: 1575px !important;
-  padding: 70px 48px 330px 46px;
+  padding: 50px 48px 330px 46px;
   @media (min-width: 1575px) {
     padding-left: 70px;
     padding-right: 70px;
