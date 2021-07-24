@@ -193,6 +193,11 @@ export class HomeComponent implements OnInit {
       return this.helpers.setEventStartDate(date);
     }
   }
+  setEventStartTime(date) {
+    if (date) {
+      return this.helpers.setEventStartTime(date);
+    }
+  }
 
   setEventDuration(start, end) {
     return this.helpers.setEventDuration(start, end);

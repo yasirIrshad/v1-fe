@@ -152,6 +152,12 @@
     z-index: -10;
     // outline: 2px solid blue;
   }
+  .purchase-btn-wrapper {
+    margin-top: 1.5rem;
+    @media (max-width: 575px) {
+      margin-top: 1.25rem;
+    }
+  }
   .feature-wrapper {
     // height: 600px;
     margin-top: 40px;
@@ -262,6 +268,9 @@
   }
   .badge-wrapper {
     margin: 20px auto 35px auto;
+    @media (max-width: 575px) {
+      margin-bottom: 25px;
+    }
   }
   .event-wrapper {
     padding-right: 20px;
@@ -343,7 +352,7 @@
     }
   }
   .watch-now {
-    margin-top: 110px;
+    margin-top: 125px;
     margin-bottom: 15px;
   }
   .just-announced {

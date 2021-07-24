@@ -44,7 +44,12 @@ export class HelpersService {
 
   setEventStartDate(date) {
     if (date) {
-      return `${moment(date).format('DD MMM YYYY, ddd h:mma')} EDT`
+      return `${moment(date).format('MMM DD')}`
+    }
+  }
+  setEventStartTime(date) {
+    if (date) {
+      return `${moment(date).format('h:mma')} EDT`
     }
   }
 
