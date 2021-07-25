@@ -144,7 +144,7 @@
   }
   .purchase-btn-wrapper {
     margin-top: 1.5rem;
-    @media (max-width: 575px) {
+    @media (max-width: 768px) {
       margin-top: 1.25rem;
     }
   }
@@ -244,7 +244,7 @@
   }
   .badge-wrapper {
     margin: 20px auto 35px auto;
-    @media (max-width: 575px) {
+    @media (max-width: 768px) {
       margin-bottom: 25px;
     }
   }
