@@ -41,18 +41,18 @@ export class HomeComponent implements OnInit {
     preloadImages: true,
     spaceBetween: 35,
     // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        // slidesPerView: 2,
-        // spaceBetween: 40
+    // breakpoints: {
+    //   // when window width is >= 320px
+    //   320: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 40
 
-      },
-      // when window width is >= 992px
-      992: {
-        // slidesPerView: 4
-      }
-    }
+    //   },
+    //   // when window width is >= 992px
+    //   992: {
+    //     slidesPerView: 4
+    //   }
+    // }
   };
   configAlt: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
