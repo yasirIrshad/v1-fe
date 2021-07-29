@@ -1,4 +1,4 @@
-<div class="login max-width-wrapper">
+<div class="login max-width-wrapper mx-auto">
     <div class="back-wrapper">
         <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" (click)="goBack()">
             <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
@@ -6,6 +6,7 @@
               </svg>
             <span class="nav-back-btn">Go back</span></a>
     </div>
+    <!-- test -->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-12">
@@ -34,7 +35,7 @@
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
                 </div>
             </div>
-            <div class="row mt-2 mb-3">
+            <div class="row mt-3 mb-3">
                 <div class="col-12">
                     <a class="float-end password" routerLink="/forgot-password">Forgot your password?</a>
                 </div>
