@@ -2,8 +2,10 @@
     <div class="back-wrapper">
         <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" (click)="goBack()">
             <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
-                <path id="spwiper-prev--disabled" d="M6.042,0A.81.81,0,0,0,5.49.224L.312,5.026A1.038,1.038,0,0,0,.2,6.381a.762.762,0,0,0,.573.342.8.8,0,0,0,.644-.217L6.043,2.2l4.625,4.152a.8.8,0,0,0,.635.21.842.842,0,0,0,.58-.354,1.032,1.032,0,0,0,.214-.73.992.992,0,0,0-.335-.672L6.584.172A.8.8,0,0,0,6.042,0Z" transform="translate(0 12.102) rotate(-90)" fill="#fff"/>
-              </svg>
+                <path id="spwiper-prev--disabled"
+                    d="M6.042,0A.81.81,0,0,0,5.49.224L.312,5.026A1.038,1.038,0,0,0,.2,6.381a.762.762,0,0,0,.573.342.8.8,0,0,0,.644-.217L6.043,2.2l4.625,4.152a.8.8,0,0,0,.635.21.842.842,0,0,0,.58-.354,1.032,1.032,0,0,0,.214-.73.992.992,0,0,0-.335-.672L6.584.172A.8.8,0,0,0,6.042,0Z"
+                    transform="translate(0 12.102) rotate(-90)" fill="#fff" />
+            </svg>
             <span class="nav-back-btn">Go back</span></a>
     </div>
     <!-- test -->
@@ -13,42 +15,47 @@
                 <img src="./assets/sos-logo.svg" class="logo">
             </div>
         </div>
-        
+
         <div class="login-wrapper">
-            <div class="row mt-5">
+            <div class="row">
                 <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label mb-3">Log in with your email</label>
+                    <label for="exampleFormControlInput1" class="form-label">Log in with your email</label>
                     <input type="email" class="form-control" id="email" (input)="emailValid()" placeholder="Email"
                         formControlName="identifier" required>
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-12">
-                    <input type="password" class="form-control" id="password" (input)="passwordValid()"
-                        placeholder="Password" formControlName="password" required>
+                <div class="col-12 d-flex align-items-center password-wrapper">
+                    <!-- <input type="password" class="form-control" id="password" (input)="passwordValid()"
+                        placeholder="Password" formControlName="password" required> -->
+                    <input type="password" id="password" class="form-control" placeholder="Password" aria-label="Password" formControlName="password" required>
+                    <!-- <span class="input-group-text" onclick="toggleVisibilityNewPassword()"> -->
+                    <span class="input-group-text" (click)="toggleVisibility($event, 'password')">
+                        <i id="new-password-togglePassIcon" class="fas fa-eye-slash fa-lg"></i>
+                    </span>
                 </div>
             </div>
             <div class="row" *ngIf="hasError">
-                <div class="col-12 error-container fade show"
-                    role="alert">
+                <div class="col-12 error-container fade show" role="alert">
                     <span class="alert-message mx-auto">Invalid Email or Password provided, please try again</span>
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
                 </div>
             </div>
             <div class="row mt-3 mb-3">
                 <div class="col-12">
-                    <a class="float-end password" routerLink="/forgot-password">Forgot your password?</a>
+                    <a class="password" routerLink="/forgot-password">Forgot your password?</a>
                 </div>
             </div>
             <div class="row mt-1">
-                <div class="col-12 d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg login-btn"
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg login-btn w-100"
                         [disabled]="loginForm.invalid">Continue</button>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-12 d-grid">
-                    <span class="help" routerLink="/signup">Don't have an account? <a class="signup" routerLink="/signup">Sign
+            <div class="row help-row">
+                <div class="col-12">
+                    <span class="help w-100" routerLink="/signup">Don't have an account? <a class="signup"
+                            routerLink="/signup">Sign
                             up</a></span>
                 </div>
             </div>

@@ -1,77 +1,139 @@
+$sos-primary: #ffd83b;
+
 .signup {
-    min-height: 100vh;
-    .back-wrapper {
-        margin: 0 auto 60px auto;
-        .nav-back-btn {
-          margin-left: 10px;
-        }
+  min-height: 100vh;
+  .back-wrapper {
+    margin: 0 auto 60px auto;
+    a {
+        color: white;
+        font-size: 16px;
     }
-    .agree-col {
-        background: #31353e;
-        padding: 10px;
-        border-radius: 6px;
-        font-size: .8rem;
-        color: #96999e;
-        line-height: 18px;
-        font-weight: 200;
+    .nav-back-btn {
+      margin-left: 10px;
     }
-    .agree-link {
-        color: #ffd83b;
-    }
-    .continue-btn {
-        background: linear-gradient(98deg, rgb(255, 216, 59) 0%, rgb(255, 164, 59) 100%);
-        font-size: 15px;
-        height: 45px;
-        border: none;
-        color: #000;
-    }
-    .continue-btn:disabled {
-        background: #7a848b;;
-        font-size: 15px;
-        height: 45px;
-        border: none;
-        color: #000;
-    }
-    .fl {
-        font-weight: 200;
-        margin-left: 10px;
-    }
-    .form-control {
-        background: #31343e;
-        height: 51px;
-        color: #fff;
-        border: none;
-    }
-    .form-pw {
-        background: #000;
-    }
-    label {
-        font-size: 15px;
-    }
-    .list-group-item {
-        background-color: transparent;
-        color: #fff;
-        font-size: 13px;
-        border: none;
-    }
-    .logo {
-        width: 82px;
-        height: 56px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    .login {
-        color: #fff;
-        font-weight: 600;
-    }
-    .terms-label {
-        font-size: .8rem;
-        color: #96999e;
-        font-weight: 200;
-    }
-    .valid {
-        color: greenyellow;
-        text-decoration: line-through;
-    }
+  }
+  .progress-wrapper {
+      .progress-text {
+          font-size: 12px;
+          letter-spacing: 0.25rem;
+          color: #96999e;
+      }
+  }
+  .form-check-input {
+      border-radius: 5px;
+      min-width: 25px;
+      min-height: 25px;
+      background-color: transparent;
+      border: 2px solid $sos-primary;
+      &:checked {
+          background-color: $sos-primary;
+        //   background-image: url();
+      }
+  }
+  .agree-col {
+    background: #31353e;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: white;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  .agree-link {
+    color: #ffd83b;
+  }
+  .continue-btn {
+    background: linear-gradient(
+      98deg,
+      rgb(255, 216, 59) 0%,
+      rgb(255, 164, 59) 100%
+    );
+    font-size: 15px;
+    height: 45px;
+    border: none;
+    color: #000;
+  }
+  .continue-btn:disabled {
+    background: #7a848b;
+    font-size: 15px;
+    height: 45px;
+    border: none;
+    color: #000;
+  }
+  .fl {
+    font-weight: 200;
+    margin-left: 10px;
+  }
+  .form-control {
+    background: #31343e;
+    height: 51px;
+    color: #fff;
+    border: 1px solid rgb(110, 110, 110);
+  }
+  .form-pw {
+    background: #000;
+  }
+  label {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .list-group-item {
+    background-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    border: none;
+  }
+  .logo {
+    width: 120px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .login {
+    color: #fff;
+    font-weight: 600;
+  }
+  .terms-label {
+    font-size: 0.8rem;
+    color: #96999e;
+    font-weight: 200;
+  }
+  .valid {
+    color: greenyellow;
+    text-decoration: line-through;
+  }
+}
+
+.signup-wrapper {
+    max-width: 415px;
+    margin: 0 auto;
+}
+
+.max-width-wrapper {
+  max-width: 1575px !important;
+  padding: 55px 48px 330px 46px;
+  @media (min-width: 1575px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 35px;
+  }
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 475px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

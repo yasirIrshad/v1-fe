@@ -8,12 +8,12 @@
   }
   .error-container {
       background-color: #f03737;
-      border-radius: 5px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
-      font-size: 12px;
+      font-size: 14px;
       width: 94%;
-      margin: 10px auto;
+      margin: 15px auto 0 auto;
       height: 35px;
       @media (max-width: 475px) {
         height: auto;
@@ -33,12 +33,31 @@
     color: #fff;
     border: none;
     padding: 0.375rem 23px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
   }
+  .password-wrapper {
+    input {
+      border-radius: 6px 0 0 6px;
+    }
+    span {
+    background-color: #31343e;
+    height: 100%;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    i {
+      color: #cacaca;
+      width: 25px;
+      height: 20px;
+    }
+    }
+  }
+  .help-row {
+    margin-top: 30px;
+  }
   .help {
-    font-size: 12px;
-    color: #96999e;
+    font-size: 14px;
+    color: #8e9199;
     font-weight: 400;
     a {
       margin-left: 2.5px;
@@ -47,6 +66,7 @@
   label {
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 28px;
   }
   .logo {
     width: 120px;
@@ -70,11 +90,11 @@
     font-weight: 600;
     border-radius: 6px;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     height: 45px;
   }
   .password {
-    font-size: 13px;
+    font-size: 14px;
   }
   .signup {
     color: #fff;
@@ -83,14 +103,14 @@
   //test
 
   .login-wrapper {
-    max-width: 415px;
-    margin: 0 auto;
+    max-width: 410px;
+    margin: 60px auto auto auto;
   }
 }
 
 .max-width-wrapper {
   max-width: 1575px !important;
-  padding: 55px 48px 330px 46px;
+  padding: 60px 45px 290px 45px;
   @media (min-width: 1575px) {
     padding-left: 70px;
     padding-right: 70px;
