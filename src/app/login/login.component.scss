@@ -1,50 +1,111 @@
 .login {
-    height: 100vh;
+  height: 100vh;
+  .back-wrapper {
+    margin: 0 auto 60px auto;
+    .nav-back-btn {
+      margin-left: 10px;
+    }
+  }
+  .error-container {
+      background-color: #f03737;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      width: 94%;
+      margin: 10px auto;
+      height: 35px;
+  }
+  a {
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .form-control {
+    background: #31343e;
+    height: 51px;
+    color: #fff;
+    border: none;
+    padding: 0.375rem 23px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .help {
+    font-size: 12px;
+    color: #96999e;
+    font-weight: 400;
     a {
-        color: #fff;
-        font-size: 15px;
-        text-decoration: none;
+      margin-left: 2.5px;
     }
-    .form-control {
-        background: #31343e;
-        height: 51px;
-        color: #fff;
-        border: none;
-    }
-    .help {
-        font-size: .8rem;
-        color: #96999e;
-        font-weight: 200;
-    }
-    label {
-        font-size: 15px;
-    }
-    .logo {
-        width: 82px;
-        height: 56px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    .btn:disabled {
-        background: #7a848b;
-        color: #232b31;
-    }
-    .login-btn {
-        background: linear-gradient(98deg, rgb(255, 216, 59) 0%, rgb(255, 164, 59) 100%);
-        border: none;
-        color: #232b31;
-        font-weight: 400;
-        border-radius: 6px;
-        text-transform: uppercase;
-        font-size: 15px;
-        height: 45px;
-    }
-    .password {
-        font-size: 13px;
-    }
-    .signup {
-        color: #fff;
-        font-weight: 600;
-    }
+  }
+  label {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .logo {
+    width: 120px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .btn:disabled {
+    background: #7a848b;
+    color: #232b31;
+  }
+  .login-btn {
+    background: linear-gradient(
+      98deg,
+      rgb(255, 216, 59) 0%,
+      rgb(255, 164, 59) 100%
+    );
+    border: none;
+    color: #232b31;
+    font-weight: 400;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 15px;
+    height: 45px;
+  }
+  .password {
+    font-size: 13px;
+  }
+  .signup {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .login-wrapper {
+    max-width: 415px;
+    margin: 0 auto;
+  }
+}
+
+.max-width-wrapper {
+  max-width: 1575px !important;
+  padding: 55px 48px 330px 46px;
+  @media (min-width: 1575px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 35px;
+  }
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 475px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
