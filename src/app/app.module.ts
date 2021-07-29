@@ -33,6 +33,7 @@ import { MerchComponent } from './components/merch/merch.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SignupComponent } from './signup/signup.component';
 import { SupportComponent } from './support/support.component';
+import { MyShowsComponent } from './my-shows/my-shows.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { SupportComponent } from './support/support.component';
     QuickMerchComponent,
     SignupComponent,
     SupportComponent,
-    TicketComponent
+    TicketComponent,
+    MyShowsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

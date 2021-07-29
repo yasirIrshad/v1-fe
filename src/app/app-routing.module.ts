@@ -19,33 +19,37 @@ import { ProfileComponent } from './profile/profile.component';
 import { PurchaseShowComponent } from './purchase-show/purchase-show.component';
 import { SignupComponent } from './signup/signup.component';
 import { SupportComponent } from './support/support.component';
+import { MyShowsComponent } from './my-shows/my-shows.component';
 
 
 const routes: Routes = [
   { path: 'artist-profile/:id', component: ArtistProfileComponent },
   { path: 'docs/:type', component: DocsComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent},
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'genre/:type', component: GenreComponent },
   { path: 'genres', component: GenresComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'purchase-show/:slug', component: PurchaseShowComponent },
-  { path: 'signup', component: SignupComponent},
+  { path: 'signup', component: SignupComponent },
   { path: 'support', component: SupportComponent },
-  { path: 'account', component: AccountComponent,
+  {
+    path: 'account', component: AccountComponent,
+    canActivate: [AuthGuard],
     children: [
-      { path: 'profile',
+      { path: 'my-shows', component: MyShowsComponent },
+      {
+        path: 'profile',
         component: ProfileComponent,
-        canActivate: [AuthGuard],
         children: [
-          { path: 'address', component: AddressComponent},
+          { path: 'address', component: AddressComponent },
           { path: 'invoices', component: InvoicesComponent },
           { path: 'personal-details', component: PersonalDetailsComponent },
           { path: 'login-security', component: LoginSecurityComponent },
           { path: 'my-profile', component: MyProfileComponent },
           { path: 'newsletter', component: NewsletterComponent }
         ]
-       },
+      },
     ]
   },
   { path: '**', component: HomeComponent },
