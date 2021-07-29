@@ -1,7 +1,11 @@
 <div class="signup">
-    <nav class="navbar">
-        <a class="navbar-brand" href="javascript:void(0)" (click)="goBack()">&larr; Back to previous page</a>
-    </nav>
+    <div class="back-wrapper">
+        <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
+                <path id="spwiper-prev--disabled" d="M6.042,0A.81.81,0,0,0,5.49.224L.312,5.026A1.038,1.038,0,0,0,.2,6.381a.762.762,0,0,0,.573.342.8.8,0,0,0,.644-.217L6.043,2.2l4.625,4.152a.8.8,0,0,0,.635.21.842.842,0,0,0,.58-.354,1.032,1.032,0,0,0,.214-.73.992.992,0,0,0-.335-.672L6.584.172A.8.8,0,0,0,6.042,0Z" transform="translate(0 12.102) rotate(-90)" fill="#fff"/>
+              </svg>
+            <span class="nav-back-btn">Go back</span></a>
+    </div>
     <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-xs-12 col-md-6 offset-md-3">
