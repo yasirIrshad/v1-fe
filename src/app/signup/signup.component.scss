@@ -3,7 +3,7 @@ $sos-primary: #ffd83b;
 .signup {
   min-height: 100vh;
   .back-wrapper {
-    margin: 0 auto 60px auto;
+    margin: 0 auto -20px auto;
     a {
         color: white;
         font-size: 16px;
@@ -16,8 +16,24 @@ $sos-primary: #ffd83b;
       .progress-text {
           font-size: 12px;
           letter-spacing: 0.25rem;
-          color: #96999e;
+          color: #6E6F77;
       }
+  }
+  .signup-row {
+    margin-bottom: 25px;
+  }
+  .email-label {
+    margin-bottom: 25px;
+  }
+  .username-label {
+    margin-bottom: 22px;
+  }
+  .username-row {
+    margin-bottom: 22px;
+  }
+  .offers-wrapper {
+    margin-top: 32px;
+    margin-bottom: 20px;
   }
   .form-check-input {
       border-radius: 5px;
@@ -25,16 +41,20 @@ $sos-primary: #ffd83b;
       min-height: 25px;
       background-color: transparent;
       border: 2px solid $sos-primary;
+      cursor: pointer;
+      margin-bottom: 5px;
       &:checked {
           background-color: $sos-primary;
-        //   background-image: url();
+          background-image: url("../../images/icons/checkmark--black.svg");
+          background-size: 75%;
+
       }
   }
   .agree-col {
     background: #31353e;
     padding: 10px;
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: 12px;
     color: white;
     line-height: 18px;
     font-weight: 400;
@@ -43,26 +63,31 @@ $sos-primary: #ffd83b;
     color: #ffd83b;
   }
   .continue-btn {
+    font-weight: 600;
+    text-transform: uppercase;
     background: linear-gradient(
       98deg,
       rgb(255, 216, 59) 0%,
       rgb(255, 164, 59) 100%
     );
-    font-size: 15px;
+    font-size: 18px;
     height: 45px;
     border: none;
     color: #000;
   }
   .continue-btn:disabled {
     background: #7a848b;
-    font-size: 15px;
+    font-size: 18px;
     height: 45px;
     border: none;
     color: #000;
   }
   .fl {
-    font-weight: 200;
+    font-weight: 500;
+    color: #CACACA;
+    font-size: 14px;
     margin-left: 10px;
+    margin-top: 2px;
   }
   .form-control {
     background: #31343e;
@@ -71,8 +96,44 @@ $sos-primary: #ffd83b;
     border: 1px solid rgb(110, 110, 110);
   }
   .form-pw {
-    background: #000;
+    background: #131519 ;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: 62px;
+    border-radius: 6px;
   }
+  .requirements-wrapper {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: -23px;
+    margin-bottom: -15px;
+  }
+  .password-wrapper {
+    height: 100%;
+    input {
+      border-radius: 6px 0 0 6px;
+    }
+    span {
+    background-color: #31343e;
+    height: 51px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    .fa-lg {
+      font-size: 20px;
+      padding-top: 3px;
+    }
+    i {
+      color: #cacaca;
+      width: 27px;
+      height: 22px;
+    }
+    }
+  }
+  .your-email-wrapper {
+    margin-bottom: 19px;
+  }
+
   label {
     font-size: 20px;
     font-weight: 600;
@@ -84,20 +145,32 @@ $sos-primary: #ffd83b;
     border: none;
   }
   .logo {
-    width: 120px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100px;
+    height: 68px;
+    margin: 0 auto 37px auto;
     display: block;
+    @media (max-width: 350px) {
+      width: 80px;
+      height: 48px;
+    }
   }
   .login {
     color: #fff;
     font-weight: 600;
   }
   .terms-label {
-    font-size: 0.8rem;
-    color: #96999e;
-    font-weight: 200;
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+  }
+  .login-link {
+    font-size: 14px;
+    color: #787c85;
+    font-weight: 400;
+    span {
+      font-weight: 600;
+      margin-left: 0.5px;
+    }
   }
   .valid {
     color: greenyellow;

@@ -80,18 +80,20 @@
 
 .max-width-wrapper {
   max-width: 1535px !important;
-  @media (max-width: 14400px) {
-    padding-left: 65px;
-    padding-right: 65px;
-  }
-  @media (max-width: 1200px) {
-    padding-left: 43px;
-    padding-right: 43px;
-  }
-  @media (max-width: 992px) {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+  padding-left: 0;
+  padding-right: 0;
+  // @media (max-width: 14400px) {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+  // @media (max-width: 1200px) {
+  //   padding-left: 43px;
+  //   padding-right: 43px;
+  // }
+  // @media (max-width: 992px) {
+  //   padding-left: 28px;
+  //   padding-right: 28px;
+  // }
   @media (max-width: 576px) {
     padding-left: 15px;
     padding-right: 15px;
