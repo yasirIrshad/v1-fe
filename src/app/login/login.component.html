@@ -18,14 +18,14 @@
 
         <div class="login-wrapper">
             <div class="row">
-                <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label">Log in with your email</label>
+                <div class="login-row email-wrapper">
+                    <label for="exampleFormControlInput1" class="form-label">Log In</label>
                     <input type="email" class="form-control" id="email" (input)="emailValid()" placeholder="Email"
                         formControlName="identifier" required>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12 d-flex align-items-center password-wrapper">
+            <div class="row">
+                <div class="login-row d-flex align-items-center password-wrapper">
                     <!-- <input type="password" class="form-control" id="password" (input)="passwordValid()"
                         placeholder="Password" formControlName="password" required> -->
                     <input type="password" id="password" class="form-control" placeholder="Password" aria-label="Password" formControlName="password" required>
@@ -36,24 +36,24 @@
                 </div>
             </div>
             <div class="row" *ngIf="hasError">
-                <div class="col-12 error-container fade show" role="alert">
+                <div class="login-row error-container fade show" role="alert">
                     <span class="alert-message mx-auto">Invalid Email or Password provided, please try again</span>
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
                 </div>
             </div>
-            <div class="row mt-3 mb-3">
-                <div class="col-12">
-                    <a class="password" routerLink="/forgot-password">Forgot your password?</a>
+            <div class="row">
+                <div class="login-row forgot-wrapper">
+                    <a class="password" routerLink="/forgot-password">Forgot password?</a>
                 </div>
             </div>
-            <div class="row mt-1">
-                <div class="col-12">
+            <div class="row">
+                <div class="login-row btn-wrapper">
                     <button type="submit" class="btn btn-primary btn-lg login-btn w-100"
                         [disabled]="loginForm.invalid">Continue</button>
                 </div>
             </div>
             <div class="row help-row">
-                <div class="col-12">
+                <div class="login-row signup-wrapper">
                     <span class="help w-100" routerLink="/signup">Don't have an account? <a class="signup"
                             routerLink="/signup">Sign
                             up</a></span>

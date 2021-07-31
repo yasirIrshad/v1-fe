@@ -1,10 +1,17 @@
 .login {
   height: 100vh;
   .back-wrapper {
-    margin: 0 auto 60px auto;
+    margin: 0 auto -20px auto;
     .nav-back-btn {
       margin-left: 10px;
     }
+  }
+  .login-row {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .forgot-wrapper {
+    text-align: right;
   }
   .error-container {
       background-color: #f03737;
@@ -12,8 +19,8 @@
       display: flex;
       align-items: center;
       font-size: 14px;
-      width: 94%;
-      margin: 15px auto 0 auto;
+      width: 95%;
+      margin: 0 auto 15px auto;
       height: 35px;
       @media (max-width: 475px) {
         height: auto;
@@ -32,7 +39,7 @@
     height: 51px;
     color: #fff;
     border: none;
-    padding: 0.375rem 23px;
+    padding: 0.375rem 20px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -45,35 +52,43 @@
     height: 100%;
     border: none;
     border-radius: 0 6px 6px 0;
+    .fa-lg {
+      font-size: 20px;
+      padding-top: 3px;
+    }
     i {
       color: #cacaca;
-      width: 25px;
-      height: 20px;
+      width: 27px;
+      height: 22px;
     }
     }
   }
   .help-row {
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .help {
     font-size: 14px;
     color: #8e9199;
     font-weight: 400;
     a {
-      margin-left: 2.5px;
+      margin-left: 0.5px;
     }
   }
   label {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 28px;
+    margin-bottom: 23px;
   }
   .logo {
-    width: 120px;
-    height: 80px;
+    width: 100px;
+    height: 68px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    @media (max-width: 350px) {
+      width: 80px;
+      height: 48px;
+    }
   }
   .btn:disabled {
     background: #7a848b;
@@ -104,7 +119,7 @@
 
   .login-wrapper {
     max-width: 410px;
-    margin: 60px auto auto auto;
+    margin: 50px auto auto auto;
   }
 }
 
