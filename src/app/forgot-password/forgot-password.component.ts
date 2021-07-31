@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../config/api.service';
+import { AuthService } from '../config/auth.service';
+import { TokenService } from '../config/token.service';
+import { Router } from '@angular/router';
+import { HelpersService } from '../config/helpers.service';   
 
 @Component({
   selector: 'app-forgot-password',
@@ -16,11 +20,15 @@ export class ForgotPasswordComponent implements OnInit {
   });
 
   constructor(
+    private helpers: HelpersService,
     private fb: FormBuilder,
     private api: ApiService
   ) { }
 
   ngOnInit(): void {
+  }
+  goBack() {
+    this.helpers.goBack()
   }
 
   onSubmit() {
