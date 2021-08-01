@@ -1,6 +1,6 @@
 <div class="signup max-width-wrapper mx-auto">
     <div class="back-wrapper">
-        <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" (click)="goBack()">
+        <a class="navbar-brand d-flex align-items-center" href="/home">
             <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
                 <path id="spwiper-prev--disabled"
                     d="M6.042,0A.81.81,0,0,0,5.49.224L.312,5.026A1.038,1.038,0,0,0,.2,6.381a.762.762,0,0,0,.573.342.8.8,0,0,0,.644-.217L6.043,2.2l4.625,4.152a.8.8,0,0,0,.635.21.842.842,0,0,0,.58-.354,1.032,1.032,0,0,0,.214-.73.992.992,0,0,0-.335-.672L6.584.172A.8.8,0,0,0,6.042,0Z"
@@ -11,7 +11,7 @@
     <div class="signup-wrapper">
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 image-wrapper">
                     <img src="./assets/sos-logo.svg" class="logo">
                 </div>
             </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="row signup-row" *ngIf="step === 1">
                 <div class="col-12">
-                    <p class="login-link">Already have an account? <span class="login">Log in</span></p>
+                    <p class="login-link">Already have an account? <a href="/login" class="login">Log in</a></p>
                 </div>
             </div>
 
@@ -139,24 +139,24 @@
             </div>
             <div class="row signup-row" *ngIf="step === 3">
                 <div class="col-12">
-                    <!-- <div class="col-12">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" [ngClass]="passwordMin === true ? 'valid' : 'invalid'">Minimum
-                    eight characters</li>
-                <li class="list-group-item" [ngClass]="passwordUpper === true ? 'valid' : 'invalid'">At
-                    least one uppercase letter</li>
-                <li class="list-group-item" [ngClass]="passwordLower === true ? 'valid' : 'invalid'">At
-                    least one lowercase letter</li>
-                <li class="list-group-item" [ngClass]="passwordNum === true ? 'valid' : 'invalid'">At least
-                    one number</li>
-                <li class="list-group-item" [ngClass]="passwordSC === true ? 'valid' : 'invalid'">At least
-                    one special character</li>
-            </ul>
-        </div> -->
-                    <div class="requirements-wrapper">
+                    <div class="col-12">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" [ngClass]="passwordMin === true ? 'valid' : 'invalid'">Minimum
+                                eight characters</li>
+                            <li class="list-group-item" [ngClass]="passwordUpper === true ? 'valid' : 'invalid'">At
+                                least one uppercase letter</li>
+                            <li class="list-group-item" [ngClass]="passwordLower === true ? 'valid' : 'invalid'">At
+                                least one lowercase letter</li>
+                            <li class="list-group-item" [ngClass]="passwordNum === true ? 'valid' : 'invalid'">At least
+                                one number</li>
+                            <li class="list-group-item" [ngClass]="passwordSC === true ? 'valid' : 'invalid'">At least
+                                one special character</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="requirements-wrapper">
                         <p class="requirement-text">Use a minimum of 8 characters with at least one number, one
                             uppercase letter, and one special character</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="row your-email-wrapper" *ngIf="step === 3">

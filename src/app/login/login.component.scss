@@ -1,7 +1,7 @@
 .login {
   height: 100vh;
   .back-wrapper {
-    margin: 0 auto -20px auto;
+    margin: 0 auto;
     .nav-back-btn {
       margin-left: 10px;
     }
@@ -12,6 +12,10 @@
   }
   .forgot-wrapper {
     text-align: right;
+  }
+  .image-wrapper {
+    width: min-content;
+    margin: 0 auto;
   }
   .error-container {
       background-color: #f03737;
@@ -124,7 +128,7 @@
 
 .max-width-wrapper {
   max-width: 1575px !important;
-  padding: 60px 45px 290px 45px;
+  padding: 52px 45px 290px 45px;
   @media (min-width: 1575px) {
     padding-left: 70px;
     padding-right: 70px;

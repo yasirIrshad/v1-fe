@@ -1,10 +1,10 @@
 .my-shows {
   min-height: 100vh;
-  margin-top: 40px;
+  margin-top: 47px;
 
   .shows-title {
     font-size: 28px;
-    font-weight: 800;
+    font-weight: bold;
   }
 }
 .shows-row {
@@ -94,4 +94,30 @@
       width: 225px;
     }
   }
+
+}
+.max-width-wrapper {
+  max-width: 1535px !important;
+  padding-left: 0;
+  padding-right: 0;
+  @media (max-width: 14400px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media (max-width: 576px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // @media (max-width: 500px) {
+  //   padding-left: 10px;
+  //   padding-right: 10px;
+  // }
 }

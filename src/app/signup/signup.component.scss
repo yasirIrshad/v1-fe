@@ -3,10 +3,11 @@ $sos-primary: #ffd83b;
 .signup {
   min-height: 100vh;
   .back-wrapper {
-    margin: 0 auto -20px auto;
+    margin: 0 auto -23px auto;
     a {
         color: white;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 600;
     }
     .nav-back-btn {
       margin-left: 10px;
@@ -144,6 +145,10 @@ $sos-primary: #ffd83b;
     font-size: 13px;
     border: none;
   }
+  .image-wrapper {
+    width: min-content;
+    margin: 0 auto;
+  }
   .logo {
     width: 100px;
     height: 68px;
@@ -167,7 +172,8 @@ $sos-primary: #ffd83b;
     font-size: 14px;
     color: #787c85;
     font-weight: 400;
-    span {
+    a {
+      text-decoration: none;
       font-weight: 600;
       margin-left: 0.5px;
     }
@@ -185,7 +191,7 @@ $sos-primary: #ffd83b;
 
 .max-width-wrapper {
   max-width: 1575px !important;
-  padding: 55px 48px 330px 46px;
+  padding: 52px 48px 330px 46px;
   @media (min-width: 1575px) {
     padding-left: 70px;
     padding-right: 70px;
