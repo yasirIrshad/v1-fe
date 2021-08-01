@@ -101,8 +101,8 @@
   padding-left: 0;
   padding-right: 0;
   @media (max-width: 14400px) {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 47px;
+  padding-right: 47px;
   }
   @media (max-width: 1200px) {
     padding-left: 17px;
@@ -113,6 +113,10 @@
     padding-right: 5px;
   }
   @media (max-width: 576px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 500px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -120,4 +124,5 @@
   //   padding-left: 10px;
   //   padding-right: 10px;
   // }
+  
 }
