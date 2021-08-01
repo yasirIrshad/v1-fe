@@ -31,8 +31,9 @@ nav {
   .btn-link {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 15px;
+    font-weight: 600;
     &:hover {
       color: #ffd83b;
     }
@@ -70,11 +71,11 @@ nav {
       fill: #ffd83b;
     }
   }
-  @media (min-width: 1440px) {
-    button {
-      padding-right: 0 !important;
-    }
+
+  button {
+    padding-right: 0 !important;
   }
+
   .navbar-toggler {
     border: none;
     background-image: url(../../../images/icons/SOS_Mobile_Menu.svg);
@@ -119,7 +120,7 @@ nav {
         padding-left: 7px;
       }
     }
-    
+
     .offcanvas-title {
       margin: 80px 0 25px 20px;
       font-size: 28px;
@@ -340,7 +341,6 @@ nav {
   .user-icon {
     margin-left: 20px;
     i {
-
       width: 47px;
     }
   }
