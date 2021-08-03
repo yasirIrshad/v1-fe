@@ -104,6 +104,9 @@ export class SignupComponent implements OnInit {
   nextStep() {
     this.step += 1;
   }
+  lastStep() {
+    this.step -= 1;
+  }
 
   onSubmit() {
     this.auth.register(this.signUpForm.value).subscribe(

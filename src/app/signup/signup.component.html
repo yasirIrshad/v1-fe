@@ -1,5 +1,5 @@
 <div class="signup max-width-wrapper mx-auto">
-    <div class="back-wrapper">
+    <div class="back-wrapper to-home" *ngIf="step === 1">
         <a class="navbar-brand d-flex align-items-center" href="/home">
             <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
                 <path id="spwiper-prev--disabled"
@@ -8,6 +8,21 @@
             </svg>
             <span class="nav-back-btn">Go back</span></a>
     </div>
+    <div class="back-wrapper last-step" *ngIf="step >= 2">
+        <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" (click)="lastStep()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6.727" height="12.102" viewBox="0 0 6.727 12.102">
+                <path id="spwiper-prev--disabled"
+                    d="M6.042,0A.81.81,0,0,0,5.49.224L.312,5.026A1.038,1.038,0,0,0,.2,6.381a.762.762,0,0,0,.573.342.8.8,0,0,0,.644-.217L6.043,2.2l4.625,4.152a.8.8,0,0,0,.635.21.842.842,0,0,0,.58-.354,1.032,1.032,0,0,0,.214-.73.992.992,0,0,0-.335-.672L6.584.172A.8.8,0,0,0,6.042,0Z"
+                    transform="translate(0 12.102) rotate(-90)" fill="#fff" />
+            </svg>
+            <span class="nav-back-btn">Go back</span></a>
+    </div>
+
+
+
+
+
+
     <div class="signup-wrapper">
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <div class="row">
@@ -29,7 +44,7 @@
             <div class="row signup-row" *ngIf="step === 1">
                 <div class="progress-wrapper"><span class="progress-text">1/3</span></div>
                 <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label email-label">Enter your email</label>
+                    <label for="exampleFormControlInput1" class="form-label email-label">Enter Email</label>
                     <input type="email" class="form-control" id="email" (input)="emailUniq()" placeholder="Email"
                         formControlName="email" required>
                 </div>
@@ -71,7 +86,7 @@
             </div>
             <div class="row signup-row" *ngIf="step === 1">
                 <div class="col-12">
-                    <p class="login-link">Already have an account? <a href="/login" class="login">Log in</a></p>
+                    <p class="login-link">Already have an account? <a href="/login" class="login">Log In</a></p>
                 </div>
             </div>
 
@@ -97,7 +112,7 @@
             <div class="row username-row" *ngIf="step === 2">
                 <div class="progress-wrapper"><span class="progress-text">2/3</span></div>
                 <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label username-label">Create a username</label>
+                    <label for="exampleFormControlInput1" class="form-label username-label">Create Username</label>
                     <input type="text" class="form-control border-0" id="username" (input)="usernameUniq()"
                         placeholder="Username" formControlName="username" required>
                 </div>
@@ -120,7 +135,7 @@
             <div class="row signup-row mb-0" *ngIf="step === 3">
                 <div class="progress-wrapper"><span class="progress-text">3/3</span></div>
 
-                <label for="password" class="form-label">Create a password</label>
+                <label for="password" class="form-label">Create Password</label>
                 <div class="col-12">
                     <div class="d-flex align-items-center password-wrapper signup-row">
 
@@ -139,7 +154,7 @@
             </div>
             <div class="row signup-row" *ngIf="step === 3">
                 <div class="col-12">
-                    <div class="col-12">
+                    <div class="col-12 password-checker-wrapper">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" [ngClass]="passwordMin === true ? 'valid' : 'invalid'">Minimum
                                 eight characters</li>
