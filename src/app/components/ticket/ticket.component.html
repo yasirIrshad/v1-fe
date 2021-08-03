@@ -1,24 +1,31 @@
-<div class="row justify-content-between ticket">
-    <div class="col-4">
-        <p>Choose a ticket</p>
+<div class="row ticket" *ngFor="let ticket of ticketOptions">
+    <div class="col-md-1 col-sm-1">
+        <i class="far fa-circle fa-2x"></i>
     </div>
-    <div class="col-1">
-        <i class="fas fa-info-circle"></i>
+    <div class="col-md-8 col-sm-9">
+        <p class="ticket-type mb-0">{{ ticketName(ticket.type) }}</p>
+        <p class="ticket-description">{{ ticket?.description }}</p>
     </div>
-    <div class="col-12">
-        <div class="row">
-            <div class="col-5">
-                <select class="form-select" aria-label="Default select example" *ngIf="ticketOptions" (change)="setTicket($event)">
-                    <option selected>Select ticket</option>
-                    <option *ngFor="let ticket of ticketOptions" [value]="ticket.id">{{ ticketName(ticket.type) }}</option>
-                </select>
-            </div>
-            <div class="col-7">
-                <p class="float-end">{{ price | currency }}</p>
-            </div>
-            <div class="col-12">
-                <p class="vip-text" *ngIf="ticketSelected?.type === 'vip'">Included for free in your VIP Stream</p>
-                <app-merch [freeItems]="vipItems" [event]="event" *ngIf="ticketSelected?.type === 'vip'"></app-merch>
+    <div class="col-md-3 col-sm-2">
+        <p class="float-end">{{ ticket?.price | currency }}</p>
+    </div>
+    <div class="col-12 p-0" *ngIf="ticket.type === 'vip'">
+        <div class="row vip-row">
+            <div class="card" *ngFor="let item of vipItems">
+                <div class="row">
+                    <img [src]="item?.image?.formats?.small.url" class="float-start image">
+                    <span class="size-section">
+                        <p class="float-start item-name">{{ item.name }}</p>
+                        <p class="size">size</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="small">S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                            <option value="xlarge">XL</option>
+                          </select>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

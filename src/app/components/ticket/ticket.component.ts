@@ -20,7 +20,7 @@ export class TicketComponent implements OnInit, OnChanges {
     private cartService: CartService
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.ticketOptions = changes.tickets.currentValue;

@@ -1,92 +1,37 @@
 <div class="purchase-show">
     <div class="row">
-        <div class="ticket-container">
-            <div class="img-container">
-                <img [src]="event?.performers[0]?.flyer?.formats?.medium?.url" class="artist-main">
-            </div>
-            <div class="details">
-                <h1 class="mb-0">{{ event?.name }}</h1>
-                <h2>{{ event?.performers[0]?.name }}</h2>
-                <section class="date-duration">
-                    <span class="date"><img src="../images/icons/calendar.svg">{{ getDate(event, event?.start) }}</span>
-                    <span class="duration"><img src="../images/icons/clock.svg"> {{ setEventDuration(event?.start, event?.end)
-                        }}
-                    </span>
-                </section>
-                <section class="share">
-                    <button type="button" class="btn btn-preview" data-bs-toggle="modal" data-bs-target="#previewModal" (click)="openPreview(1)"><img src="../../images/icons/play-circle-outline.svg" alt="play"> Preview</button>
-                    <button type="button" class="btn btn-share" data-bs-toggle="modal" data-bs-target="#shareModal"><img src="../images/icons/share.svg" alt="share"> Share</button>
-                </section>
-                <section class="summary">
-                    {{ event?.summary }}
-                </section>
-            </div>
-            <div class="ticket">
-                <app-ticket [event]="event" [tickets]="event.tickets" *ngIf="event"></app-ticket>
-            </div>
-            <div class="merch" *ngIf="products?.length > 0">
-                <p>Merch</p>
-                <div class="row" *ngFor="let product of products | slice:0:end">
-                    <app-merch [freeItems]="" [event]="event" [products]="product"></app-merch>
+        <div class="col-md-8 col-sm-12">
+            <div class="artist-info">
+                <div>
+                    <img [src]="event?.performers[0]?.flyer?.formats?.medium?.url" class="float-start">
+                    <h3 class="artist-name">{{ event?.performers[0]?.name }}</h3>
+                    <p class="event-title">{{ event?.name }}</p>
+                    <div class="row">
+                        <section class="event-date">
+                            <span class="date"><img src="../images/icons/calendar.svg"><span class="e-d-text">{{ getDate(event, event?.start) }}</span></span>
+                            <span class="duration"><img src="../images/icons/clock.svg"><span class="e-d-text"> {{ setEventDuration(event?.start, event?.end) }}</span></span>
+                        </section>
+                    </div>
+                    <section class="share">
+                        <button type="button" class="btn btn-preview" data-bs-toggle="modal" data-bs-target="#previewModal" (click)="openPreview(1)"><img src="../../images/icons/play-circle-outline.svg" alt="play"> Preview</button>
+                        <button type="button" class="btn btn-share" data-bs-toggle="modal" data-bs-target="#shareModal"><img src="../images/icons/share.svg" alt="share"> Share</button>
+                    </section>
                 </div>
             </div>
-            <button class="btn btn-link float-end" (click)="toggleDisplay()" *ngIf="event?.products.length > 0">{{ showMore ? 'View Less' : 'View all merch' }}</button>
-            <br />
-            <br />
-            <hr class="pay" />
-            <br />
-            <div class="row">
-                <div class="col-12">
-                    <p class="float-md-start currency-title">Currency: </p>
-                    <select class="form-select float-md-start currency-select" aria-label="Disabled select example" name="currency" id="currency" #currency (change)="getRates($event)">
-                        <option [value]="currency.code" *ngFor="let currency of currencies">{{ currency.name }}</option>
-                    </select>
-                </div>
+            <div class="show-info">
+                <h3 class="title">Show Info</h3>
+                <p class="show-details"> {{ event?.summary }} </p>
             </div>
-            <div class="row totals-row">
-                <div class="col-12">
-                    <p class="mb-0 total">Total:</p>
-                    <p class="amount">$ 200.00</p>
-                    <button class="btn btn-checkout">Go to Checkout</button>
-                </div>
+            <div class="get-ticket">
+                <h3 class="title">Get your ticket</h3>
+                <app-ticket [event]="event" [tickets]="event.tickets" *ngIf="event" class="tickets"></app-ticket>
+            </div>
+            <div class="get-merch">
+                <h3 class="title">Merch</h3>
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- Share Modal -->
-<div class="modal fade share-modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="shareModal">Share this show</h5>
-        <button type="button" class="btn btn-link" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="modal-body">
-        <p id="link">The link will be copied to your clipboard</p>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" [placeholder]="windowLocation" [value]="windowLocation" aria-label="Recipient's username" aria-describedby="basic-addon2" #input>
-            <span class="input-group-text" id="basic-addon2" (click)="copyLink()"><img src="./images/icons/copy.svg"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Preview Modal -->
-<div class="share-container">
-    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header p-0">
-                    <h5 class="modal-title" id="exampleModalLabel">{{ event?.name }}</h5>
-                    <button type="button" class="btn btn-link" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="modal-body p-0">
-                    <video controls autoplay muted="false" #video></video>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-12">
+            right container
         </div>
     </div>
 </div>

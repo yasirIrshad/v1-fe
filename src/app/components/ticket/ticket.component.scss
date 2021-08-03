@@ -1,21 +1,82 @@
 .ticket {
-    background-color: #363f4c;
-    border-radius: 11px;
-    opacity: 1;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    padding: 24px;
-    .form-select {
-        color: #fff;
-        background-color: #131519;
-        border: 1px solid #788995;
-        border-radius: 10px;
+  background-color: #363f4c;
+  border-radius: 11px;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 24px;
+  margin-bottom: 35px;
+
+  .fa-circle {
+    color: #FFDC4E;
+  }
+
+  .form-select {
+    color: #fff;
+    background-color: #131519;
+    border: 1px solid #788995;
+    border-radius: 10px;
+  }
+
+  .ticket-description {
+    color: #B0B9D3;
+    font-size: 16px;
+  }
+
+  .ticket-type {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .vip-text {
+    color: #B0B9D3;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  .vip-row {
+    padding-left: 10%;
+  }
+
+  .card {
+    max-width: 48%;
+    height: 150px;
+    background-color: #1C2233;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    margin-right: 10px;
+
+    .item-name {
+      width: 120px;
     }
-    .vip-text {
-        color: #B0B9D3;
-        font-size: 15px;
-        font-weight: 600;
-        margin-top: 28px;
-        margin-bottom: 28px;
+
+    img {
+      width: 109px;
+      height: 109px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-left: 10px;
     }
+
+    .size-section {
+      width: 32%;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .form-select {
+        border: none;
+        background-color: #393C4D;
+      }
+
+      .size {
+        vertical-align: bottom;
+      }
+    }
+  }
 }
