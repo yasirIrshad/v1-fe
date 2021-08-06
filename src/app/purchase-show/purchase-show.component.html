@@ -9,12 +9,12 @@
                     <div class="row">
                         <section class="event-date">
                             <span class="date"><img src="../images/icons/calendar.svg"><span class="e-d-text">{{ getDate(event, event?.start) }}</span></span>
-                            <span class="duration"><img src="../images/icons/clock.svg"><span class="e-d-text"> {{ setEventDuration(event?.start, event?.end) }}</span></span>
+                            <span class="duration"><img src="../images/icons/time.svg"><span class="e-d-text"> {{ setEventDuration(event?.start, event?.end) }}</span></span>
                         </section>
                     </div>
                     <section class="share">
-                        <button type="button" class="btn btn-preview" data-bs-toggle="modal" data-bs-target="#previewModal" (click)="openPreview(1)"><img src="../../images/icons/play-circle-outline.svg" alt="play"> Preview</button>
-                        <button type="button" class="btn btn-share" data-bs-toggle="modal" data-bs-target="#shareModal"><img src="../images/icons/share.svg" alt="share"> Share</button>
+                        <button type="button" class="btn btn-preview" data-bs-toggle="modal" data-bs-target="#previewModal" (click)="openPreview(1)"><i class="fas fa-play"></i> Preview</button>
+                        <button type="button" class="btn btn-share" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fas fa-share-alt"></i> Share</button>
                     </section>
                 </div>
             </div>
@@ -28,10 +28,111 @@
             </div>
             <div class="get-merch">
                 <h3 class="title">Merch</h3>
+                <div class="march-main">
+                    <div class="box">
+                        <div class="img">
+                            <img src="../images/icons/grey-sweatshirt.png">
+                        </div>
+                        <h4>Harry Styles Fine Line T-Shirt</h4>
+                        <h5>$ 15.00</h5>
+                        <h6>SIZE</h6>
+                        <span>
+                            <select>
+                                <option>XL</option>
+                                <option>L</option>
+                                <option>M</option>
+                                <option>S</option>
+                            </select>
+                            <button>Added</button>
+                        </span>
+                    </div>
+
+                    <div class="box">
+                        <div class="img">
+                            <img src="../images/icons/grey-sweatshirt.png">
+                        </div>
+                        <h4>Harry Styles Fine Line T-Shirt</h4>
+                        <h5>$ 15.00</h5>
+                        <h6>SIZE</h6>
+                        <span>
+                            <select>
+                                <option>XL</option>
+                                <option>L</option>
+                                <option>M</option>
+                                <option>S</option>
+                            </select>
+                            <button>Added</button>
+                        </span>
+                    </div>
+
+                    <div class="box">
+                        <div class="img">
+                            <img src="../images/icons/grey-sweatshirt.png">
+                        </div>
+                        <h4>Harry Styles Fine Line T-Shirt</h4>
+                        <h5>$ 15.00</h5>
+                        <h6>SIZE</h6>
+                        <span>
+                            <select>
+                                <option>XL</option>
+                                <option>L</option>
+                                <option>M</option>
+                                <option>S</option>
+                            </select>
+                            <button>Added</button>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
-            right container
+            <div class="right">
+                <div class="dropdown">
+                    <label>Currency</label>
+                    <button>US dollar<i class="fas fa-caret-down"></i></button>
+                </div>
+                <div class="cart">
+                    <h5>Your Cart</h5>
+
+                    <div class="field">
+                        <label><i class="far fa-times-circle"></i>VIP Stream Bundle</label>
+                        <span class="price">$ 150.00</span>
+                    </div>
+
+                    <div class="field">
+                        <label><i class="far fa-times-circle"></i>Harry Styles - Fine Line T-…</label>
+                        <span class="price">$ 15.00</span>
+                    </div>
+
+                    <div class="tick">
+                        <input type="checkbox">
+                        <label>Have a Promo Code?</label>
+                    </div>
+
+                    <div class="others">
+                        <label>Subtotal</label>
+                        <span class="price">$ 165.00</span>
+                    </div>
+
+                    <div class="others">
+                        <label>Service fee</label>
+                        <span class="price">$ 15.00</span>
+                    </div>
+
+                    <div class="others">
+                        <label>Shipping & Handling</label>
+                        <span class="price">$ 0.00</span>
+                    </div>
+
+                    <div class="total">
+                        <label>Total</label>
+                        <span class="price">$ 180.00<br><small>Price including Tax</small></span>
+                    </div>
+
+                    <a href="#">Continue to payment</a>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

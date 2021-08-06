@@ -1,13 +1,13 @@
-<div class="row ticket" *ngFor="let ticket of ticketOptions">
+<!-- <div class="row ticket" *ngFor="let ticket of ticketOptions">
     <div class="col-md-1 col-sm-1">
-        <i class="far fa-circle fa-2x"></i>
+        <input class="form-check-input" type="radio">
     </div>
     <div class="col-md-8 col-sm-9">
-        <p class="ticket-type mb-0">{{ ticketName(ticket.type) }}</p>
+        <p class="ticket-type">{{ ticketName(ticket.type) }}</p>
         <p class="ticket-description">{{ ticket?.description }}</p>
     </div>
     <div class="col-md-3 col-sm-2">
-        <p class="float-end">{{ ticket?.price | currency }}</p>
+        <p class="float-end">{{ ticket?.price | currency }} <i class="fas fa-info"></i></p>
     </div>
     <div class="col-12 p-0" *ngIf="ticket.type === 'vip'">
         <div class="row vip-row">
@@ -29,5 +29,69 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="row ticket">
+    <div class="col-12">
+        <img class="infooo" src="../images/icons/infooo.svg">
+        <div class="checkk">
+            <input type="radio">
+        </div>
+        <div class="ht">
+            <span>
+                <h4>Basic Stream</h4>
+                <h5>$ 15.00</h5>
+            </span>
+            <p>Access on the show only</p>
+        </div>        
+    </div>
 </div>
 
+<div class="row ticket">
+    <div class="col-12">
+        <img class="infooo" src="../images/icons/infooo.svg">
+        <div class="checkk">
+            <input type="radio">
+        </div>
+        <div class="ht">
+            <span>
+                <h4>Basic Stream</h4>
+                <h5>$ 15.00</h5>
+            </span>
+            <p>Access on the show only</p>
+
+            <div class="productt">
+                <div class="box">
+                    <div class="img">
+                        <img src="../images/icons/grey-sweatshirt.png">
+                    </div>
+                    <div class="detaill">
+                        <h3>Plain sweater in grey color</h3>
+                        <h6>SIZE</h6>
+                        <select>
+                            <option>XL</option>
+                            <option>L</option>
+                            <option>M</option>
+                            <option>S</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="../images/icons/grey-sweatshirt.png">
+                    </div>
+                    <div class="detaill">
+                        <h3>Plain sweater in grey color</h3>
+                        <h6>SIZE</h6>
+                        <select>
+                            <option>XL</option>
+                            <option>L</option>
+                            <option>M</option>
+                            <option>S</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

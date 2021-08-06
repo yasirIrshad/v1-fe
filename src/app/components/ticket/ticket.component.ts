@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { HelpersService } from '../../config/helpers.service';
 import { CartService } from '../../config/cart.service';
+import { ViewEncapsulation }  from '@angular/core';
 
 @Component({
   selector: 'app-ticket',
@@ -15,6 +16,7 @@ export class TicketComponent implements OnInit, OnChanges {
   public price: any;
   public merchItems: any;
   ticketSelected: any;
+
   constructor(
     private helpers: HelpersService,
     private cartService: CartService

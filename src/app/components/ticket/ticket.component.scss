@@ -1,11 +1,10 @@
 .ticket {
-  background-color: #363f4c;
+  background-color: #2F3443;
   border-radius: 11px;
-  opacity: 1;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  padding: 24px;
+  padding: 35px 25px;
   margin-bottom: 35px;
+  margin-left: 0;
+  margin-right: 0;
 
   .fa-circle {
     color: #FFDC4E;
@@ -80,3 +79,149 @@
     }
   }
 }
+
+/*TICKET NEW*/
+.ticket .col-12 {
+    position: relative;
+}
+
+.ticket .infooo {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.ticket .checkk {
+    width: 5%;
+    float: left;
+}
+
+.ticket input[type='radio']:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #363f4c;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid #FFDC4E;
+}
+
+.ticket input[type='radio']:checked:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #FFDC4E;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 6px solid #6f6f6f;
+}
+
+.ticket .ht {
+    width: 95%;
+    float: left;
+    padding: 0 30px 0 0;
+}
+
+.ticket .ht span {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ticket .ht h4 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ticket .ht h5 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ticket .ht p {
+    margin: 10px 0 0;
+    color: #B0B9D3;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ticket .productt {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0 0;
+}
+
+.ticket .productt .box {
+    width: 48%;
+    float: left;
+    background: #1C2233;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.ticket .productt .img {
+    width: 45%;
+    float: left;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.ticket .productt .img img {
+    width: 100%;
+    float: left;
+}
+
+.ticket .productt .detaill {
+    width: calc(55% - 20px);
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.ticket .productt  h3 {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.ticket .productt h6 {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0 0 10px;
+}
+
+.ticket .productt select {
+    -webkit-appearance: none;
+    background-color: #393C4D !important;
+    border: none;
+    padding: 12px 45px 12px 12px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background-image: url("/images/icons/down.svg");
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 20px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+/*TICKET NEW*/
+
