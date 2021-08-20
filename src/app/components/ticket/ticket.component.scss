@@ -1,7 +1,9 @@
 .ticket {
+  width: 100%;
+  float: left;
   background-color: #2F3443;
   border-radius: 11px;
-  padding: 35px 25px;
+  padding: 30px 25px;
   margin-bottom: 35px;
   margin-left: 0;
   margin-right: 0;
@@ -81,84 +83,77 @@
 }
 
 /*TICKET NEW*/
-.ticket .col-12 {
+.ticket:nth-child(2) {
+    border: 2px solid #FFDC4E;
+}
+
+.ticket .box {
+    width: 100%;
+    float: left;
     position: relative;
 }
 
 .ticket .infooo {
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 0;
 }
 
 .ticket .checkk {
-    width: 5%;
+    width: calc(9% - 12px);
     float: left;
 }
 
-.ticket input[type='radio']:after {
-    width: 24px;
-    height: 24px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
+#yes {
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    appearance:none;
+    border-radius:50%;
     position: relative;
-    background-color: #363f4c;
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    border: 3px solid #FFDC4E;
+    border: 5px solid #2F3443;
+    box-shadow: 0 0 0 3px #FFDC4E !important;
 }
 
-.ticket input[type='radio']:checked:after {
-    width: 24px;
-    height: 24px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #FFDC4E;
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    border: 6px solid #6f6f6f;
+#yes:checked {
+    background: #ffdc4e;
 }
 
 .ticket .ht {
-    width: 95%;
+    width: 91%;
     float: left;
-    padding: 0 30px 0 0;
 }
 
 .ticket .ht span {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 27px 0 0;
+    justify-content: space-between;
 }
 
 .ticket .ht h4 {
-    font-size: 22px;
-    line-height: 22px;
-    font-weight: 700;
     margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
 }
 
 .ticket .ht h5 {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: 700;
     margin: 0;
 }
 
 .ticket .ht p {
-    margin: 10px 0 0;
+    margin: 15px 0 0;
     color: #B0B9D3;
     font-size: 16px;
+    line-height: 16px;
     font-weight: 600;
 }
 
 .ticket .productt {
-    width: 100%;
     float: left;
     display: flex;
     flex-wrap: wrap;
@@ -167,20 +162,20 @@
 }
 
 .ticket .productt .box {
-    width: 48%;
+    width: 48.5%;
     float: left;
     background: #1C2233;
     border-radius: 10px;
     overflow: hidden;
-    padding: 20px;
+    padding: 19.83px 20px;
 }
 
 .ticket .productt .img {
-    width: 45%;
+    width: 42%;
     float: left;
-    padding: 20px 30px;
     background: #fff;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .ticket .productt .img img {
@@ -189,39 +184,151 @@
 }
 
 .ticket .productt .detaill {
-    width: calc(55% - 20px);
+    width: calc(57% - 20px);
     float: left;
     margin: 0 0 0 20px;
 }
 
 .ticket .productt  h3 {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 20px;
     font-weight: 600;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
 }
 
 .ticket .productt h6 {
     font-size: 12px;
     line-height: 12px;
-    margin: 0 0 10px;
+    margin: 0 0 5px;
 }
 
 .ticket .productt select {
     -webkit-appearance: none;
     background-color: #393C4D !important;
     border: none;
-    padding: 12px 45px 12px 12px;
+    padding: 7px 45px 7px 12px;
     border-radius: 6px;
     color: #fff;
     cursor: pointer;
     background-image: url("/images/icons/down.svg");
     background-repeat: no-repeat;
     background-position-x: 80%;
-    background-position-y: 20px;
+    background-position-y: 15px;
     outline: none;
     font-size: 16px;
     font-weight: 600;
 }
-/*TICKET NEW*/
 
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+@media (min-width: 1440px) {
+.ticket .productt {
+    width: 100%;
+}
+}
+
+
+
+
+@media (max-width: 1439px) {
+.ticket .productt {
+    width: 78%;
+}
+
+.ticket .productt .box {
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+.ticket .productt .box:last-child {
+    margin: 0;
+}
+
+.ticket .productt .img {
+    width: 30%;
+}
+}
+
+
+
+
+@media (max-width: 1199px) {
+.ticket .productt {
+    width: 100%;
+}
+}
+
+
+
+
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {
+.ticket .productt {
+    width: calc(100% + 10%);
+    margin: 30px 0 0 -10%;
+}
+
+.ticket .productt .box {
+    width: 100%;
+    margin: 0 0 17px;
+}
+
+.ticket .productt .box:last-child {
+    margin: 0;
+}
+
+.ticket .productt .img {
+    width: 28%;
+}
+
+.ticket .productt .detaill {
+    width: calc(55% - 20px);
+}
+}
+
+@media (max-width: 575px) {
+.ticket .ht span {
+    padding: 0;
+    flex-direction: column;
+}
+
+.ticket .ht h4 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.ticket .ht p {
+    margin: 18px 0 0;
+}
+
+.ticket .checkk {
+    width: 17%;
+}
+
+.ticket .ht {
+    width: 83%;
+}
+
+.ticket .productt {
+    width: calc(100% + 23%);
+    margin: 30px 0 0 -21%;
+}
+
+.ticket .productt .img {
+    width: 42%;
+}
+.ticket .productt .detaill {
+    width: calc(58% - 20px);
+}
+}
+
+/*TICKET NEW*/

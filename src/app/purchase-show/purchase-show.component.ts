@@ -33,7 +33,8 @@ export class PurchaseShowComponent implements OnInit {
     private helpers: HelpersService,
     private metaService: Meta,
     private seo: SeoService,
-    private titleService: Title
+    private titleService: Title,
+    private elementRef: ElementRef
   ) { }
 
   ngOnInit(): void {
@@ -90,6 +91,7 @@ export class PurchaseShowComponent implements OnInit {
         // this.setTotals();
         // this.setMetaData();
         if (this.helpers.isBrowser()) {
+          //this.helpers.setBG(this.event.background_image.formats.large.url, 'full');
           this.helpers.setBG(this.event.background_image.formats.large.url, 'full');
           this.windowLocation = location.href;
           this.modalListener();

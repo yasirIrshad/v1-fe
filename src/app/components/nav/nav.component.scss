@@ -2,7 +2,7 @@ nav {
   background: transparent linear-gradient(180deg, #1a2030 0%, #1a203000 100%) 0%
     0% no-repeat padding-box;
   opacity: 1;
-  padding: 20px 0 /*72px*/;
+  padding: 30px 0px;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -359,8 +359,43 @@ nav {
   }
 }
 
-@media (max-width: 1440px) {
+
+
+/*RESPONSIVE*/
+@media (min-width: 1440px) {
 nav {
-  padding: 20px 72px;
+    padding: 30px 75px;
+}
+}
+
+@media (max-width: 1439px) {
+nav {
+    padding: 30px 45px;
+}
+}
+
+@media (max-width: 1199px) {
+nav {
+    padding: 30px 111px;
+}
+}
+
+@media (max-width: 991px) {
+nav {
+    padding: 20px 36px;
+}
+}
+
+
+@media (max-width: 767px) {
+nav {
+    padding: 20px 30px;
+}
+}
+
+
+@media (max-width: 575px) {
+nav {
+    padding: 20px 12px;
 }
 }

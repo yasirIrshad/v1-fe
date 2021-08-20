@@ -165,3 +165,23 @@ footer {
     padding-right: 11px;
   }
 }
+
+@media (max-width: 1439px) {}
+
+@media (max-width: 991px) {
+footer .links-wrapper {
+    justify-content: flex-end !important;
+}
+
+footer .links-wrapper .list-group-wrapper:last-child {
+    margin: 0;
+}
+
+footer .updates-container {
+    max-width: 100%;
+}
+}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 575px) {}
